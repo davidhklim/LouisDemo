@@ -1,217 +1,376 @@
-import PublicPageShell from "./PublicPageShell";
+import "./PublicLandingPage.css";
 
 const FEATURES = [
   {
-    useCaseId: "ai-drafting",
-    label: "Feature 01",
-    title: "AI Legal Drafting backed by real transactions",
+    id: "ai-drafting",
+    icon: "psychology",
+    title: "AI Drafting",
     description:
-      "Draft, rewrite, and assemble legal documents with AI grounded in 200,000+ real transaction clauses. Louis suggests language that reflects what actually gets signed — not generic output. Rewrite clauses, explain them in plain English, or fully assemble documents from 100+ curated templates.",
-    reverse: false,
-    video: "/videos/Ai-Drafting-SHORT.mp4",
+      "Our context-aware AI leverages 228K verified clauses to suggest the perfect legal wording. Draft, rewrite, and assemble documents grounded in real Canadian deals.",
+    badge: "Legal Intelligence",
+    videoShort: "/videos/Ai-Drafting-SHORT.mp4",
   },
   {
-    useCaseId: "secure-repository",
-    label: "Feature 02",
+    id: "secure-repository",
+    icon: "history",
     title: "Version Control & Redline",
     description:
-      "Every save creates an immutable snapshot. Compare any two versions side-by-side with semantic redlining that highlights exactly what changed — additions, deletions, restructured sections. No more emailing v3_FINAL_final.docx back and forth.",
-    reverse: true,
-    video: "/videos/version-control-SHORT.mp4",
+      "Every save creates an immutable snapshot. Compare any two versions side-by-side with semantic redlining that highlights exactly what changed.",
+    badge: "Audit Ready",
+    videoShort: "/videos/version-control-SHORT.mp4",
   },
   {
-    useCaseId: "document-storage",
-    label: "Feature 03",
-    title: "Secure Document Storage",
+    id: "document-storage",
+    icon: "edit_note",
+    title: "Collaborative Editing",
     description:
-      "One workspace for generated and uploaded documents. Edit together with collaborative editing, and grant credential-based access to advisors, investors, and outside counsel — each with the right level of visibility. Your corporate records, organized and protected.",
-    reverse: false,
-    video: "/videos/document-storage-SHORT.mp4",
+      "Work on documents with your team in real time. Grant credential-based access to advisors, investors, and outside counsel with the right level of visibility.",
+    badge: "Team Workflow",
+    videoShort: "/videos/document-storage-SHORT.mp4",
   },
   {
-    useCaseId: "e-signatures",
-    label: "Feature 04",
-    title: "E-Signature Integration",
+    id: "e-signatures",
+    icon: "draw",
+    title: "DocuSign Integration",
     description:
-      "Prepare DocuSign signature packages and send them directly from your workspace. Draft to executed in one place — no re-uploading, no switching tabs. Track status, manage counterparties, and store executed copies.",
-    reverse: true,
-    video: "/videos/e-signature-SHORT.mp4",
+      "Prepare and send signature packages directly from your workspace. Go from draft to executed without switching tabs or chasing down signers.",
+    badge: "Closing Workflow",
+    videoShort: "/videos/e-signature-SHORT.mp4",
   },
 ];
 
-const HOW_STEPS = [
-  {
-    number: "01",
-    title: "Pick a template",
-    description:
-      "Choose from 100+ ready-to-use legal templates — board resolutions, employment agreements, NDAs, financing documents, and more.",
-  },
-  {
-    number: "02",
-    title: "Draft with AI",
-    description:
-      "Louis suggests language as you write, drawn from real transaction data. Fill in your company details and let the tool do the heavy lifting.",
-  },
-  {
-    number: "03",
-    title: "Sign and close",
-    description:
-      "Send for signature through DocuSign with one click. Executed documents and full version history stay in your workspace.",
-  },
+const FOOTER_PRODUCT_LINKS = [
+  { label: "Features", action: "features" },
+  { label: "Pricing", action: "pricing" },
+  { label: "Templates", action: "templates" },
 ];
 
-const FeatureVideo = ({ src, title }) => (
-  <video
-    className="public-showcase-row__video"
-    src={src}
-    autoPlay
-    muted
-    loop
-    playsInline
-    aria-label={`${title} demo`}
-  />
-);
+const FOOTER_COMPANY_LINKS = [
+  { label: "About", action: "about" },
+  { label: "Learn", action: "learn" },
+  { label: "Contact", action: "contact" },
+];
+
+const FOOTER_LEGAL_LINKS = [
+  { label: "Privacy Policy", action: "privacy" },
+  { label: "Terms of Service", action: "terms" },
+];
 
 const PublicLandingPage = ({
   onGetStarted,
+  onSignIn,
   onViewPricing,
   onViewAbout,
   onViewLearn,
   onOpenUseCase,
+  onViewPrivacy,
+  onViewTerms,
 }) => {
-  const actions = [
-    {
-      key: "pricing",
-      label: "Pricing",
-      onClick: onViewPricing,
-    },
-    {
-      key: "learn",
-      label: "Learn",
-      onClick: onViewLearn,
-    },
-    {
-      key: "about",
-      label: "About",
-      onClick: onViewAbout,
-    },
-    {
-      key: "start-free",
-      label: "Start Free",
-      onClick: onGetStarted,
-      className: "pill-button primary-button",
-    },
-  ];
+  const footerAction = (action) => {
+    switch (action) {
+      case "features":
+        document.querySelector(".landing__features")?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "pricing": onViewPricing?.(); break;
+      case "templates": onGetStarted?.(); break;
+      case "about": onViewAbout?.(); break;
+      case "learn": onViewLearn?.(); break;
+      case "contact": window.location.href = "mailto:louisaiproject@gmail.com"; break;
+      case "privacy": onViewPrivacy?.(); break;
+      case "terms": onViewTerms?.(); break;
+      default: break;
+    }
+  };
 
   return (
-    <PublicPageShell
-      pageClassName="public-landing"
-      headerClassName="public-landing__header"
-      brandClassName="public-landing__brand"
-      actionsClassName="public-landing__actions"
-      contentClassName="public-landing__content"
-      actions={actions}
-      brandExtra={<span className="public-landing__tagline">Legal Operations for Canadian Startups</span>}
-      decor={
-        <>
-          <div className="public-landing__bg-orb public-landing__bg-orb--left" aria-hidden="true" />
-          <div className="public-landing__bg-orb public-landing__bg-orb--right" aria-hidden="true" />
-        </>
-      }
-    >
-      {/* Hero */}
-      <section className="public-landing__hero public-reveal">
-        <p className="public-landing__eyebrow">Built for founders who do it themselves</p>
-        <h1>The legal tool that works as hard as you do</h1>
-        <p className="public-landing__lead">
-          100+ ready-to-use legal templates, AI-assisted drafting backed by real transaction data, version control with redline, and DocuSign integration — all in one legal workspace built for Canadian founders.
-        </p>
-      </section>
+    <div className="landing">
+      {/* ── Fixed Header ──────────────────────────────────────── */}
+      <header className="landing__header">
+        <nav className="landing__nav" aria-label="Main navigation">
+          <div className="landing__nav-left">
+            <button
+              type="button"
+              className="landing__logo-btn landing-serif"
+              onClick={onGetStarted}
+              aria-label="LouisAI — go to home"
+            >
+              LouisAI
+            </button>
+            <div className="landing__nav-links">
+              <button type="button" className="landing__nav-link" onClick={() => onOpenUseCase?.("ai-drafting")}>
+                Use Cases
+              </button>
+              <button type="button" className="landing__nav-link" onClick={onViewPricing}>
+                Pricing
+              </button>
+              <button type="button" className="landing__nav-link" onClick={onViewLearn}>
+                Learn
+              </button>
+              <button type="button" className="landing__nav-link" onClick={onViewAbout}>
+                About
+              </button>
+            </div>
+          </div>
+          <div className="landing__nav-right">
+            <button type="button" className="landing__login-btn" onClick={onSignIn}>
+              Log In
+            </button>
+            <button type="button" className="landing__cta-btn" onClick={onGetStarted}>
+              Get Started
+            </button>
+          </div>
+        </nav>
+      </header>
 
-      {/* Section divider */}
-      <div className="public-landing__section-divider" aria-hidden="true" style={{ marginTop: "64px" }} />
+      <main className="landing__main">
+        {/* ── Hero ──────────────────────────────────────────── */}
+        <section className="landing__hero" aria-label="Hero">
+          <div className="landing__hero-text">
+            <h1 className="landing__hero-headline">
+              Legal operations, simplified.
+            </h1>
+            <p className="landing__hero-sub">
+              The lightweight platform startup founders use to manage corporate
+              documents, generate contracts, and keep their minutebook
+              organized.
+            </p>
+            <div className="landing__hero-cta-row">
+              <button
+                type="button"
+                className="landing__hero-cta"
+                onClick={onGetStarted}
+              >
+                Get Started &mdash; Free
+                <span className="material-symbols-outlined" aria-hidden="true">
+                  arrow_forward
+                </span>
+              </button>
+              <div className="landing__social-proof">
+                <div className="landing__avatars" aria-hidden="true">
+                  <div className="landing__avatar landing__avatar--a" />
+                  <div className="landing__avatar landing__avatar--b" />
+                  <div className="landing__avatar landing__avatar--c" />
+                </div>
+                <p className="landing__social-proof-label">
+                  Trusted by 500+ Canadian founders
+                </p>
+              </div>
+            </div>
+          </div>
 
-      {/* Feature Showcase */}
-      <section className="public-landing__showcase public-reveal" aria-label="Feature showcase">
-        <h2 className="public-landing__showcase-heading">Legal drafting, document storage, record-keeping, and signing — one workspace.</h2>
+          {/* Product demo video — enlarged */}
+          <div className="landing__hero-visual">
+            <div className="landing__hero-orb--a" />
+            <div className="landing__hero-orb--b" />
+            <div className="landing__hero-card">
+              <div className="landing__hero-screen">
+                <video
+                  className="landing__hero-video"
+                  src="/videos/ai-drafting.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  aria-label="LouisAI product demo"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {FEATURES.map((item) => (
-          <div
-            key={item.useCaseId}
-            className={`public-showcase-row${item.reverse ? " public-showcase-row--reverse" : ""}`}
-          >
-            <div className="public-showcase-row__text">
-              <p className="public-showcase-row__label">{item.label}</p>
-              <h3 className="public-showcase-row__title">
+        {/* ── Social Proof Bar ──────────────────────────────── */}
+        <section className="landing__proof-bar" aria-label="Social proof">
+          <div className="landing__proof-bar-inner">
+            <div className="landing__proof-left">
+              <p className="landing__proof-label">Trusted by founders</p>
+              <p className="landing__proof-quote">
+                &ldquo;The only legal tool that actually speaks Canadian.&rdquo;
+              </p>
+            </div>
+            <div className="landing__proof-right">
+              <span className="landing__proof-number">228,005</span>
+              <span className="landing__proof-sublabel">
+                clauses from 87 real Canadian deals power our AI
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Features Grid ─────────────────────────────────── */}
+        <section className="landing__features" aria-label="Features">
+          <div className="landing__features-inner">
+            <div className="landing__features-header">
+              <h2 className="landing__features-heading">
+                Built for the velocity of startups.
+              </h2>
+              <p className="landing__features-sub">
+                Eliminate legal bottlenecks with tools designed for corporate
+                efficiency and compliance.
+              </p>
+            </div>
+            <div className="landing__features-grid">
+              {FEATURES.map((feature) => (
                 <button
+                  key={feature.title}
                   type="button"
-                  className="public-showcase-row__title-link"
-                  onClick={() => onOpenUseCase?.(item.useCaseId)}
+                  className="landing__feature-card landing__feature-card--clickable"
+                  onClick={() => onOpenUseCase?.(feature.id)}
                 >
-                  {item.title}
+                  {/* Video thumbnail */}
+                  <div className="landing__feature-video-wrap">
+                    <video
+                      src={feature.videoShort}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      aria-label={`${feature.title} preview`}
+                    />
+                  </div>
+                  <div className="landing__feature-icon-wrap" aria-hidden="true">
+                    <span className="material-symbols-outlined">
+                      {feature.icon}
+                    </span>
+                  </div>
+                  <h3 className="landing__feature-title">{feature.title}</h3>
+                  <p className="landing__feature-desc">
+                    {feature.description}
+                  </p>
+                  {feature.badge ? (
+                    <div className="landing__feature-badge">
+                      {feature.badge}
+                    </div>
+                  ) : null}
+                  <span className="landing__feature-arrow" aria-hidden="true">
+                    <span className="material-symbols-outlined">arrow_forward</span>
+                  </span>
                 </button>
-              </h3>
-              <p className="public-showcase-row__desc">{item.description}</p>
-            </div>
-            <div className="public-showcase-row__video-wrap">
-              <FeatureVideo src={item.video} title={item.title} />
+              ))}
             </div>
           </div>
-        ))}
-      </section>
+        </section>
 
-      {/* Section divider */}
-      <div className="public-landing__section-divider" aria-hidden="true" />
-
-      {/* How It Works */}
-      <section className="public-landing__how-it-works public-reveal" aria-label="How it works">
-        <h2>How it works.</h2>
-        <div className="public-how-steps">
-          {HOW_STEPS.map((step) => (
-            <div key={step.number} className="public-how-step">
-              <div className="public-how-step__number" aria-hidden="true">{step.number}</div>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
+        {/* ── Dark CTA ──────────────────────────────────────── */}
+        <section className="landing__cta-section" aria-label="Call to action">
+          <div className="landing__cta-card">
+            <div className="landing__cta-lines" aria-hidden="true">
+              {[...Array(8)].map((_, i) => (
+                <div key={i} className="landing__cta-line" />
+              ))}
             </div>
-          ))}
+            <div className="landing__cta-text">
+              <h2 className="landing__cta-heading">
+                Ready to clean up your legal deck?
+              </h2>
+              <p className="landing__cta-body">
+                Join hundreds of founders who spend less on legal fees and more
+                on building.
+              </p>
+            </div>
+            <div className="landing__cta-actions">
+              <button
+                type="button"
+                className="landing__cta-btn"
+                onClick={onGetStarted}
+              >
+                Get Started &mdash; Free
+              </button>
+              <p className="landing__cta-fine">No credit card required</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* ── Footer ────────────────────────────────────────────── */}
+      <footer className="landing__footer">
+        <div className="landing__footer-inner">
+          <div className="landing__footer-top">
+            <div className="landing__footer-brand">
+              <p className="landing__footer-logo landing-serif">LouisAI</p>
+              <p className="landing__footer-tagline">
+                The premium legal operations layer for high-growth Canadian
+                companies.
+              </p>
+            </div>
+            <nav className="landing__footer-links" aria-label="Footer navigation">
+              <div className="landing__footer-col">
+                <h4 className="landing__footer-col-heading">Product</h4>
+                <ul>
+                  {FOOTER_PRODUCT_LINKS.map((link) => (
+                    <li key={link.label}>
+                      <button
+                        type="button"
+                        className="landing__footer-link"
+                        onClick={() => footerAction(link.action)}
+                      >
+                        {link.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="landing__footer-col">
+                <h4 className="landing__footer-col-heading">Company</h4>
+                <ul>
+                  {FOOTER_COMPANY_LINKS.map((link) => (
+                    <li key={link.label}>
+                      <button
+                        type="button"
+                        className="landing__footer-link"
+                        onClick={() => footerAction(link.action)}
+                      >
+                        {link.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="landing__footer-col">
+                <h4 className="landing__footer-col-heading">Legal</h4>
+                <ul>
+                  {FOOTER_LEGAL_LINKS.map((link) => (
+                    <li key={link.label}>
+                      <button
+                        type="button"
+                        className="landing__footer-link"
+                        onClick={() => footerAction(link.action)}
+                      >
+                        {link.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div className="landing__footer-bottom">
+            <p className="landing__footer-copy">
+              &copy; 2026 LouisAI Legal Operations Inc. All rights reserved.
+            </p>
+            <div className="landing__footer-icons">
+              <button
+                type="button"
+                className="landing__footer-icon-btn"
+                aria-label="Language"
+              >
+                <span className="material-symbols-outlined" aria-hidden="true">
+                  language
+                </span>
+              </button>
+              <button
+                type="button"
+                className="landing__footer-icon-btn"
+                aria-label="Email"
+              >
+                <span className="material-symbols-outlined" aria-hidden="true">
+                  alternate_email
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
-      </section>
-
-      {/* Section divider */}
-      <div className="public-landing__section-divider" aria-hidden="true" style={{ marginTop: "64px" }} />
-
-      {/* Trust / Stats */}
-      <section className="public-landing__trust public-reveal" aria-label="Platform credentials">
-        <h2>Built for Canadian founders.</h2>
-        <div className="public-trust-stats">
-          <div className="public-trust-stat">
-            <span className="public-trust-stat__number">100+</span>
-            <span className="public-trust-stat__label">Canadian Business Templates</span>
-          </div>
-          <div className="public-trust-stat">
-            <span className="public-trust-stat__number">200,000+</span>
-            <span className="public-trust-stat__label">Clauses</span>
-          </div>
-          <div className="public-trust-stat">
-            <span className="public-trust-stat__number">SHA-256</span>
-            <span className="public-trust-stat__label">Version Integrity</span>
-          </div>
-          <div className="public-trust-stat">
-            <span className="public-trust-stat__number">DocuSign</span>
-            <span className="public-trust-stat__label">E-Signature Integration</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="public-landing__final-cta public-reveal" aria-label="Get started">
-        <h2>Ready to get your paperwork out of the way?</h2>
-        <p>100+ legal templates, AI drafting backed by real transactions, version control, and DocuSign — all in one legal workspace.</p>
-        <button type="button" className="pill-button primary-button" onClick={onGetStarted}>
-          Start Free
-        </button>
-      </section>
-    </PublicPageShell>
+      </footer>
+    </div>
   );
 };
 

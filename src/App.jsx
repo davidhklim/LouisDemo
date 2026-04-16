@@ -13,69 +13,77 @@ export default function App() {
   const openUseCase = (id) => navigate(`/use-case/${id}`);
 
   return (
-    <div className="page-transition page-transition--public">
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <PublicLandingPage
-              onGetStarted={goComingSoon}
-              onViewPricing={goComingSoon}
-              onViewAbout={goComingSoon}
-              onViewLearn={goComingSoon}
-              onOpenUseCase={openUseCase}
-            />
-          }
-        />
-        <Route
-          path="/use-case/:useCaseId"
-          element={
-            <PublicUseCasePage
-              onGoHome={goHome}
-              onGetStarted={goComingSoon}
-              onViewPricing={goComingSoon}
-              onViewAbout={goComingSoon}
-            />
-          }
-        />
-        <Route
-          path="/privacy"
-          element={
-            <PublicPrivacyPage
-              onGoHome={goHome}
-              onGetStarted={goComingSoon}
-              onViewPricing={goComingSoon}
-            />
-          }
-        />
-        <Route
-          path="/terms"
-          element={
-            <PublicTermsPage
-              onGoHome={goHome}
-              onGetStarted={goComingSoon}
-              onViewPricing={goComingSoon}
-            />
-          }
-        />
-        <Route
-          path="/coming-soon"
-          element={<ComingSoonPage onGoHome={goHome} />}
-        />
-        {/* Catch-all — redirect to home */}
-        <Route
-          path="*"
-          element={
-            <PublicLandingPage
-              onGetStarted={goComingSoon}
-              onViewPricing={goComingSoon}
-              onViewAbout={goComingSoon}
-              onViewLearn={goComingSoon}
-              onOpenUseCase={openUseCase}
-            />
-          }
-        />
-      </Routes>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <PublicLandingPage
+            onGetStarted={goComingSoon}
+            onSignIn={goComingSoon}
+            onViewPricing={goComingSoon}
+            onViewAbout={goComingSoon}
+            onViewLearn={goComingSoon}
+            onOpenUseCase={openUseCase}
+            onViewPrivacy={() => navigate("/privacy")}
+            onViewTerms={() => navigate("/terms")}
+          />
+        }
+      />
+      <Route
+        path="/use-case/:useCaseId"
+        element={
+          <PublicUseCasePage
+            onGoHome={goHome}
+            onGetStarted={goComingSoon}
+            onSignIn={goComingSoon}
+            onViewPricing={goComingSoon}
+            onViewAbout={goComingSoon}
+            onViewLearn={goComingSoon}
+            onViewPrivacy={() => navigate("/privacy")}
+            onViewTerms={() => navigate("/terms")}
+          />
+        }
+      />
+      <Route
+        path="/privacy"
+        element={
+          <PublicPrivacyPage
+            onGoHome={goHome}
+            onGetStarted={goComingSoon}
+            onViewPricing={goComingSoon}
+          />
+        }
+      />
+      <Route
+        path="/terms"
+        element={
+          <PublicTermsPage
+            onGoHome={goHome}
+            onGetStarted={goComingSoon}
+            onViewPricing={goComingSoon}
+          />
+        }
+      />
+      <Route
+        path="/coming-soon"
+        element={<ComingSoonPage onGoHome={goHome} />}
+      />
+      {/* Catch-all */}
+      <Route
+        path="*"
+        element={
+          <PublicLandingPage
+            onGetStarted={goComingSoon}
+            onSignIn={goComingSoon}
+            onViewPricing={goComingSoon}
+            onViewAbout={goComingSoon}
+            onViewLearn={goComingSoon}
+            onOpenUseCase={openUseCase}
+            onViewPrivacy={() => navigate("/privacy")}
+            onViewTerms={() => navigate("/terms")}
+          />
+        }
+      />
+    </Routes>
   );
 }
