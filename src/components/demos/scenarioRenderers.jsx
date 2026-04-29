@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   FULL_TIME_EMPLOYMENT_BC_DOCUMENT,
   FULL_TIME_EMPLOYMENT_BC_TITLE,
@@ -257,7 +256,23 @@ export const renderCollaborativeEditing = ({ state, config, transition, STATES }
           </SceneTarget>
 
           {state === STATES.ADDING_COMMENT ? (
-            <AutoAdvance event="COMMENT_ADDED" transition={transition} delay={1000} />
+            <SceneTarget
+              active={config.indicator === "review-track-btn"}
+              tooltip={config.tooltip}
+              onClick={() => transition("COMMENT_ADDED")}
+              className="scene-panel__cta-wrap"
+              data-scene-id="review-track-btn"
+            >
+              <button
+                type="button"
+                className={`scene-btn scene-btn--primary ${
+                  config.indicator !== "review-track-btn" ? "scene-btn--dim" : ""
+                }`}
+                disabled
+              >
+                Review tracked edit
+              </button>
+            </SceneTarget>
           ) : null}
 
           {state === STATES.WAITING_FOR_TRACK_EDIT ||
@@ -2182,15 +2197,20 @@ export const renderDataRoom = ({ state, config, transition, STATES }) => {
    Used for "thinking" states (COMPARING, POPULATING, SENDING, etc).
    Fires `transition(event)` after `delay` ms. Renders a skeleton row
    so the viewport doesn't feel frozen. */
-const AutoAdvance = ({ event, transition, delay = 1000, label = "Working…" }) => {
-  useEffect(() => {
-    const t = setTimeout(() => transition(event), delay);
-    return () => clearTimeout(t);
-  }, [event, transition, delay]);
+const AutoAdvance = ({ event, transition, label = "Working..." }) => {
   return (
-    <div className="scene-loading" role="status" aria-live="polite">
+    <SceneTarget
+      active
+      tooltip="Continue"
+      onClick={() => transition(event)}
+      className="scene-loading"
+      data-scene-id="continue-btn"
+    >
       <span className="scene-loading__dot" aria-hidden="true" />
-      {label}
-    </div>
+      <span>{label}</span>
+      <button type="button" className="scene-btn scene-btn--primary scene-btn--xs" disabled>
+        Continue
+      </button>
+    </SceneTarget>
   );
 };

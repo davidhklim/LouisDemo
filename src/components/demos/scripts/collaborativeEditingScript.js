@@ -5,7 +5,7 @@
  * Flow:
  *   WAITING_FOR_SELECTION  → highlight a clause to comment on
  *   WAITING_FOR_COMMENT    → click "Add Comment"
- *   ADDING_COMMENT         → the scripted comment renders (~0.3 s)
+ *   ADDING_COMMENT         -> the scripted comment renders, then pauses
  *   WAITING_FOR_TRACK_EDIT → accept a track-changes suggestion
  *   DONE                   → Start Over
  *
@@ -64,9 +64,9 @@ export const STATE_CONFIG = {
   },
   [STATES.ADDING_COMMENT]: {
     step: 3,
-    indicator: null,
+    indicator: "review-track-btn",
     narrationCorner: "bottom-left",
-    tooltip: null,
+    tooltip: "Review tracked edit",
     narration: {
       title: "Comment added",
       body:

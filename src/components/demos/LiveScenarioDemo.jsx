@@ -174,7 +174,13 @@ const DEMO_REGISTRY = {
 
 /* ── Narration card (shared with LiveFeatureDemo — inlined here) ──── */
 
-const NarrationCard = ({ narration, corner, stepKey, isDone = false }) => {
+const NarrationCard = ({
+  narration,
+  corner,
+  stepKey,
+  isDone = false,
+  style = undefined,
+}) => {
   if (!narration || (!narration.title && !narration.body)) return null;
   return (
     <div
@@ -182,6 +188,7 @@ const NarrationCard = ({ narration, corner, stepKey, isDone = false }) => {
         isDone ? " live-demo__narration--done" : ""
       }`}
       key={`narr-${stepKey}`}
+      style={style}
     >
       <div className="live-demo__narration-badge" aria-hidden="true">
         <span className="live-demo__narration-badge-mark" />
@@ -215,6 +222,7 @@ const LiveScenarioDemo = ({ demoId }) => {
 
   const { state, config, transition, reset } = useStateMachine(fsm);
   const [resetKey, setResetKey] = useState(0);
+  const [narrationStyle, setNarrationStyle] = useState(undefined);
   const navigate = useNavigate();
   const rootRef = useRef(null);
 
@@ -237,6 +245,73 @@ const LiveScenarioDemo = ({ demoId }) => {
       scrollActiveTargetIntoView(rootRef.current);
     });
     return () => cancelAnimationFrame(id);
+  }, [state, resetKey]);
+
+  useEffect(() => {
+    if (!rootRef.current) return undefined;
+
+    const positionNarration = () => {
+      const root = rootRef.current;
+      const viewport = root?.querySelector(".live-demo__viewport");
+      const target = root?.querySelector(".scene-target--active");
+      if (!viewport || !target) {
+        setNarrationStyle(undefined);
+        return;
+      }
+
+      const vRect = viewport.getBoundingClientRect();
+      const tRect = target.getBoundingClientRect();
+      const width = Math.min(320, Math.max(260, vRect.width * 0.34));
+      const height = 132;
+      const gap = 18;
+      const min = 18;
+      const maxLeft = Math.max(min, vRect.width - width - min);
+      const maxTop = Math.max(min, vRect.height - height - min);
+      const targetLeft = tRect.left - vRect.left;
+      const targetRight = tRect.right - vRect.left;
+      const targetTop = tRect.top - vRect.top;
+      const targetBottom = tRect.bottom - vRect.top;
+      const targetCenterY = tRect.top - vRect.top + tRect.height / 2;
+      const targetCenterX = targetLeft + tRect.width / 2;
+
+      let left;
+      let top;
+      if (targetLeft >= width + gap + min) {
+        left = targetLeft - width - gap;
+        top = Math.min(Math.max(targetCenterY - height / 2, min), maxTop);
+      } else if (targetRight + width + gap <= vRect.width - min) {
+        left = targetRight + gap;
+        top = Math.min(Math.max(targetCenterY - height / 2, min), maxTop);
+      } else if (targetBottom + height + gap <= vRect.height - min) {
+        left = Math.min(Math.max(targetCenterX - width / 2, min), maxLeft);
+        top = targetBottom + gap;
+      } else if (targetTop >= height + gap + min) {
+        left = Math.min(Math.max(targetCenterX - width / 2, min), maxLeft);
+        top = targetTop - height - gap;
+      } else {
+        left = Math.min(Math.max(targetLeft, min), maxLeft);
+        top = Math.min(Math.max(targetCenterY - height / 2, min), maxTop);
+      }
+
+      setNarrationStyle({
+        "--narration-left": `${Math.min(Math.max(left, min), maxLeft)}px`,
+        "--narration-top": `${top}px`,
+        maxWidth: `${width}px`,
+      });
+    };
+
+    const first = requestAnimationFrame(() => {
+      const second = requestAnimationFrame(positionNarration);
+      rootRef.current.__narrationFrame = second;
+    });
+    window.addEventListener("resize", positionNarration);
+    return () => {
+      cancelAnimationFrame(first);
+      if (rootRef.current?.__narrationFrame) {
+        cancelAnimationFrame(rootRef.current.__narrationFrame);
+      }
+      window.removeEventListener("resize", positionNarration);
+    };
   }, [state, resetKey]);
 
   /* ── Start Over — bump resetKey + reset FSM ─────────────────────── */
@@ -308,9 +383,10 @@ const LiveScenarioDemo = ({ demoId }) => {
 
         <NarrationCard
           narration={stateConfig.narration}
-          corner={stateConfig.narrationCorner ?? "bottom-left"}
+          corner={narrationStyle ? "follow" : stateConfig.narrationCorner ?? "bottom-left"}
           stepKey={state}
           isDone={isDone}
+          style={narrationStyle}
         />
 
         {isRestartLive ? (

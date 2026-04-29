@@ -1,6 +1,10 @@
 import { lazy, Suspense, useEffect, useMemo } from "react";
-import { useParams } from "react-router-dom";
-import { FEATURE_IDS, FEATURES_BY_ID } from "../data/features";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+  FEATURE_IDS,
+  FEATURE_IDS_BY_SLUG,
+  FEATURES_BY_ID,
+} from "../data/features";
 import "./PublicUseCasePage.css";
 
 // Lazy-loaded to keep the initial bundle small. Only loaded when someone
@@ -27,6 +31,27 @@ const SCENARIO_LIVE = new Set([
 // Single source of truth: shared features data.
 const USE_CASES = FEATURES_BY_ID;
 
+const scrollPageToTop = () => {
+  if (typeof window === "undefined") return;
+
+  if (document.activeElement instanceof HTMLElement) {
+    document.activeElement.blur();
+  }
+
+  const targets = [
+    document.scrollingElement,
+    document.documentElement,
+    document.body,
+    document.getElementById("root"),
+  ].filter(Boolean);
+
+  targets.forEach((target) => {
+    target.scrollTop = 0;
+    target.scrollLeft = 0;
+  });
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+};
+
 const FOOTER_RESOURCES = [
   { label: "Newsletter", action: "newsletter" },
   { label: "Learn", action: "learn" },
@@ -43,6 +68,7 @@ const FOOTER_SUPPORT = [
 
 const PublicUseCasePage = ({
   onGoHome,
+  onViewUseCases,
   onOpenUseCase,
   onViewPricing,
   onViewAbout,
@@ -52,6 +78,7 @@ const PublicUseCasePage = ({
   onViewPrivacy,
   onViewTerms,
 }) => {
+  const navigate = useNavigate();
   const footerAction = (action) => {
     switch (action) {
       case "learn": onViewLearn?.(); break;
@@ -64,8 +91,9 @@ const PublicUseCasePage = ({
   };
 
   const { useCaseId } = useParams();
-  const useCase = useMemo(() => USE_CASES[useCaseId] ?? null, [useCaseId]);
-  const currentFeatureIndex = FEATURE_IDS.indexOf(useCaseId);
+  const featureId = FEATURE_IDS_BY_SLUG[useCaseId] ?? useCaseId;
+  const useCase = useMemo(() => USE_CASES[featureId] ?? null, [featureId]);
+  const currentFeatureIndex = FEATURE_IDS.indexOf(featureId);
   const previousFeature = currentFeatureIndex >= 0
     ? USE_CASES[FEATURE_IDS[(currentFeatureIndex - 1 + FEATURE_IDS.length) % FEATURE_IDS.length]]
     : null;
@@ -75,14 +103,29 @@ const PublicUseCasePage = ({
   const featurePosition = currentFeatureIndex >= 0 ? currentFeatureIndex + 1 : 0;
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    const canonicalSlug = useCase?.slug ?? useCase?.id;
+    if (canonicalSlug && useCaseId !== canonicalSlug) {
+      navigate(`/use-case/${canonicalSlug}`, { replace: true });
+      return;
     }
-  }, [useCaseId]);
+    scrollPageToTop();
+    window.requestAnimationFrame(scrollPageToTop);
+    window.setTimeout(scrollPageToTop, 80);
+    window.setTimeout(scrollPageToTop, 250);
+  }, [featureId, navigate, useCase, useCaseId]);
 
   const openFeature = (featureId) => {
-    if (!featureId || featureId === useCaseId) return;
+    if (!featureId || featureId === useCase?.id) return;
+    scrollPageToTop();
     onOpenUseCase?.(featureId);
+    window.requestAnimationFrame(scrollPageToTop);
+    window.setTimeout(scrollPageToTop, 80);
+    window.setTimeout(scrollPageToTop, 250);
+  };
+
+  const viewAllUseCases = () => {
+    scrollPageToTop();
+    onViewUseCases?.();
   };
 
   if (!useCase) {
@@ -126,7 +169,7 @@ const PublicUseCasePage = ({
   }
 
   return (
-    <div className="usecase">
+    <div className="usecase" key={featureId}>
       {/* ── Fixed Glass Header ────────────────────────────────── */}
       <header className="usecase__header">
         <nav className="usecase__nav" aria-label="Main navigation">
@@ -140,7 +183,7 @@ const PublicUseCasePage = ({
               LouisAI
             </button>
             <div className="usecase__nav-links">
-              <button type="button" className="usecase__nav-link" onClick={onGoHome}>
+              <button type="button" className="usecase__nav-link" onClick={viewAllUseCases}>
                 Use Cases
               </button>
               <button type="button" className="usecase__nav-link" onClick={onViewPricing}>
@@ -172,7 +215,7 @@ const PublicUseCasePage = ({
             Home
           </button>
           <span className="usecase__breadcrumb-sep" aria-hidden="true">/</span>
-          <button type="button" className="usecase__breadcrumb-link" onClick={onGoHome}>
+          <button type="button" className="usecase__breadcrumb-link" onClick={viewAllUseCases}>
             Use Cases
           </button>
           <span className="usecase__breadcrumb-sep" aria-hidden="true">/</span>
@@ -216,10 +259,10 @@ const PublicUseCasePage = ({
               </div>
             }
           >
-            {AI_DRAFTING_LIVE.has(useCaseId) ? (
-              <LiveFeatureDemo demoId={useCaseId} />
-            ) : SCENARIO_LIVE.has(useCaseId) ? (
-              <LiveScenarioDemo demoId={useCaseId} />
+            {AI_DRAFTING_LIVE.has(featureId) ? (
+              <LiveFeatureDemo demoId={featureId} />
+            ) : SCENARIO_LIVE.has(featureId) ? (
+              <LiveScenarioDemo demoId={featureId} />
             ) : null}
           </Suspense>
         </section>
@@ -302,7 +345,7 @@ const PublicUseCasePage = ({
             <button
               type="button"
               className="usecase__feature-nav-home"
-              onClick={onGoHome}
+              onClick={viewAllUseCases}
               aria-label="View all use cases"
             >
               <span className="material-symbols-outlined" aria-hidden="true">apps</span>

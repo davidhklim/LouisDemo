@@ -1,6 +1,8 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useLayoutEffect } from "react";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import PublicLandingPage from "./components/PublicLandingPage";
 import PublicUseCasePage from "./components/PublicUseCasePage";
+import { FEATURE_SLUGS_BY_ID } from "./data/features";
 import PublicAboutPage from "./components/PublicAboutPage";
 import LearnPage from "./components/learn/LearnPage";
 import LearnTermDetail from "./components/learn/LearnTermDetail";
@@ -11,12 +13,58 @@ import PublicEditorPage from "./components/PublicEditorPage";
 
 export default function App() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const goHome = () => navigate("/");
+  const goUseCases = () => navigate("/", { state: { scrollTo: "use-cases", nonce: Date.now() } });
   const goComingSoon = () => navigate("/coming-soon");
   const goAbout = () => navigate("/about");
   const goLearn = () => navigate("/learn");
-  const openUseCase = (id) => navigate(`/use-case/${id}`);
+  const openUseCase = (id) => {
+    const slug = FEATURE_SLUGS_BY_ID[id] ?? id;
+    navigate(`/use-case/${slug}`, { state: { scrollTo: "top", nonce: Date.now() } });
+  };
+
+  useLayoutEffect(() => {
+    const resetScroll = () => {
+      const targets = [
+        document.scrollingElement,
+        document.documentElement,
+        document.body,
+        document.getElementById("root"),
+      ].filter(Boolean);
+
+      targets.forEach((target) => {
+        target.scrollTop = 0;
+        target.scrollLeft = 0;
+      });
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    };
+
+    const scrollToUseCases = () => {
+      const section = document.querySelector(".landing__features");
+      if (!section) {
+        resetScroll();
+        return;
+      }
+
+      section.scrollIntoView({ block: "start", behavior: "auto" });
+    };
+
+    if (location.pathname === "/" && location.state?.scrollTo === "use-cases") {
+      scrollToUseCases();
+      window.requestAnimationFrame(scrollToUseCases);
+      window.setTimeout(scrollToUseCases, 80);
+      return;
+    }
+
+    if (location.pathname.startsWith("/use-case/") || location.state?.scrollTo === "top") {
+      resetScroll();
+      window.requestAnimationFrame(resetScroll);
+      window.setTimeout(resetScroll, 80);
+      window.setTimeout(resetScroll, 250);
+    }
+  }, [location.key, location.pathname, location.state]);
 
   return (
     <Routes>
@@ -29,6 +77,7 @@ export default function App() {
             onViewPricing={goComingSoon}
             onViewAbout={goAbout}
             onViewLearn={goLearn}
+            onViewUseCases={goUseCases}
             onOpenUseCase={openUseCase}
             onViewPrivacy={() => navigate("/privacy")}
             onViewTerms={() => navigate("/terms")}
@@ -40,6 +89,7 @@ export default function App() {
         element={
           <PublicUseCasePage
             onGoHome={goHome}
+            onViewUseCases={goUseCases}
             onOpenUseCase={openUseCase}
             onGetStarted={goComingSoon}
             onSignIn={goComingSoon}
@@ -64,7 +114,7 @@ export default function App() {
             onViewLearn={goLearn}
             onViewPrivacy={() => navigate("/privacy")}
             onViewTerms={() => navigate("/terms")}
-            onViewUseCases={() => openUseCase("ai-drafting")}
+            onViewUseCases={goUseCases}
           />
         }
       />
@@ -130,6 +180,7 @@ export default function App() {
             onViewPricing={goComingSoon}
             onViewAbout={goAbout}
             onViewLearn={goLearn}
+            onViewUseCases={goUseCases}
             onOpenUseCase={openUseCase}
             onViewPrivacy={() => navigate("/privacy")}
             onViewTerms={() => navigate("/terms")}

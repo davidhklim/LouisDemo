@@ -344,6 +344,15 @@
 .live-demo__narration--top-left    { top: 20px; left: 20px; }
 .live-demo__narration--bottom-right { bottom: 20px; right: 20px; }
 .live-demo__narration--bottom-left  { bottom: 20px; left: 20px; }
+.live-demo__narration--clause-left  { top: 46%; left: 28px; }
+.live-demo__narration--clause-below { top: 58%; left: 54px; }
+.live-demo__narration--prompt-left  { top: 128px; right: 340px; }
+.live-demo__narration--draft-left   { bottom: 112px; right: 340px; }
+.live-demo__narration--insert-left  { bottom: 44px; right: 340px; }
+.live-demo__narration--follow {
+  left: var(--narration-left, 20px);
+  top: var(--narration-top, 20px);
+}
 
 @keyframes live-demo-narration-in {
   from { opacity: 0; transform: translateY(8px); }
@@ -609,6 +618,17 @@
 
   .live-demo__narration {
     max-width: 260px;
+  }
+
+  .live-demo__narration--clause-left,
+  .live-demo__narration--clause-below,
+  .live-demo__narration--prompt-left,
+  .live-demo__narration--draft-left,
+  .live-demo__narration--insert-left {
+    top: 20px;
+    right: 20px;
+    bottom: auto;
+    left: auto;
   }
 
   .live-demo__header-right {

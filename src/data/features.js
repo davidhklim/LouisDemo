@@ -59,6 +59,7 @@ export const FEATURES = [
   /* ── 2. Collaborative Editing ────────────────────────────────── */
   {
     id: "document-storage",
+    slug: "collaborative-document-editing",
     icon: "edit_note",
     title: "Collaborative Document Editing",
     shortTitle: "Collaborative Editing",
@@ -956,6 +957,19 @@ export const FEATURES = [
 /** Lookup map by feature id. */
 export const FEATURES_BY_ID = FEATURES.reduce((acc, f) => {
   acc[f.id] = f;
+  return acc;
+}, {});
+
+/** Public use-case slugs. Defaults to id unless a feature has a better URL. */
+export const FEATURE_SLUGS_BY_ID = FEATURES.reduce((acc, f) => {
+  acc[f.id] = f.slug ?? f.id;
+  return acc;
+}, {});
+
+/** Resolve a URL slug or legacy id back to a feature id. */
+export const FEATURE_IDS_BY_SLUG = FEATURES.reduce((acc, f) => {
+  acc[f.id] = f.id;
+  acc[f.slug ?? f.id] = f.id;
   return acc;
 }, {});
 

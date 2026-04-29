@@ -77,13 +77,15 @@ const buildFsm = () => {
       on: { SELECT_CLAUSE: STATES.ENTERING_PROMPT },
     },
     [STATES.ENTERING_PROMPT]: { on: { START_PROMPT: STATES.TYPING_PROMPT } },
-    [STATES.TYPING_PROMPT]: { on: { PROMPT_DONE: STATES.GENERATING } },
+    [STATES.TYPING_PROMPT]: { on: { PROMPT_DONE: STATES.WAITING_FOR_GENERATE } },
+    [STATES.WAITING_FOR_GENERATE]: { on: { GENERATE: STATES.GENERATING } },
     [STATES.GENERATING]: {
       on: {
-        STREAM_DONE: STATES.WAITING_FOR_INSERT,
+        STREAM_DONE: STATES.REVIEWING_DRAFT,
         STREAM_FAIL: STATES.ENTERING_PROMPT,
       },
     },
+    [STATES.REVIEWING_DRAFT]: { on: { REVIEW_DRAFT: STATES.WAITING_FOR_INSERT } },
     [STATES.WAITING_FOR_INSERT]: { on: { INSERT: STATES.DONE } },
     [STATES.DONE]: { on: { RESTART: STATES.WAITING_FOR_SELECTION } },
   };
@@ -258,11 +260,15 @@ const ScriptedAssistantPanel = ({
   streaming,
   error,
   onPromptClick,
+  onGenerate,
+  onReviewDraft,
   onInsert,
 }) => {
   const promptActive = config?.indicator === "prompt";
+  const generateActive = config?.indicator === "generate-btn";
   const promptTyping = state === STATES.TYPING_PROMPT;
   const promptComplete =
+    state === STATES.WAITING_FOR_GENERATE ||
     state === STATES.GENERATING ||
     state === STATES.WAITING_FOR_INSERT ||
     state === STATES.DONE;
@@ -272,6 +278,7 @@ const ScriptedAssistantPanel = ({
   const hasSelection = selectionText.length > 0;
   const hasDraft = Boolean(draftText || streamingText);
   const displayedDraft = streaming && streamingText ? streamingText : draftText;
+  const reviewDraftActive = state === STATES.REVIEWING_DRAFT;
 
   return (
     <div className="live-demo__scripted-panel">
@@ -387,6 +394,39 @@ const ScriptedAssistantPanel = ({
                 <span className="scene-target__tooltip">{config.tooltip}</span>
               ) : null}
             </div>
+            <div className="live-demo__panel-actions">
+              <div
+                className={`scene-target ${
+                  generateActive ? "scene-target--active" : ""
+                }`}
+                role={generateActive ? "button" : undefined}
+                tabIndex={generateActive ? 0 : -1}
+                onClick={generateActive ? onGenerate : undefined}
+                onKeyDown={
+                  generateActive
+                    ? (e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          onGenerate?.();
+                        }
+                      }
+                    : undefined
+                }
+              >
+                <button
+                  type="button"
+                  className={`scene-btn scene-btn--primary${
+                    generateActive ? "" : " scene-btn--dim"
+                  }`}
+                  disabled
+                >
+                  Generate
+                </button>
+                {generateActive && config?.tooltip ? (
+                  <span className="scene-target__tooltip">{config.tooltip}</span>
+                ) : null}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -396,6 +436,19 @@ const ScriptedAssistantPanel = ({
             className={`scene-target ${
               draftActive ? "scene-target--active" : ""
             } live-demo__panel-card live-demo__panel-card--step live-demo__panel-card--draft`}
+            role={reviewDraftActive ? "button" : undefined}
+            tabIndex={reviewDraftActive ? 0 : -1}
+            onClick={reviewDraftActive ? onReviewDraft : undefined}
+            onKeyDown={
+              reviewDraftActive
+                ? (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      onReviewDraft?.();
+                    }
+                  }
+                : undefined
+            }
           >
             <div className="live-demo__panel-step-badge" aria-hidden="true">
               3
@@ -421,7 +474,7 @@ const ScriptedAssistantPanel = ({
                 </div>
               )}
 
-              {state !== STATES.GENERATING && hasDraft ? (
+              {(state === STATES.WAITING_FOR_INSERT || state === STATES.DONE) && hasDraft ? (
                 <div className="live-demo__panel-actions">
                   <button
                     type="button"
@@ -466,6 +519,9 @@ const ScriptedAssistantPanel = ({
                 </div>
               ) : null}
             </div>
+            {reviewDraftActive && config?.tooltip ? (
+              <span className="scene-target__tooltip">{config.tooltip}</span>
+            ) : null}
           </div>
         ) : null}
 
@@ -568,12 +624,7 @@ const LiveFeatureDemo = ({ demoId = "ai-drafting" }) => {
     setSelectionText(DEMO_SELECTION_TEXT);
     setPromptText("");
     transition("SELECT_CLAUSE");
-  }, []);
-
-  useEffect(() => {
-    if (state !== STATES.GENERATING || generationStartedRef.current) return;
-    runGenerate();
-  }, [state, runGenerate]);
+  }, [state, transition]);
 
   const handlePromptClick = useCallback(() => {
     if (state !== STATES.ENTERING_PROMPT) return;
@@ -598,6 +649,8 @@ const LiveFeatureDemo = ({ demoId = "ai-drafting" }) => {
 
   /* ── Handler: Generate → stream the stubbed SSE response ───────── */
   const runGenerate = useCallback(async () => {
+    if (state !== STATES.WAITING_FOR_GENERATE) return;
+    transition("GENERATE");
     generationStartedRef.current = true;
     setStreaming(true);
     setStreamingText("");
@@ -660,6 +713,7 @@ const LiveFeatureDemo = ({ demoId = "ai-drafting" }) => {
       transitionRef.current("STREAM_DONE");
     } catch (err) {
       setError(err?.message || "Unable to reach Louis.");
+      generationStartedRef.current = false;
       transitionRef.current("STREAM_FAIL");
     } finally {
       setStreaming(false);
@@ -670,6 +724,11 @@ const LiveFeatureDemo = ({ demoId = "ai-drafting" }) => {
   const runInsert = useCallback(() => {
     if (state !== STATES.WAITING_FOR_INSERT) return;
     transition("INSERT");
+  }, [state, transition]);
+
+  const handleReviewDraft = useCallback(() => {
+    if (state !== STATES.REVIEWING_DRAFT) return;
+    transition("REVIEW_DRAFT");
   }, [state, transition]);
 
   /* ── Handler: Start Over ─────────────────────────────────────────── */
@@ -695,6 +754,14 @@ const LiveFeatureDemo = ({ demoId = "ai-drafting" }) => {
 
   const isDone = state === STATES.DONE;
   const isRestartLive = isDone;
+  const narrationStepKey =
+    state === STATES.ENTERING_PROMPT ||
+    state === STATES.TYPING_PROMPT ||
+    state === STATES.WAITING_FOR_GENERATE
+      ? "prompt-generate"
+      : state === STATES.GENERATING || state === STATES.REVIEWING_DRAFT
+        ? "draft-review"
+      : state;
 
   return (
     <div
@@ -755,6 +822,8 @@ const LiveFeatureDemo = ({ demoId = "ai-drafting" }) => {
               streaming={streaming}
               error={error}
               onPromptClick={handlePromptClick}
+              onGenerate={runGenerate}
+              onReviewDraft={handleReviewDraft}
               onInsert={runInsert}
             />
           </div>
@@ -763,7 +832,7 @@ const LiveFeatureDemo = ({ demoId = "ai-drafting" }) => {
         <NarrationCard
           narration={stateConfig.narration}
           corner={stateConfig.narrationCorner ?? "bottom-left"}
-          stepKey={state}
+          stepKey={narrationStepKey}
           isDone={isDone}
         />
 

@@ -97,7 +97,9 @@ export const STATES = {
   WAITING_FOR_SELECTION: "WAITING_FOR_SELECTION",
   ENTERING_PROMPT: "ENTERING_PROMPT",
   TYPING_PROMPT: "TYPING_PROMPT",
+  WAITING_FOR_GENERATE: "WAITING_FOR_GENERATE",
   GENERATING: "GENERATING",
+  REVIEWING_DRAFT: "REVIEWING_DRAFT",
   WAITING_FOR_INSERT: "WAITING_FOR_INSERT",
   DONE: "DONE",
 };
@@ -118,7 +120,7 @@ export const STATE_CONFIG = {
   [STATES.WAITING_FOR_SELECTION]: {
     step: 1,
     indicator: "clause",
-    narrationCorner: "bottom-left",
+    narrationCorner: "clause-below",
     tooltip: "Click the bracketed placeholder",
     narration: {
       title: "Click the placeholder to fill",
@@ -131,7 +133,7 @@ export const STATE_CONFIG = {
   [STATES.ENTERING_PROMPT]: {
     step: 1,
     indicator: "prompt",
-    narrationCorner: "bottom-left",
+    narrationCorner: "prompt-left",
     tooltip: "Click to type prompt",
     narration: {
       title: "Insert the drafting prompt",
@@ -144,21 +146,47 @@ export const STATE_CONFIG = {
   [STATES.TYPING_PROMPT]: {
     step: 1,
     indicator: "prompt",
-    narrationCorner: "bottom-left",
+    narrationCorner: "prompt-left",
     tooltip: "Typing prompt",
     narration: {
-      title: "Prompt being entered",
+      title: "Prompt ready for Louis",
       body:
-        "The drafting prompt captures the facts the user knows. Louis then " +
-        "uses the prompt, company context, and the selected bracket to draft " +
-        "specific contract language.",
+        "The prompt captures the facts the user knows. Click Generate so " +
+        "Louis can combine that prompt, stored company data, and the " +
+        "selected placeholder into context-specific contract language.",
+    },
+  },
+  [STATES.WAITING_FOR_GENERATE]: {
+    step: 1,
+    indicator: "generate-btn",
+    narrationCorner: "prompt-left",
+    tooltip: "Click Generate",
+    narration: {
+      title: "Prompt ready for Louis",
+      body:
+        "The prompt captures the facts the user knows. Click Generate so " +
+        "Louis can combine that prompt, stored company data, and the " +
+        "selected placeholder into context-specific contract language.",
     },
   },
   [STATES.GENERATING]: {
     step: 2,
     indicator: "draft",
-    narrationCorner: "bottom-left",
+    narrationCorner: "draft-left",
     tooltip: null,
+    narration: {
+      title: "Generating with company context",
+      body:
+        "Louis is using the drafting prompt, the selected bracket, and " +
+        "company context to structure Priya's prior projects into the " +
+        "formal phrasing this agreement needs.",
+    },
+  },
+  [STATES.REVIEWING_DRAFT]: {
+    step: 2,
+    indicator: "draft",
+    narrationCorner: "draft-left",
+    tooltip: "Click Edit & insert",
     narration: {
       title: "Generating with company context",
       body:
@@ -170,7 +198,7 @@ export const STATE_CONFIG = {
   [STATES.WAITING_FOR_INSERT]: {
     step: 3,
     indicator: "insert-btn",
-    narrationCorner: "bottom-left",
+    narrationCorner: "insert-left",
     tooltip: "Click Insert into Document",
     narration: {
       title: "Review and insert",

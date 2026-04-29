@@ -75,14 +75,22 @@ const PublicLandingPage = ({
   onViewPricing,
   onViewAbout,
   onViewLearn,
+  onViewUseCases,
   onOpenUseCase,
   onViewPrivacy,
   onViewTerms,
 }) => {
+  const scrollToFeatures = () => {
+    document.querySelector(".landing__features")?.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+  };
+
   const footerAction = (action) => {
     switch (action) {
       case "features":
-        document.querySelector(".landing__features")?.scrollIntoView({ behavior: "smooth" });
+        scrollToFeatures();
         break;
       case "pricing": onViewPricing?.(); break;
       case "templates": onGetStarted?.(); break;
@@ -110,7 +118,7 @@ const PublicLandingPage = ({
               LouisAI
             </button>
             <div className="landing__nav-links">
-              <button type="button" className="landing__nav-link" onClick={() => onOpenUseCase?.("ai-drafting")}>
+              <button type="button" className="landing__nav-link" onClick={onViewUseCases ?? scrollToFeatures}>
                 Use Cases
               </button>
               <button type="button" className="landing__nav-link" onClick={onViewPricing}>

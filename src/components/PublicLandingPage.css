@@ -152,7 +152,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 64px;
+  gap: clamp(80px, 7vw, 104px);
 }
 
 .landing__hero-text {
@@ -263,6 +263,7 @@
   min-width: 0;
   width: 100%;
   position: relative;
+  margin-left: 16px;
 }
 
 .landing__hero-card {
@@ -392,6 +393,7 @@
 
 /* ── Features Grid ──────────────────────────────────────────── */
 .landing__features {
+  scroll-margin-top: 80px;
   background: var(--surface-container-low);
   padding: 128px 32px;
 }
@@ -773,6 +775,10 @@ button.landing__feature-card {
     flex-direction: column;
     padding: 64px 24px 80px;
     gap: 48px;
+  }
+
+  .landing__hero-visual {
+    margin-left: 0;
   }
 
   .landing__hero-headline {
