@@ -101,6 +101,10 @@ const PublicUseCasePage = ({
     ? USE_CASES[FEATURE_IDS[(currentFeatureIndex + 1) % FEATURE_IDS.length]]
     : null;
   const featurePosition = currentFeatureIndex >= 0 ? currentFeatureIndex + 1 : 0;
+  const ctaUseCaseLabel =
+    featureId === "ai-drafting"
+      ? "AI-assisted legal drafting"
+      : useCase?.title.toLowerCase();
 
   useEffect(() => {
     const canonicalSlug = useCase?.slug ?? useCase?.id;
@@ -302,7 +306,7 @@ const PublicUseCasePage = ({
               ))}
             </div>
             <h2 className="usecase__cta-heading usecase-serif">
-              Ready to try {useCase.title.toLowerCase()}?
+              Ready to try {ctaUseCaseLabel}?
             </h2>
             <p className="usecase__cta-body">
               Start building with LouisAI today — no credit card required.
