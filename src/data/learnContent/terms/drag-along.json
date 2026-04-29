@@ -1,0 +1,42 @@
+{
+  "id": "term-drag-along",
+  "type": "term",
+  "slug": "drag-along",
+  "term": "Drag-Along Right",
+  "definition": "A drag-along right gives majority shareholders the power to force minority shareholders to sell their shares in a company acquisition, on the same price and terms. If the majority decides to sell the company, minority shareholders cannot block or hold out — they are legally compelled to sell alongside. It exists to ensure a clean acquisition exit without a small number of shareholders derailing a deal that the majority has approved.",
+  "formalDefinition": "A contractual right entitling a specified majority of shareholders, or a combination of the board of directors and a majority shareholder class, to compel the remaining shareholders to sell, transfer, or vote their shares in connection with a bona fide arm's-length transaction, subject to the minority receiving the same per-share consideration and on the same terms as the triggering majority.",
+  "synonyms": [
+    "drag-along",
+    "drag right",
+    "bring-along right",
+    "come-along right",
+    "forced sale right",
+    "majority drag",
+    "drag-along provision",
+    "compulsory transfer right"
+  ],
+  "relatedPhrases": [
+    "drag-along notice",
+    "drag-along transaction",
+    "same price and same terms",
+    "arm's-length transaction",
+    "majority approval threshold",
+    "requisite majority",
+    "compelled transfer",
+    "drag-along exercise period"
+  ],
+  "whenYouSeeThis": "Drag-along rights appear in shareholders agreements, investors' rights agreements, and ROFR/co-sale agreements. They are standard in virtually all venture-backed Canadian companies. CVCA model documents include drag-along provisions triggered by approval of both the board of directors and holders of a specified percentage of preferred shares (commonly 66.7%). They also appear in employment agreements and option plans where unvested equity must be dragged.",
+  "founderNote": "As a founder, the drag-along is your friend at exit — it prevents a minority investor or ex-employee with 1% from holding the company hostage during an acquisition. Pay close attention to the trigger threshold: a drag at 50% majority preferred approval is much easier to activate than one requiring 66.7% or 75%. Also check whether the drag applies to common shareholders (including founders) equally or only to minority preferred holders. In the CVCA model, the drag requires both board approval and a majority preferred vote — this means founders cannot be dragged without investor support, and investors cannot drag without board support. That dual-key structure is fair and is the standard you should insist on.",
+  "relatedTermSlugs": [
+    "tag-along",
+    "right-of-first-refusal",
+    "unanimous-shareholder-agreement",
+    "share-structure"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "shareholders-agreement",
+    "rofr-co-sale-agreement"
+  ],
+  "updatedAt": "2026-04-10"
+}

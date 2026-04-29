@@ -1,0 +1,46 @@
+{
+  "id": "term-cap-table",
+  "type": "term",
+  "slug": "cap-table",
+  "term": "Cap Table (Capitalization Table)",
+  "definition": "A cap table (short for capitalization table) is a spreadsheet or document that lists every shareholder in a company, the type and number of shares they hold, their ownership percentage, and the price they paid. It also tracks options, warrants, convertible notes, and SAFEs that could convert into shares in the future. A fully diluted cap table shows what ownership would look like if all of these instruments converted into shares. The cap table is the single source of truth for who owns what, and it changes every time the company issues shares, grants options, or closes a financing round.",
+  "formalDefinition": "A capitalization table is a record of a corporation's equity ownership, including all issued and outstanding shares by class, options and warrants granted under equity incentive plans (vested and unvested), convertible instruments (convertible notes, SAFEs, convertible debentures), and the resulting ownership percentages on both an issued-and-outstanding and fully diluted basis. It is derived from the corporation's central securities register, share subscription records, option plan ledger, and outstanding convertible instrument terms.",
+  "synonyms": [
+    "cap table",
+    "capitalization table",
+    "ownership table",
+    "equity table",
+    "share register",
+    "central securities register"
+  ],
+  "relatedPhrases": [
+    "fully diluted",
+    "issued and outstanding",
+    "option pool",
+    "ESOP",
+    "convertible instruments",
+    "pre-money cap table",
+    "post-money cap table",
+    "waterfall analysis",
+    "liquidation waterfall",
+    "pro rata ownership"
+  ],
+  "whenYouSeeThis": "Cap tables are referenced in term sheets, subscription agreements, share purchase agreements, option agreements, and investors' rights agreements. They are a required item in any data room for due diligence. The cap table is also the basis for calculating the option pool, determining pro rata rights, and modeling the economic outcome of a liquidation event.",
+  "founderNote": "Keep your cap table clean and up to date from day one. Errors compound and are expensive to fix later. Track every share issuance, option grant, and convertible instrument. Use a fully diluted view when negotiating with investors so there are no surprises. Before each financing round, model the post-money cap table to understand exactly how much dilution you will experience. Common mistakes: forgetting to account for the option pool expansion (which typically comes out of the founders' share before the investors' money comes in), and not tracking convertible notes that may convert at a discount to the round price.",
+  "relatedTermSlugs": [
+    "share-structure",
+    "dilution",
+    "vesting"
+  ],
+  "relatedTemplateIds": [
+    "tpl-shareholder-register"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "founder",
+    "investor"
+  ]
+}

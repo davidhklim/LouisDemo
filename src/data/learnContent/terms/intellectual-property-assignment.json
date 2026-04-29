@@ -1,0 +1,45 @@
+{
+  "id": "term-intellectual-property-assignment",
+  "type": "term",
+  "slug": "intellectual-property-assignment",
+  "term": "Intellectual Property Assignment",
+  "definition": "A legal transfer of ownership of intellectual property — patents, copyrights, trade secrets, trademarks, and software — from one party to the corporation. In a startup context, this typically means founders assign all IP they created before and during their involvement to the company. Without an IP assignment, the company may not actually own its core technology, which becomes a fatal problem in any due diligence process.",
+  "formalDefinition": "A written instrument by which an assignor transfers all right, title, and interest in specified intellectual property rights to an assignee, including the right to sue for past infringement, effective upon execution and delivery without further consideration.",
+  "synonyms": [
+    "IP assignment",
+    "IP transfer",
+    "assignment of intellectual property",
+    "assignment of inventions",
+    "proprietary information and inventions agreement",
+    "PIIA",
+    "invention assignment agreement",
+    "IP vesting agreement",
+    "assignment of copyright",
+    "work-for-hire agreement"
+  ],
+  "relatedPhrases": [
+    "assigns, transfers, and conveys all right, title, and interest",
+    "prior inventions",
+    "work made for hire",
+    "moral rights waiver",
+    "pre-incorporation IP",
+    "all intellectual property conceived, developed, or reduced to practice",
+    "whether or not patentable",
+    "schedule of prior inventions"
+  ],
+  "whenYouSeeThis": "IP assignment clauses appear in employment agreements, contractor/consulting agreements, and standalone IP assignment agreements. Investors will look for signed IP assignments from all founders and key employees during due diligence for any equity financing. The absence of a clean IP assignment is one of the most common deal-blocking issues in early-stage financings.",
+  "founderNote": "Two timing issues matter most for Canadian founders. First, pre-incorporation IP: anything you built before the company was incorporated is owned by you personally, not the company — you must explicitly assign it. Second, contractor work: under the Canadian Copyright Act, copyright in work created by an independent contractor belongs to the contractor, not the person who paid for it (unlike the US work-made-for-hire doctrine). Every contractor who touches your codebase, design system, or content must sign an IP assignment. This is non-negotiable for any serious investor.",
+  "relatedTermSlugs": [
+    "non-compete"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "ip-assignment-agreement",
+    "employment-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "founder",
+    "adviser"
+  ]
+}

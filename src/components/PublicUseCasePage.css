@@ -1,7 +1,6 @@
 /* ─────────────────────────────────────────────────────────────
    PublicUseCasePage.css — Investor-webpage
-   Stitch design: use case detail page
-   Ported from wireframe-app/client/src/components/PublicUseCasePage.css
+   Use case detail page
 ───────────────────────────────────────────────────────────── */
 
 /* ── Token ─────────────────────────────────────────────────── */
@@ -186,6 +185,13 @@
   gap: 24px;
 }
 
+.usecase__hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .usecase__hero-badge {
   font-size: 0.625rem;
   font-weight: 700;
@@ -196,7 +202,12 @@
   display: inline-block;
   padding: 6px 12px;
   border-radius: 4px;
-  align-self: flex-start;
+}
+
+.usecase__hero-badge--coming-soon {
+  color: #b91c1c;
+  background: rgba(220, 38, 38, 0.10);
+  border: 1px solid rgba(220, 38, 38, 0.25);
 }
 
 .usecase__hero-headline {
@@ -220,6 +231,12 @@
 
 /* ── Video Section — ENLARGED ──────────────────────────────── */
 .usecase__video-section {
+  padding: 0 0 64px;
+}
+
+/* Interactive demo variant — keeps the same outer rhythm but lets the
+   embedded live demo manage its own border, shadow, and rounding. */
+.usecase__video-section--demo {
   padding: 0 0 64px;
 }
 
@@ -412,7 +429,7 @@
 
 /* ── CTA Section ────────────────────────────────────────────── */
 .usecase__cta-section {
-  padding: 0 0 128px;
+  padding: 0 0 48px;
 }
 
 .usecase__cta-card {
@@ -495,7 +512,125 @@
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-/* ── Footer ─────────────────────────────────────────────────── */
+/* Feature Navigation */
+.usecase__feature-nav {
+  padding: 0 0 128px;
+  border-top: 1px solid var(--outline-variant);
+}
+
+.usecase__feature-nav-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 40px 0 24px;
+}
+
+.usecase__feature-nav-count {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.usecase__feature-nav-title {
+  color: var(--text-primary);
+  font-family: 'Newsreader', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.usecase__feature-nav-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: 16px;
+}
+
+.usecase__feature-nav-button,
+.usecase__feature-nav-home {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container-lowest);
+  color: var(--text-primary);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.usecase__feature-nav-button {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 12px;
+}
+
+.usecase__feature-nav-button--next {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.usecase__feature-nav-home {
+  min-height: 88px;
+  min-width: 152px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.usecase__feature-nav-button:hover,
+.usecase__feature-nav-home:hover {
+  border-color: rgba(18, 18, 18, 0.16);
+  box-shadow: var(--editorial-shadow);
+  transform: translateY(-2px);
+}
+
+.usecase__feature-nav-button:focus-visible,
+.usecase__feature-nav-home:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.usecase__feature-nav-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.usecase__feature-nav-kicker {
+  color: var(--text-muted);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.usecase__feature-nav-name {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.usecase__feature-nav-button .material-symbols-outlined,
+.usecase__feature-nav-home .material-symbols-outlined {
+  flex: 0 0 auto;
+  color: var(--gold-color);
+  font-size: 1.25rem;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Footer */
 .usecase__footer {
   background: var(--surface-container-low);
   padding: 80px 32px;
@@ -622,6 +757,24 @@
 
   .usecase__cta-card {
     padding: 48px 32px;
+  }
+
+  .usecase__feature-nav-heading {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  .usecase__feature-nav-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .usecase__feature-nav-button--next {
+    text-align: left;
+  }
+
+  .usecase__feature-nav-button--next .material-symbols-outlined {
+    order: -1;
   }
 
   .usecase__footer-top {

@@ -1,0 +1,39 @@
+{
+  "id": "term-capital-gains-exemption",
+  "type": "term",
+  "slug": "capital-gains-exemption",
+  "term": "Lifetime Capital Gains Exemption (LCGE)",
+  "definition": "The lifetime capital gains exemption allows Canadian residents to shelter a significant amount of capital gains from tax when selling qualified small business corporation (QSBC) shares. Effective June 25, 2024, the federal government increased the lifetime limit to $1,250,000 per individual for QSBC share dispositions (up from approximately $1,016,836 in 2023), and the limit continues to be indexed annually to inflation. This means that if you sell your startup shares for a $1.25 million gain and the shares qualify, you pay zero tax on that gain. Each individual gets their own exemption, so a married couple founding a company together could potentially shelter over $2.5 million in combined gains. Confirm the current indexed limit with a tax advisor before any exit transaction. This is one of the most valuable tax benefits available to Canadian entrepreneurs.",
+  "formalDefinition": "Under s. 110.6 of the Income Tax Act (Canada), an individual resident in Canada may claim a deduction in computing taxable income equal to the capital gains inclusion rate applied to net gains realized on the disposition of qualified small business corporation shares, up to the cumulative lifetime limit (adjusted annually for inflation). To qualify, the shares must be of a CCPC, more than 50% of the fair market value of the corporation's assets must be used in active business in Canada at the time of disposition, and the shares must have been held by the taxpayer (or a related person) throughout the 24-month period preceding disposition during which time substantially all (90%+) of the corporation's assets were used in active business.",
+  "synonyms": [
+    "LCGE",
+    "lifetime capital gains exemption",
+    "capital gains exemption",
+    "QSBC exemption",
+    "s. 110.6 exemption",
+    "CGE",
+    "small business capital gains exemption"
+  ],
+  "relatedPhrases": [
+    "qualified small business corporation shares",
+    "QSBC shares",
+    "active business assets",
+    "90% asset test",
+    "24-month holding period",
+    "50% asset test at time of sale",
+    "purification",
+    "crystallization",
+    "capital gains reserve",
+    "lifetime limit"
+  ],
+  "whenYouSeeThis": "The LCGE is discussed in tax planning documents, corporate reorganization plans, share purchase agreements (asset test compliance), and exit planning advice. Tax advisors may recommend 'purification' (removing non-active-business assets) or 'crystallization' (triggering a deemed disposition to lock in the exemption at current values) as strategies to maximize the benefit.",
+  "founderNote": "This is the single most valuable tax benefit you have as a Canadian startup founder. To protect it: (1) keep your company as a CCPC (watch the non-resident control issue), (2) ensure substantially all assets are used in active business (keep investment assets in a separate holding company), and (3) hold your shares for at least 24 months before selling. Consider crystallizing part of the exemption before a large financing round that might cause you to lose CCPC status. A family trust can multiply the exemption by allocating gains to beneficiaries who each have their own $1.25M+ exemption (as of June 2024, indexed annually). Always get tax advice before an exit event — the dollar limit changes year to year and the asset tests are technical.",
+  "relatedTermSlugs": [
+    "ccpc",
+    "small-business-deduction",
+    "dividend"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [],
+  "updatedAt": "2026-04-11"
+}

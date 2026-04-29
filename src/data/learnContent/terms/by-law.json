@@ -1,0 +1,44 @@
+{
+  "id": "term-by-law",
+  "type": "term",
+  "slug": "by-law",
+  "term": "By-Law",
+  "definition": "A by-law is the internal operating manual of a corporation. It sets out the rules for how the company runs day-to-day: how board meetings are called and conducted, how officers are appointed and removed, how shares are issued and transferred, how the company deals with its bank, and how the corporate seal (if any) is used. By-laws sit below the statute (CBCA or BCBCA) and articles of incorporation in the corporate hierarchy — they fill in procedural detail that the articles and the statute do not specify.",
+  "formalDefinition": "A by-law is a resolution adopted by the board of directors pursuant to the governing corporate statute (e.g., CBCA s. 103 or BCBCA s. 110) that regulates the business and affairs of the corporation, including the conduct of meetings, the powers and duties of directors and officers, and the procedures for share transactions, subject to confirmation by ordinary resolution of the shareholders at the next annual or special meeting following adoption.",
+  "synonyms": [
+    "bylaws",
+    "by-laws",
+    "corporate by-laws",
+    "company by-laws",
+    "general by-law",
+    "by-law no. 1",
+    "general operating by-law",
+    "administrative by-law"
+  ],
+  "relatedPhrases": [
+    "by-law no. 1",
+    "general by-law",
+    "board of directors",
+    "calling of meetings",
+    "quorum",
+    "notice period",
+    "signing authority",
+    "banking resolution",
+    "corporate seal",
+    "shareholders' confirmation"
+  ],
+  "whenYouSeeThis": "By-laws are one of the first corporate documents adopted when a CBCA or BCBCA company is incorporated. They appear in incorporation packages alongside the articles of incorporation, directors' organizational resolutions, and initial share issuance resolutions. By-laws are also attached to board meeting minutes when they are first adopted, and shareholders confirm them by resolution at the first annual meeting or by written resolution in lieu. Investors doing due diligence will ask for the by-laws as part of a corporate records review.",
+  "founderNote": "Most startups use a standard-form By-Law No. 1 at incorporation — your lawyer will provide this and it rarely needs customization at the seed stage. The more important governance document at the early stage is your shareholders agreement, which supplements and in some cases overrides the by-laws for relationship-specific matters (voting rights, share transfer restrictions, etc.). That said, pay attention to two by-law provisions even at seed: (1) quorum requirements for board meetings — if your by-law requires all directors to be present for quorum and you add investor directors, scheduling gets hard; and (2) notice periods for board meetings — a 10-day notice requirement can slow down urgent decisions. Under the CBCA, directors can make, amend, or repeal by-laws without shareholder approval, but shareholders must confirm by ordinary resolution at the next meeting; until confirmation, the by-law is effective but provisional.",
+  "relatedTermSlugs": [
+    "corporation",
+    "articles-of-incorporation"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "by-law"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "corporate-secretary"
+  ]
+}

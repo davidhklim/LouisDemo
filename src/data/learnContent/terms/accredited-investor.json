@@ -1,0 +1,48 @@
+{
+  "id": "term-accredited-investor",
+  "type": "term",
+  "slug": "accredited-investor",
+  "term": "Accredited Investor",
+  "definition": "An accredited investor is an individual or entity that meets specific financial thresholds defined by securities regulators, which allow them to purchase securities (such as shares in a private company) without the company having to prepare a prospectus. In Canada, an individual qualifies if they have net income exceeding $200,000 in each of the two most recent years (or $300,000 combined with a spouse) or net financial assets exceeding $1,000,000. The accredited investor exemption under National Instrument 45-106 is the most commonly used prospectus exemption for Canadian private placements.",
+  "formalDefinition": "Under s. 2.3 of National Instrument 45-106 (Prospectus Exemptions), an accredited investor includes, among others: an individual with net financial assets exceeding $1,000,000 (alone or with a spouse), an individual with net income before taxes exceeding $200,000 in each of the two most recent calendar years (or combined net income with a spouse exceeding $300,000), a person registered under provincial securities legislation, and specified institutional investors. The exemption permits a distribution of securities without a prospectus, subject to reporting requirements and resale restrictions.",
+  "synonyms": [
+    "accredited investor",
+    "AI",
+    "qualified investor",
+    "eligible investor",
+    "sophisticated investor",
+    "NI 45-106 accredited investor"
+  ],
+  "relatedPhrases": [
+    "accredited investor exemption",
+    "prospectus exemption",
+    "private placement",
+    "National Instrument 45-106",
+    "net financial assets",
+    "net income threshold",
+    "accredited investor certificate",
+    "risk acknowledgement",
+    "resale restrictions",
+    "hold period"
+  ],
+  "whenYouSeeThis": "Accredited investor status is verified in subscription agreements, accredited investor certificates, and private placement documents. The accredited investor exemption is the most common way Canadian startups raise capital from angel investors and high-net-worth individuals. You will encounter it every time you raise a seed or Series A round from individual investors.",
+  "founderNote": "Before accepting money from any individual investor, verify their accredited investor status. Have them sign an accredited investor certificate (LouisAI has a template for this). If an investor does not qualify as accredited, you can still accept their investment under other exemptions (friends and family, offering memorandum) but these come with additional requirements and restrictions. Institutional investors (venture capital funds, banks) are automatically accredited. The accredited investor exemption does not require you to prepare an offering memorandum, which saves significant legal costs.",
+  "relatedTermSlugs": [
+    "prospectus-exemption",
+    "private-placement",
+    "safe",
+    "convertible-note"
+  ],
+  "relatedTemplateIds": [
+    "tpl-accredited-investor-certificate",
+    "tpl-subscription-agreement-simple"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "subscription-agreement",
+    "investors-rights-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "investor"
+  ]
+}

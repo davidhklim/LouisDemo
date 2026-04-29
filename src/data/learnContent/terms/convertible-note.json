@@ -1,0 +1,54 @@
+{
+  "id": "term-convertible-note",
+  "type": "term",
+  "slug": "convertible-note",
+  "term": "Convertible Note (Convertible Promissory Note)",
+  "definition": "A convertible note is a loan that is designed to convert into equity shares when the company raises a future priced financing round, rather than being repaid in cash. Unlike a SAFE, a convertible note is real debt: it carries an interest rate (typically 6-10% per year) and has a maturity date (typically 12-24 months) by which the loan must either convert or be repaid. If the company has not raised a qualifying round by the maturity date and cannot repay, the lender is in a legally enforceable default position. Conversion typically happens at a discount to the round price or subject to a valuation cap, rewarding the investor for taking early risk.",
+  "formalDefinition": "A convertible promissory note is a debt instrument evidencing a loan obligation that converts into equity securities of the issuer upon the occurrence of specified triggering events, most commonly a Qualified Financing meeting a minimum threshold. The instrument accrues simple or compound interest at a stated annual rate and matures on a fixed date. At conversion, the outstanding principal and accrued interest typically convert into the class of shares issued in the Qualified Financing at a price calculated by reference to a conversion discount, a valuation cap, or both, whichever yields a lower conversion price. If no triggering event occurs prior to maturity, the holder may demand repayment, negotiate an extension, or, in some instruments, elect to convert at a specified price. In Canada, the accrual of interest creates potential complications for CCPC status and the availability of the small business deduction, and security over company assets (via a general security agreement) may be taken as additional protection for the lender.",
+  "synonyms": [
+    "convertible note",
+    "convertible promissory note",
+    "CPN",
+    "convertible debt",
+    "bridge note",
+    "bridge loan",
+    "convertible bridge",
+    "angel note",
+    "seed note",
+    "demand convertible note"
+  ],
+  "relatedPhrases": [
+    "valuation cap",
+    "conversion discount",
+    "maturity date",
+    "qualified financing",
+    "accrued interest",
+    "most favoured nation clause",
+    "conversion price",
+    "principal amount",
+    "event of default",
+    "general security agreement"
+  ],
+  "whenYouSeeThis": "Convertible notes appear at the pre-seed and seed stage, often alongside or instead of SAFEs. You will see them in convertible note purchase agreements, board resolutions approving the financing, general security agreements (if the note is secured), and cap table schedules. They are common in bridge financings between priced rounds and in situations where investors want the legal protections of debt.",
+  "founderNote": "Convertible notes are older and more complex than SAFEs, and the maturity date creates a real risk that is easy to underestimate at signing. If your Series A takes longer than expected and the notes mature, investors can demand repayment at a time when you can least afford it — this gives them significant leverage to renegotiate terms. Always negotiate (1) a maturity extension option so you can push the date if needed, (2) an automatic conversion on maturity at a pre-agreed price rather than a cash repayment obligation, and (3) the smallest interest rate and valuation cap you can get away with. The accrued interest is also a minor but real complication: it converts into shares too, which means slightly more dilution than the principal alone would cause. For most Canadian seed-stage deals, a SAFE is simpler and avoids the debt-default risk entirely — use a convertible note when the investor insists on debt treatment for tax or accounting reasons.",
+  "relatedTermSlugs": [
+    "safe",
+    "pre-money-valuation",
+    "dilution",
+    "accredited-investor",
+    "security-interest"
+  ],
+  "relatedTemplateIds": [
+    "tpl-convertible-promissory-note",
+    "tpl-term-sheet-convertible-note"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "convertible-note",
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "investor",
+    "founder"
+  ]
+}

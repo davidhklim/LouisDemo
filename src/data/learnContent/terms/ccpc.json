@@ -1,0 +1,38 @@
+{
+  "id": "term-ccpc",
+  "type": "term",
+  "slug": "ccpc",
+  "term": "CCPC (Canadian-Controlled Private Corporation)",
+  "definition": "A CCPC is a Canadian-controlled private corporation, a special tax status under the Income Tax Act that unlocks several significant tax advantages for small businesses. To qualify, the corporation must be a private corporation (not publicly traded), incorporated in Canada, and not controlled directly or indirectly by non-residents or public corporations. CCPCs benefit from the small business deduction (lower tax rate on the first $500,000 of active business income), access to the lifetime capital gains exemption for shareholders selling qualifying shares, and preferential treatment of investment income through the refundable tax mechanism.",
+  "formalDefinition": "A Canadian-controlled private corporation is defined in s. 125(7) of the Income Tax Act (Canada) as a corporation that is a private corporation and a Canadian corporation other than a corporation controlled, directly or indirectly in any manner whatever, by one or more non-resident persons, by one or more public corporations, or by any combination thereof. CCPC status is determined at each particular time and is relevant to the small business deduction (s. 125), the lifetime capital gains exemption (s. 110.6), the enhanced investment tax credit, and the refundable tax regime for investment income (Part IV tax).",
+  "synonyms": [
+    "CCPC",
+    "Canadian-controlled private corporation",
+    "small business corporation",
+    "qualifying small business corporation",
+    "QSBC"
+  ],
+  "relatedPhrases": [
+    "small business deduction",
+    "active business income",
+    "business limit",
+    "lifetime capital gains exemption",
+    "LCGE",
+    "qualified small business corporation shares",
+    "refundable tax",
+    "RDTOH",
+    "GRIP and LRIP",
+    "associated corporations"
+  ],
+  "whenYouSeeThis": "CCPC status is relevant to every tax planning decision for a Canadian startup. It affects how founder compensation is structured (salary vs. dividends), whether the lifetime capital gains exemption will be available on a future exit, and the effective tax rate on business income. Tax lawyers will reference CCPC status in corporate reorganization documents, share purchase agreements, and tax opinions.",
+  "founderNote": "Almost every Canadian startup should be structured as a CCPC to access the small business deduction and preserve the lifetime capital gains exemption for shareholders. The biggest risk to CCPC status is losing Canadian control: if non-resident shareholders collectively control the company, CCPC status is lost. This means you need to be careful about the voting rights attached to shares issued to US-based investors. A common structure is to give non-resident investors preferred shares with economic rights but limited voting rights to preserve CCPC status. Work with a tax advisor before your first financing round to ensure your share structure protects CCPC status.",
+  "relatedTermSlugs": [
+    "small-business-deduction",
+    "capital-gains-exemption",
+    "corporation",
+    "dividend"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [],
+  "updatedAt": "2026-04-11"
+}

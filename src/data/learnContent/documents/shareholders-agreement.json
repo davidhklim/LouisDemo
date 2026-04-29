@@ -1,0 +1,33 @@
+{
+  "id": "doc-shareholders-agreement",
+  "type": "document_guide",
+  "slug": "shareholders-agreement",
+  "title": "Shareholders' Agreement",
+  "summary": "A private contract among all shareholders (and often the corporation) that governs how the company is run, how shares can be transferred, and how disputes are resolved. It fills in the gaps that the articles and by-laws leave open.",
+  "whatItIs": "A shareholders' agreement is a contract that sets out the rights and obligations of the shareholders of a corporation. It typically covers: board composition and voting (who appoints directors), share transfer restrictions (ROFRs, co-sale/tag-along, drag-along), information rights, protective provisions (matters requiring special consent), dividend policy, deadlock resolution, and exit mechanisms (buyout on death, disability, or termination). A unanimous shareholder agreement (USA) is a special form that can transfer directors' powers to shareholders under the CBCA and most provincial statutes.",
+  "whenToUse": "A shareholders' agreement should be put in place as soon as a company has more than one shareholder. For a co-founded startup, this means at or shortly after incorporation. The agreement is typically updated or replaced when investors come in (the investors' rights agreement, voting agreement, and ROFR/co-sale agreement are the venture-capital equivalents of a shareholders' agreement). It is also relevant in shareholder buyout situations and corporate reorganizations.",
+  "whyItMatters": "Without a shareholders' agreement, the relationship between shareholders is governed only by the statute, the articles, and the by-laws, which often do not address critical issues like what happens when a co-founder leaves, how disputes are resolved, or what rights minority shareholders have beyond the statutory minimum. A well-drafted shareholders' agreement prevents deadlock, protects minority shareholders, and provides clarity on share transfers. It is the single most important governance document for a private company.",
+  "keyTerms": [
+    { "termSlug": "right-of-first-refusal", "label": "Right of First Refusal" },
+    { "termSlug": "vesting", "label": "Vesting" },
+    { "termSlug": "unanimous-shareholder-agreement", "label": "Unanimous Shareholder Agreement" },
+    { "termSlug": "oppression-remedy", "label": "Oppression Remedy" },
+    { "termSlug": "non-compete", "label": "Non-Compete" }
+  ],
+  "applicableJurisdictions": ["CBCA", "BCBCA", "OBCA", "ABCA"],
+  "relatedTemplateIds": [
+    "tpl-unanimous-shareholder-agreement-emerging",
+    "tpl-shareholder-agreement-rofo",
+    "tpl-rofr-co-sale-agreement",
+    "tpl-investors-rights-agreement",
+    "tpl-voting-agreement"
+  ],
+  "relatedTermSlugs": [
+    "right-of-first-refusal",
+    "vesting",
+    "oppression-remedy",
+    "unanimous-shareholder-agreement",
+    "non-compete"
+  ],
+  "updatedAt": "2026-03-30"
+}

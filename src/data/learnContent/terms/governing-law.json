@@ -1,0 +1,37 @@
+{
+  "id": "term-governing-law",
+  "type": "term",
+  "slug": "governing-law",
+  "term": "Governing Law",
+  "definition": "The clause in a contract that specifies which jurisdiction's laws will apply to interpret and enforce the agreement. In a Canadian startup context, this is usually the province where the company is incorporated or where its principal office is located. Governing law is distinct from the forum selection clause — governing law tells you whose laws apply, while forum selection tells you whose courts will hear any dispute.",
+  "formalDefinition": "A contractual choice-of-law provision specifying the substantive law of a named jurisdiction that will govern the interpretation, validity, and enforcement of the agreement, exclusive of its conflict-of-laws rules.",
+  "synonyms": [
+    "choice of law",
+    "applicable law",
+    "choice-of-law clause",
+    "governing jurisdiction",
+    "governing legislation",
+    "proper law of the contract",
+    "jurisdiction clause"
+  ],
+  "relatedPhrases": [
+    "governed by and construed in accordance with the laws of",
+    "laws of the Province of British Columbia and the federal laws of Canada applicable therein",
+    "without regard to its conflict of laws principles",
+    "exclusive jurisdiction of the courts of",
+    "submit to the exclusive jurisdiction",
+    "service of process",
+    "forum selection"
+  ],
+  "whenYouSeeThis": "Governing law clauses appear in virtually every commercial contract — NDAs, employment agreements, SAFEs, convertible notes, shareholders' agreements, subscription agreements, and M&A documents. In cross-border transactions between Canadian and US parties, the governing law choice (Canadian province vs. Delaware or New York) can significantly affect the enforceability of specific provisions, particularly non-competes, limitation of liability clauses, and fiduciary duty waivers.",
+  "founderNote": "For a BC company operating in Canada, governing law should default to British Columbia unless there is a specific reason to choose otherwise. CBCA companies often use Ontario or the province of their registered office. Be cautious when a US investor's form documents specify Delaware or New York law — those clauses are drafted for US legal concepts (like Delaware's implied covenant of good faith or New York's strict construction of commercial contracts) that may not translate cleanly to Canadian law. If your company is Canadian, push for Canadian governing law.",
+  "relatedTermSlugs": [
+    "corporation"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "shareholders-agreement",
+    "subscription-agreement"
+  ],
+  "updatedAt": "2026-04-11"
+}

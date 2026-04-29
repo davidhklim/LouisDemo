@@ -1,0 +1,44 @@
+{
+  "id": "term-prospectus-exemption",
+  "type": "term",
+  "slug": "prospectus-exemption",
+  "term": "Prospectus Exemption",
+  "definition": "In Canada, securities law generally requires that any sale of securities (shares, convertible notes, SAFEs, etc.) be made under a prospectus filed with the securities regulator. A prospectus is a lengthy disclosure document that is extremely expensive and time-consuming to prepare, making it impractical for private companies. Prospectus exemptions are statutory exceptions that allow private companies to sell securities without a prospectus, provided they meet certain conditions. The most common exemptions used by startups are the accredited investor exemption (NI 45-106, s. 2.3), the friends and family exemption (s. 2.5), the minimum investment exemption ($150,000+), and the offering memorandum exemption (s. 2.9).",
+  "formalDefinition": "A prospectus exemption is a statutory exception under National Instrument 45-106 (Prospectus Exemptions) or the equivalent provincial securities legislation that permits a distribution of securities to proceed without the filing of a preliminary or final prospectus with the applicable securities regulatory authority. Each exemption imposes specific conditions regarding purchaser qualification, disclosure, reporting, and resale restrictions. Securities sold under a prospectus exemption are subject to a restricted hold period (typically four months for reporting issuers) and cannot be freely traded.",
+  "synonyms": [
+    "exempt distribution",
+    "private placement exemption",
+    "prospectus-exempt offering",
+    "NI 45-106 exemption",
+    "distribution exemption"
+  ],
+  "relatedPhrases": [
+    "accredited investor exemption",
+    "friends and family exemption",
+    "offering memorandum exemption",
+    "minimum investment exemption",
+    "closely held issuer exemption",
+    "Form 45-106F1",
+    "report of exempt distribution",
+    "resale restrictions",
+    "four-month hold period",
+    "private issuer exemption"
+  ],
+  "whenYouSeeThis": "Prospectus exemptions are referenced in subscription agreements, term sheets, investor questionnaires, and accredited investor certificates. Every time a Canadian startup issues shares or convertible instruments to raise capital, it relies on one or more prospectus exemptions. The company must file a report of exempt distribution (Form 45-106F1) with the securities regulators within 10 days of the distribution.",
+  "founderNote": "The exemption you use depends on who your investors are. For angel investors and VCs: use the accredited investor exemption (simplest, no offering memorandum required). For friends and family: use the close personal friend / family exemption (no cost, but limited to defined relationships). For larger checks from non-accredited investors: the offering memorandum exemption requires preparing an OM (typically $10,000-$30,000 in legal fees). Always file the Form 45-106F1 after closing, keep signed subscription agreements and accredited investor certificates in your corporate records. Failure to comply with securities law can result in investors having a right to rescind their investment.",
+  "relatedTermSlugs": [
+    "accredited-investor",
+    "private-placement"
+  ],
+  "relatedTemplateIds": [
+    "tpl-subscription-agreement-simple",
+    "tpl-securities-purchase-agreement"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "subscription-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "investor"
+  ]
+}

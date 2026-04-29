@@ -1,0 +1,39 @@
+{
+  "id": "term-amalgamation",
+  "type": "term",
+  "slug": "amalgamation",
+  "term": "Amalgamation",
+  "definition": "The Canadian legal mechanism for combining two or more corporations into a single continuing entity. Unlike a share purchase (where the target becomes a subsidiary and survives as a separate legal entity), an amalgamation results in one combined corporation that inherits all assets, liabilities, contracts, and employees of the predecessor companies by operation of law. The predecessor corporations cease to exist; the amalgamated corporation continues.",
+  "formalDefinition": "A statutory procedure under which two or more corporations amalgamate and continue as one corporation, with the amalgamated corporation succeeding to all property, rights, obligations, and liabilities of each amalgamating corporation, as governed by CBCA Part XV (ss. 181–186) or equivalent provincial legislation.",
+  "synonyms": [
+    "merger",
+    "amalg",
+    "vertical amalgamation",
+    "horizontal amalgamation",
+    "short-form amalgamation",
+    "statutory merger",
+    "business combination",
+    "rollup"
+  ],
+  "relatedPhrases": [
+    "amalgamate and continue as one corporation",
+    "amalgamation agreement",
+    "articles of amalgamation",
+    "certificate of amalgamation",
+    "successor by amalgamation",
+    "amalgamating corporations",
+    "short-form amalgamation",
+    "vertical short-form amalgamation"
+  ],
+  "whenYouSeeThis": "Amalgamation references appear in M&A term sheets and purchase agreements, corporate reorganization memos, tax planning documents (particularly for post-acquisition integration), and corporate records following a completed amalgamation. Successor-by-amalgamation clauses appear in commercial contracts to bind the continuing corporation to the predecessor's obligations.",
+  "founderNote": "The most common amalgamation you will encounter as a startup founder is the vertical short-form amalgamation: a parent company absorbs its wholly-owned subsidiary without a shareholder vote or amalgamation agreement (CBCA s. 184). This is routinely used in post-acquisition integration to collapse a newly purchased company into the acquirer's corporate structure for tax and administrative simplicity. If you are being acquired, pay attention to whether the transaction is structured as a share purchase, asset purchase, or amalgamation — each has different tax and liability implications for you personally. The amalgamation structure means the buyer takes all of the target's liabilities automatically, which typically results in more extensive representations and warranties from the seller.",
+  "relatedTermSlugs": [
+    "corporation",
+    "articles-of-incorporation"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "articles-of-incorporation"
+  ],
+  "updatedAt": "2026-04-11"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "term-non-compete",
+  "type": "term",
+  "slug": "non-compete",
+  "term": "Non-Compete / Restrictive Covenant",
+  "definition": "A non-compete (formally a 'restrictive covenant') is a contractual restriction that limits what a person can do after leaving a company. The most common forms are: (1) non-competition — you cannot work for a competitor or start a competing business for a defined period in a defined geography; (2) non-solicitation of clients — you cannot approach former clients; (3) non-solicitation of employees — you cannot recruit former colleagues. Canadian courts will enforce restrictive covenants only if they are reasonable in scope, duration, and geography.",
+  "formalDefinition": "A restrictive covenant is a post-termination obligation limiting the covenantor's ability to compete, solicit customers, or solicit employees of the covenantee, enforceable only to the extent reasonable in scope, temporal duration, and geographic area under applicable provincial law.",
+  "synonyms": [
+    "non-compete",
+    "non-competition clause",
+    "restrictive covenant",
+    "non-solicitation",
+    "non-solicit",
+    "covenant not to compete",
+    "post-employment restriction",
+    "garden leave",
+    "non-disparagement"
+  ],
+  "relatedPhrases": [
+    "restricted period",
+    "restricted territory",
+    "competitive business",
+    "directly or indirectly",
+    "solicit or hire",
+    "solicit or induce",
+    "reasonable in the circumstances",
+    "blue-pencil doctrine",
+    "rolling non-compete"
+  ],
+  "whenYouSeeThis": "Non-competes appear in employment agreements, confidentiality and IP agreements, share purchase agreements (where the selling founder agrees not to compete post-closing), and unanimous shareholder agreements. They are most heavily litigated in employment law. Ontario's Employment Standards Act, 2000 prohibits non-competition clauses in most employment contracts as of October 2021, with an exception for sales of a business.",
+  "founderNote": "In an M&A transaction, the buyer will almost always require the selling founders to sign a personal non-compete as a condition of closing. These tend to be 2–3 years and are generally enforceable because they are part of a business acquisition rather than a pure employment relationship. In employment agreements, keep duration under 12 months and tie it to a defined geographic area to maximize enforceability.",
+  "relatedTermSlugs": [
+    "vesting",
+    "indemnification",
+    "intellectual-property-assignment"
+  ],
+  "relatedTemplateIds": [
+    "tpl-confidentiality-nda-employment",
+    "tpl-non-compete-non-solicit-nda",
+    "tpl-employment-agreement-long-form"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "employment-agreement",
+    "nda",
+    "shareholders-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "founder",
+    "adviser"
+  ]
+}

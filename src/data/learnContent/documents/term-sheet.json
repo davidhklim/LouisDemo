@@ -1,0 +1,33 @@
+{
+  "id": "doc-term-sheet",
+  "type": "document_guide",
+  "slug": "term-sheet",
+  "title": "Term Sheet",
+  "summary": "A non-binding summary of the key economic and governance terms of a proposed investment. The term sheet is the starting point of every venture financing negotiation.",
+  "whatItIs": "A term sheet is a concise document (typically 3-10 pages) that outlines the principal terms of a proposed equity investment or financing transaction. It covers the economic terms (valuation, share price, liquidation preference, anti-dilution protection), governance terms (board composition, protective provisions, information rights), and other key terms (pro rata rights, ROFR, drag-along, founder vesting, ESOP pool). Term sheets are typically non-binding except for confidentiality and exclusivity provisions. Once signed, the parties proceed to negotiate and draft the definitive legal agreements.",
+  "whenToUse": "A term sheet is prepared at the beginning of a financing round, after the investor has completed preliminary due diligence and both sides have agreed in principle to proceed. It is the bridge between a verbal agreement and the binding legal documents. Term sheets are used for seed rounds, Series A and later rounds, convertible note financings, and SAFE financings. Each financing structure has a slightly different term sheet format.",
+  "whyItMatters": "The term sheet sets the framework for the entire deal. Once terms are agreed to, they are very difficult to renegotiate. The term sheet also signals what kind of investor you are dealing with: aggressive terms (full ratchet anti-dilution, high liquidation preferences, expansive protective provisions) suggest an investor who will be difficult to work with. Understanding every line of a term sheet is essential for founders because the economic and governance consequences compound across future rounds. A favorable seed term sheet protects your upside in Series A and beyond.",
+  "keyTerms": [
+    { "termSlug": "dilution", "label": "Dilution" },
+    { "termSlug": "vesting", "label": "Vesting" },
+    { "termSlug": "representations-and-warranties", "label": "Representations and Warranties" },
+    { "termSlug": "right-of-first-refusal", "label": "Right of First Refusal" },
+    { "termSlug": "cap-table", "label": "Cap Table" }
+  ],
+  "applicableJurisdictions": ["CBCA", "BCBCA", "OBCA"],
+  "relatedTemplateIds": [
+    "tpl-term-sheet-seed",
+    "tpl-term-sheet-convertible-note",
+    "tpl-term-sheet-safe",
+    "tpl-share-purchase-agreement-seed",
+    "tpl-investors-rights-agreement"
+  ],
+  "relatedTermSlugs": [
+    "dilution",
+    "private-placement",
+    "accredited-investor",
+    "burn-rate-and-runway",
+    "cap-table"
+  ],
+  "updatedAt": "2026-03-30"
+}

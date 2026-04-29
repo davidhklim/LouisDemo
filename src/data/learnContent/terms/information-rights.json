@@ -1,0 +1,44 @@
+{
+  "id": "term-information-rights",
+  "type": "term",
+  "slug": "information-rights",
+  "term": "Information Rights",
+  "definition": "Contractual rights granted to an investor to receive regular financial and operational information about the company. Typical packages include annual audited financial statements, quarterly unaudited financials, an annual operating budget, and cap table updates. These rights go well beyond what corporate statutes provide by default, and investors negotiate for them to monitor their investment and make informed governance decisions.",
+  "formalDefinition": "Contractual obligations of the corporation to deliver to specified investors, at defined intervals, financial statements (audited and unaudited), operating budgets, capitalization schedules, and other operational information, as set out in an investors' rights agreement or shareholders' agreement.",
+  "synonyms": [
+    "inspection rights",
+    "financial reporting rights",
+    "investor reporting rights",
+    "access rights",
+    "audit rights",
+    "reporting covenants",
+    "financial covenants",
+    "investor information package"
+  ],
+  "relatedPhrases": [
+    "as soon as practicable after the end of each fiscal year",
+    "audited annual financial statements",
+    "unaudited quarterly financial statements",
+    "annual operating budget and business plan",
+    "capitalization table",
+    "inspection of books and records",
+    "threshold holder",
+    "major investor",
+    "as-converted basis"
+  ],
+  "whenYouSeeThis": "Information rights appear in investors' rights agreements, shareholders' agreements, and SAFE side letters. They are typically tiered: institutional investors (above a minimum investment threshold, often called 'Major Investors') receive the full package; smaller investors may receive only annual statements. The rights typically terminate on an IPO, when the company becomes a reporting issuer, or upon acquisition.",
+  "founderNote": "Information rights feel administrative, but they have real teeth. Investors who receive regular financials can spot problems early and may use that information to exercise other contractual rights (pro-rata, board seats, protective provisions). Keep your reporting obligations at the back of your mind — failing to deliver on information rights is a technical breach of your investors' rights agreement, and it damages trust faster than almost anything else. Many early-stage investors are willing to accept lighter reporting packages (annual only, no audit requirement) in exchange for a lower investment threshold. Negotiate for flexibility here while you are still pre-revenue and pre-audit.",
+  "relatedTermSlugs": [
+    "fiduciary-duty",
+    "duty-of-care"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "investors-rights-agreement",
+    "shareholders-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "investor"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "term-safe",
+  "type": "term",
+  "slug": "safe",
+  "term": "SAFE (Simple Agreement for Future Equity)",
+  "definition": "A SAFE is a financing instrument that lets a startup raise money today in exchange for the right to receive shares at a later date, typically when the company closes a priced equity round (like a Series A). It was invented by Y Combinator in 2013 as a faster, simpler alternative to convertible notes. A SAFE is not a loan — there is no interest rate and no maturity date — so there is no risk of the company defaulting on it the way it could default on debt. The investor's money converts into shares at a future round, usually at a discount to the round price or subject to a valuation cap (a ceiling on the price at which the SAFE converts), whichever is more favourable to the investor.",
+  "formalDefinition": "A SAFE (Simple Agreement for Future Equity) is a contractual instrument under which an investor provides capital to a company in exchange for the right to receive equity securities upon the occurrence of a future triggering event, typically a Qualified Financing, an exit, or a dissolution. Unlike a convertible promissory note, a SAFE does not accrue interest, has no maturity date, and is not characterized as indebtedness. Conversion mechanics are governed by a valuation cap, a discount rate, or both, as specified in the instrument. In Canada, standard Y Combinator SAFE forms must be modified to comply with applicable provincial securities legislation (including prospectus exemption requirements under National Instrument 45-106), CBCA share class mechanics, and applicable anti-money-laundering verification obligations.",
+  "synonyms": [
+    "SAFE",
+    "simple agreement for future equity",
+    "safe note",
+    "SAFE note",
+    "safe agreement",
+    "Y Combinator SAFE",
+    "YC SAFE",
+    "post-money SAFE",
+    "pre-money SAFE",
+    "simple future equity agreement"
+  ],
+  "relatedPhrases": [
+    "valuation cap",
+    "discount rate",
+    "qualified financing",
+    "conversion event",
+    "pro rata rights",
+    "most favoured nation clause",
+    "MFN clause",
+    "post-money valuation cap",
+    "safe financing round",
+    "triggering event"
+  ],
+  "whenYouSeeThis": "SAFEs appear at the pre-seed and seed stage when a company raises its first rounds of capital before establishing a priced valuation. You will see them in SAFE financing board resolutions, investor side letters, and cap table schedules. They are typically used for angel rounds, friends-and-family rounds, and accelerator investments. In Canada, they are often accompanied by an accredited investor certificate.",
+  "founderNote": "The SAFE is the dominant pre-seed instrument in Canada right now, and for good reason: it is fast, cheap to document, and avoids the debt-default risk of a convertible note. The two key economic terms are the valuation cap (the maximum price at which the SAFE converts — negotiate this hard, as a low cap means massive dilution) and the discount rate (typically 15-20%). Post-money SAFEs, which Y Combinator now uses as the default, are particularly founder-unfriendly because the investor's ownership percentage is locked in at signing rather than at conversion — stack multiple post-money SAFEs and your dilution compounds quickly. Always model your cap table post-conversion before signing. The standard Y Combinator SAFE form needs modifications for Canadian companies — do not use the US form as-is.",
+  "relatedTermSlugs": [
+    "pre-money-valuation",
+    "dilution",
+    "cap-table",
+    "accredited-investor",
+    "convertible-note"
+  ],
+  "relatedTemplateIds": [
+    "tpl-safe-financing-board-resolution",
+    "tpl-term-sheet-safe"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "safe",
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "investor",
+    "founder"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "doc-board-resolutions",
+  "type": "document_guide",
+  "slug": "board-resolutions",
+  "title": "Board Resolutions (Directors' Resolutions)",
+  "summary": "Written records of formal decisions made by the board of directors. Board resolutions authorize the corporation to take specific actions and are the primary mechanism for documenting corporate governance decisions.",
+  "whatItIs": "A board resolution is a formal written record of a decision made by the corporation's board of directors, either at a meeting or by written consent (without a meeting). Resolutions authorize the corporation to act: issue shares, approve financings, appoint officers, open bank accounts, enter into material contracts, declare dividends, and approve financial statements. Under most Canadian statutes, directors can pass resolutions in writing signed by all directors without holding a meeting (a 'consent resolution' or 'resolution in lieu of meeting'). Consent resolutions are the most common form in private companies.",
+  "whenToUse": "Board resolutions are required for virtually every significant corporate action. Common triggers include: incorporation organization (appointing officers, setting fiscal year, opening bank accounts), share issuances (approving each issuance), annual matters (approving financial statements, waiving auditor appointment), financing rounds (authorizing new share classes, approving subscription agreements), and material transactions (approving M&A, major contracts, changes to compensation). Most private companies use written consent resolutions rather than holding formal meetings.",
+  "whyItMatters": "Board resolutions are the legal evidence that the corporation authorized an action. Without a properly passed resolution, a contract signed by an officer may not be binding on the corporation. Investors' lawyers will review the resolution history during due diligence. Missing or incomplete resolutions are one of the most common deficiencies found in startup minute books. Maintaining a clean resolution trail from day one saves significant time and legal fees when you raise capital or sell the company.",
+  "keyTerms": [
+    { "termSlug": "fiduciary-duty", "label": "Fiduciary Duty" },
+    { "termSlug": "duty-of-care", "label": "Duty of Care" },
+    { "termSlug": "conflicts-of-interest", "label": "Conflicts of Interest" },
+    { "termSlug": "business-judgment-rule", "label": "Business Judgment Rule" }
+  ],
+  "applicableJurisdictions": ["CBCA", "BCBCA", "OBCA", "ABCA"],
+  "relatedTemplateIds": [
+    "tpl-board-resolutions-annual-matters",
+    "tpl-board-resolutions-appointing-officers",
+    "tpl-board-resolutions-safe-financing",
+    "tpl-board-resolutions-ratifying-prior-actions",
+    "tpl-directors-resolution-shareholder-rights-plan",
+    "tpl-template-directors-resolution-cbca"
+  ],
+  "relatedTermSlugs": [
+    "fiduciary-duty",
+    "duty-of-care",
+    "conflicts-of-interest"
+  ],
+  "updatedAt": "2026-03-30"
+}

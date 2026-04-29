@@ -1,0 +1,40 @@
+{
+  "id": "term-business-judgment-rule",
+  "type": "term",
+  "slug": "business-judgment-rule",
+  "term": "Business Judgment Rule",
+  "definition": "The business judgment rule is a legal principle that protects directors from personal liability when they make honest business decisions that turn out badly. Courts generally will not second-guess the decisions of a board of directors provided the decision was made honestly, prudently, in good faith, and on reasonable grounds. Even if the decision proves in hindsight to be mistaken or misguided, directors will not be liable as long as the process they followed was sound. It is not a separate legal standard but rather a practice of judicial deference built into how courts evaluate the duty of care.",
+  "formalDefinition": "The business judgment rule is a principle of judicial deference under which courts decline to second-guess the merits of bona fide business decisions made by a board of directors acting honestly, prudently, in good faith, and on reasonable grounds. It was affirmed in Peoples Department Stores Inc. (Trustee of) v. Wise (2004 SCC 68) and has been consistently applied in subsequent decisions including Gojkovich v. Buhbli Organics Inc. (2023 ONSC 2738).",
+  "synonyms": [
+    "business judgment defence",
+    "business judgment deference",
+    "judicial deference",
+    "board deference"
+  ],
+  "relatedPhrases": [
+    "honestly, prudently, in good faith and on reasonable grounds",
+    "judicial deference to board decisions",
+    "not second-guess the board",
+    "mistaken, misguided or imperfect",
+    "informed business decision",
+    "process over outcome"
+  ],
+  "whenYouSeeThis": "The business judgment rule is not typically written into contracts or corporate documents. Instead, it is a common law principle that courts apply when evaluating whether directors have met their duty of care. It becomes relevant when a shareholder or creditor challenges a board decision through an oppression claim, derivative action, or other proceeding. Directors invoke it defensively.",
+  "founderNote": "The business judgment rule protects the quality of your decision-making process, not the quality of the outcome. Practical steps to maximize your protection: (1) document your decision-making process in board minutes, (2) obtain independent professional advice (legal, accounting, valuation) before major transactions, (3) hold a formal vote and record any dissents, and (4) avoid self-interested transactions without proper disclosure and approval. Courts look at whether you followed a reasonable process, not whether you got the best possible result.",
+  "relatedTermSlugs": [
+    "duty-of-care",
+    "fiduciary-duty",
+    "oppression-remedy"
+  ],
+  "relatedTemplateIds": [
+    "tpl-directors-resolution-shareholder-rights-plan"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "board-resolutions",
+    "shareholders-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "director"
+  ]
+}

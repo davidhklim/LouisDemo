@@ -1,141 +1,31 @@
-import { useMemo } from "react";
+import { lazy, Suspense, useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
+import { FEATURE_IDS, FEATURES_BY_ID } from "../data/features";
 import "./PublicUseCasePage.css";
 
-const USE_CASES = {
-  "ai-drafting": {
-    title: "AI-Assisted Legal Drafting",
-    subtitle: "Precedent-Backed Intelligence",
-    intro:
-      "Precedent-backed clause generation drawn from 228,000+ real clauses from Canadian venture deals across multiple jurisdictions. Draft, rewrite, and assemble legal documents with AI that knows the needs of Canadian founders — grounded in what actually gets signed.",
-    designedFor:
-      "Founders, operations leads, and in-house teams that need to move faster on routine corporate documents without starting from scratch every time.",
-    video: "/videos/ai-drafting.mp4",
-    capabilities: [
-      {
-        icon: "auto_awesome",
-        label: "Precedent-backed drafting — language grounded in real Canadian venture deals, not generic AI output",
-      },
-      {
-        icon: "search",
-        label: "Every clause summarized and semantically indexed for precise retrieval",
-      },
-      {
-        icon: "edit_note",
-        label: "Rewrite and explain selected clauses in plain English for internal review",
-      },
-      {
-        icon: "library_books",
-        label: "Full draft assembly from 199+ curated legal templates",
-      },
-      {
-        icon: "mail",
-        label: "Auto-fill company details with mail merge across any template",
-      },
-      {
-        icon: "database",
-        label: "Context-aware suggestions using your stored company data",
-      },
-    ],
-  },
-  "secure-repository": {
-    title: "Version Control & Redline",
-    subtitle: "Every Change, Tracked",
-    intro:
-      "Every save creates an immutable version snapshot. Compare any two versions side-by-side with semantic redlining that shows exactly what changed — no more v3_FINAL_final.docx.",
-    designedFor:
-      "Teams that need a clean audit trail on corporate documents and the confidence that nothing has been silently altered.",
-    video: "/videos/version-control.mp4",
-    capabilities: [
-      {
-        icon: "save",
-        label: "Immutable version snapshots on every save",
-      },
-      {
-        icon: "compare",
-        label: "Side-by-side semantic redline between any two versions",
-      },
-      {
-        icon: "restore",
-        label: "Full version history with the ability to restore prior versions",
-      },
-      {
-        icon: "verified_user",
-        label: "SHA-256 integrity hashing to verify documents have not been altered",
-      },
-      {
-        icon: "receipt_long",
-        label: "Complete audit trail on all document operations",
-      },
-    ],
-  },
-  "document-storage": {
-    title: "Collaborative Document Editing",
-    subtitle: "Work Together, Seamlessly",
-    intro:
-      "Store generated and uploaded documents in one secure workspace with collaborative editing. Your corporate records — organized, protected, and accessible to the right people.",
-    designedFor:
-      "Founders managing corporate records, minute books, financing documents, and operational agreements who need controlled access for team members, advisors, investors, and outside counsel.",
-    video: "/videos/document-storage.mp4",
-    capabilities: [
-      {
-        icon: "group",
-        label: "Collaborative editing — work on the same document with your team in real time",
-      },
-      {
-        icon: "folder_managed",
-        label: "Centralized storage for all corporate documents — generated and uploaded",
-      },
-      {
-        icon: "lock",
-        label: "Credential-based access control for people inside and outside your organization",
-      },
-      {
-        icon: "visibility",
-        label: "Tiered visibility so investors see what investors should see",
-      },
-      {
-        icon: "comment",
-        label: "Leave comments, track suggestions, and resolve feedback inline",
-      },
-      {
-        icon: "history",
-        label: "Full audit trail on who accessed, edited, or downloaded each document",
-      },
-    ],
-  },
-  "e-signatures": {
-    title: "DocuSign Integration",
-    subtitle: "Draft to Executed, One Click",
-    intro:
-      "Prepare and send DocuSign signature packages directly from your workspace. Go from draft to executed without switching tabs or chasing down signers.",
-    designedFor:
-      "Teams closing agreements with employees, investors, vendors, and partners who need predictable execution cycles and fewer handoffs.",
-    video: "/videos/e-signature.mp4",
-    capabilities: [
-      {
-        icon: "send",
-        label: "Send signature packages directly from the active document",
-      },
-      {
-        icon: "track_changes",
-        label: "Track signing status in your document workspace",
-      },
-      {
-        icon: "draw",
-        label: "DocuSign integration for industry-standard e-signatures",
-      },
-      {
-        icon: "inventory_2",
-        label: "Store executed copies alongside drafts and version history",
-      },
-      {
-        icon: "group",
-        label: "Manage counterparties and signing order from one place",
-      },
-    ],
-  },
-};
+// Lazy-loaded to keep the initial bundle small. Only loaded when someone
+// lands on the AI Drafting use case page.
+const LiveFeatureDemo = lazy(() => import("./demos/LiveFeatureDemo"));
+
+// Scripted-scene driver for the other 8 demos. Shares the frame + state
+// machine + fetch stub + narration card with LiveFeatureDemo.
+const LiveScenarioDemo = lazy(() => import("./demos/LiveScenarioDemo"));
+
+const AI_DRAFTING_LIVE = new Set(["ai-drafting"]);
+
+const SCENARIO_LIVE = new Set([
+  "document-storage",
+  "secure-repository",
+  "e-signatures",
+  "mail-merge",
+  "template-library",
+  "company-data",
+  "minutebook",
+  "data-room",
+]);
+
+// Single source of truth: shared features data.
+const USE_CASES = FEATURES_BY_ID;
 
 const FOOTER_RESOURCES = [
   { label: "Newsletter", action: "newsletter" },
@@ -153,6 +43,7 @@ const FOOTER_SUPPORT = [
 
 const PublicUseCasePage = ({
   onGoHome,
+  onOpenUseCase,
   onViewPricing,
   onViewAbout,
   onViewLearn,
@@ -174,6 +65,25 @@ const PublicUseCasePage = ({
 
   const { useCaseId } = useParams();
   const useCase = useMemo(() => USE_CASES[useCaseId] ?? null, [useCaseId]);
+  const currentFeatureIndex = FEATURE_IDS.indexOf(useCaseId);
+  const previousFeature = currentFeatureIndex >= 0
+    ? USE_CASES[FEATURE_IDS[(currentFeatureIndex - 1 + FEATURE_IDS.length) % FEATURE_IDS.length]]
+    : null;
+  const nextFeature = currentFeatureIndex >= 0
+    ? USE_CASES[FEATURE_IDS[(currentFeatureIndex + 1) % FEATURE_IDS.length]]
+    : null;
+  const featurePosition = currentFeatureIndex >= 0 ? currentFeatureIndex + 1 : 0;
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+  }, [useCaseId]);
+
+  const openFeature = (featureId) => {
+    if (!featureId || featureId === useCaseId) return;
+    onOpenUseCase?.(featureId);
+  };
 
   if (!useCase) {
     return (
@@ -271,25 +181,47 @@ const PublicUseCasePage = ({
 
         {/* ── Hero ──────────────────────────────────────────── */}
         <section className="usecase__hero" aria-label="Use case hero">
-          <div className="usecase__hero-badge">{useCase.subtitle}</div>
+          <div className="usecase__hero-badges">
+            <div className="usecase__hero-badge">{useCase.subtitle}</div>
+          </div>
           <h1 className="usecase__hero-headline usecase-serif">{useCase.title}</h1>
           <p className="usecase__hero-sub">{useCase.intro}</p>
         </section>
 
-        {/* ── Video Player — enlarged ──────────────────────── */}
-        <section className="usecase__video-section" aria-label="Demo video">
-          <div className="usecase__video-wrap">
-            <video
-              className="usecase__video"
-              src={useCase.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls
-              aria-label={`${useCase.title} demo video`}
-            />
-          </div>
+        {/* ── Interactive Demo (all 9 features have one) ────── */}
+        <section
+          className="usecase__video-section usecase__video-section--demo"
+          aria-label="Interactive demo"
+        >
+          <Suspense
+            fallback={
+              <div
+                style={{
+                  width: "100%",
+                  maxWidth: 1240,
+                  margin: "0 auto",
+                  minHeight: 620,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "#fff",
+                  borderRadius: 18,
+                  border: "1px solid rgba(18,18,18,0.08)",
+                  boxShadow: "0 24px 60px -20px rgba(18,18,18,0.18)",
+                  color: "#777",
+                  fontSize: 13,
+                }}
+              >
+                Loading live demo…
+              </div>
+            }
+          >
+            {AI_DRAFTING_LIVE.has(useCaseId) ? (
+              <LiveFeatureDemo demoId={useCaseId} />
+            ) : SCENARIO_LIVE.has(useCaseId) ? (
+              <LiveScenarioDemo demoId={useCaseId} />
+            ) : null}
+          </Suspense>
         </section>
 
         {/* ── Designed For ──────────────────────────────────── */}
@@ -336,6 +268,63 @@ const PublicUseCasePage = ({
               Get Started Free
               <span className="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
             </button>
+          </div>
+        </section>
+
+        <section className="usecase__feature-nav" aria-label="Feature navigation">
+          <div className="usecase__feature-nav-heading">
+            <span className="usecase__feature-nav-count">
+              Feature {featurePosition} of {FEATURE_IDS.length}
+            </span>
+            <h2 className="usecase__feature-nav-title usecase-serif">
+              Explore more features
+            </h2>
+          </div>
+
+          <div className="usecase__feature-nav-actions">
+            {previousFeature ? (
+              <button
+                type="button"
+                className="usecase__feature-nav-button usecase__feature-nav-button--previous"
+                onClick={() => openFeature(previousFeature.id)}
+                aria-label={`Previous feature: ${previousFeature.title}`}
+              >
+                <span className="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                <span className="usecase__feature-nav-copy">
+                  <span className="usecase__feature-nav-kicker">Previous Feature</span>
+                  <span className="usecase__feature-nav-name">
+                    {previousFeature.shortTitle ?? previousFeature.title}
+                  </span>
+                </span>
+              </button>
+            ) : null}
+
+            <button
+              type="button"
+              className="usecase__feature-nav-home"
+              onClick={onGoHome}
+              aria-label="View all use cases"
+            >
+              <span className="material-symbols-outlined" aria-hidden="true">apps</span>
+              <span>All Use Cases</span>
+            </button>
+
+            {nextFeature ? (
+              <button
+                type="button"
+                className="usecase__feature-nav-button usecase__feature-nav-button--next"
+                onClick={() => openFeature(nextFeature.id)}
+                aria-label={`Next feature: ${nextFeature.title}`}
+              >
+                <span className="usecase__feature-nav-copy">
+                  <span className="usecase__feature-nav-kicker">Next Feature</span>
+                  <span className="usecase__feature-nav-name">
+                    {nextFeature.shortTitle ?? nextFeature.title}
+                  </span>
+                </span>
+                <span className="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+              </button>
+            ) : null}
           </div>
         </section>
       </main>

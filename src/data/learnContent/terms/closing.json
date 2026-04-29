@@ -1,0 +1,43 @@
+{
+  "id": "term-closing",
+  "type": "term",
+  "slug": "closing",
+  "term": "Closing",
+  "definition": "Closing is the moment when a deal becomes legally effective — money changes hands, shares are issued, and all signed documents are exchanged. Everything before closing is negotiation, documentation, and due diligence; at closing, promises become binding reality. A closing can be simultaneous (sign and close on the same day) or split (sign today, close later once all conditions are satisfied).",
+  "formalDefinition": "The closing of a transaction is the completion of all steps required to give effect to the definitive agreements, including the payment of purchase price, the issuance and registration of securities, the delivery of all executed closing documents, and the satisfaction or waiver of all conditions precedent, such that the transaction becomes legally binding and effective as between the parties.",
+  "synonyms": [
+    "close",
+    "closing date",
+    "transaction closing",
+    "completion",
+    "funding close",
+    "deal close",
+    "financial close",
+    "simultaneous close",
+    "split signing and closing"
+  ],
+  "relatedPhrases": [
+    "closing date",
+    "closing conditions",
+    "closing deliverables",
+    "wire transfer",
+    "share issuance",
+    "register of members",
+    "closing agenda",
+    "escrow release",
+    "conditions to closing",
+    "post-closing covenants"
+  ],
+  "whenYouSeeThis": "Closing mechanics appear in subscription agreements, share purchase agreements, convertible note agreements, and SAFEs. The closing date is typically defined in the agreement and is the date on which funds must be received and shares (or notes) issued. Most Canadian seed financings are simultaneous sign-and-close: the founder and investor sign the same day and funds are wired immediately. Series A deals often split signing and closing because regulatory approvals (e.g., competition clearances if a large strategic is investing) or third-party consents (bank waivers, landlord consents) take time after signing.",
+  "founderNote": "For your first seed round, push for a simultaneous sign-and-close — it is simpler, faster, and reduces the risk that a condition is not met between signing and closing. Before closing day, prepare a closing agenda (a checklist of every document to be signed, every wire to be sent, and every corporate action to be taken) and circulate it at least 48 hours in advance. Common last-minute issues: the investor's wire arrives in USD when your account is CAD-only, the bank signature authority on the corporate account is wrong, or the board resolution approving the issuance was not signed by all required directors. Running a clean closing reflects well on you as a founder and sets the tone for your investor relationship.",
+  "relatedTermSlugs": [
+    "conditions-precedent",
+    "representations-and-warranties"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "subscription-agreement",
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-10"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "term-tag-along",
+  "type": "term",
+  "slug": "tag-along",
+  "term": "Tag-Along Right",
+  "definition": "A tag-along right allows minority shareholders to join a sale initiated by a major shareholder, receiving the same price and terms. If a founder or lead investor sells their shares to a third party, minority shareholders can elect to sell their proportionate stake at the same time, at the same price. It protects minority shareholders from being left behind under a new controlling shareholder they never agreed to.",
+  "formalDefinition": "A contractual co-sale right entitling a shareholder to participate, on a pro-rata basis, in any proposed transfer of shares by another specified shareholder to a third-party transferee, on the same per-share consideration and terms as the triggering shareholder, exercisable within a defined notice period following delivery of a transfer notice.",
+  "synonyms": [
+    "tag-along",
+    "co-sale right",
+    "co-sale agreement",
+    "participation right",
+    "piggyback right",
+    "tag right",
+    "tag-along co-sale right",
+    "minority sale protection"
+  ],
+  "relatedPhrases": [
+    "tag-along notice",
+    "co-sale exercise period",
+    "same price and same terms",
+    "pro-rata participation",
+    "transfer notice",
+    "third-party transferee",
+    "tag-along shares",
+    "permitted transferee"
+  ],
+  "whenYouSeeThis": "Tag-along rights appear in shareholders agreements, ROFR and co-sale agreements, and investors' rights agreements. In Canadian venture deals they are almost always paired with right-of-first-refusal provisions in the same agreement — the selling shareholder must first offer shares to ROFR holders, and any shareholder who does not exercise their ROFR may then exercise their tag-along instead. The CVCA model ROFR/Co-Sale Agreement is the canonical Canadian source.",
+  "founderNote": "Tag-along rights protect your investors from being stranded under a buyer they did not choose. As a founder, granting reasonable tag-along rights is standard and expected — refusing them will raise red flags during diligence. The key negotiating point is the pro-rata calculation basis: does a tag-along holder get to sell a slice of the total deal, or only a slice proportionate to the triggering seller's shareholding? Broader tag-alongs (full pro-rata of total deal) are more protective; narrower ones limit how much each tag-along holder can actually exit. Also confirm that transfers to permitted transferees (e.g., a founder's holding company) are carved out from triggering tag-along rights.",
+  "relatedTermSlugs": [
+    "drag-along",
+    "right-of-first-refusal",
+    "share-structure"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "shareholders-agreement",
+    "rofr-co-sale-agreement"
+  ],
+  "updatedAt": "2026-04-10"
+}

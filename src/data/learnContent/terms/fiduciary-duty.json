@@ -1,0 +1,52 @@
+{
+  "id": "term-fiduciary-duty",
+  "type": "term",
+  "slug": "fiduciary-duty",
+  "term": "Fiduciary Duty",
+  "definition": "A fiduciary duty is the legal obligation of a director or officer to act honestly and in good faith with a view to the best interests of the corporation. It is the highest standard of loyalty the law imposes. As a director, you must always put the company's interests ahead of your own personal interests, ahead of any other company you are involved in, and ahead of any particular shareholder group. The duty is owed to the corporation itself, not to any individual shareholder, creditor, or employee.",
+  "formalDefinition": "Under s. 122(1)(a) of the CBCA (and equivalent provincial provisions), every director and officer of a corporation shall act honestly and in good faith with a view to the best interests of the corporation. The Supreme Court of Canada in BCE Inc. v. 1976 Debentureholders (2008 SCC 69) confirmed that the duty is owed to the corporation as such, and that boards may consider the interests of shareholders, employees, creditors, consumers, governments, and the environment (codified in s. 122(1.1) CBCA, added in 2019).",
+  "synonyms": [
+    "fiduciary obligation",
+    "duty of loyalty",
+    "duty of good faith",
+    "good faith obligation",
+    "duty to act in the best interests",
+    "loyalty duty",
+    "fiduciary relationship"
+  ],
+  "relatedPhrases": [
+    "act honestly and in good faith",
+    "best interests of the corporation",
+    "conflict of interest",
+    "corporate opportunity doctrine",
+    "self-dealing",
+    "duty owed to the corporation as such",
+    "reasonable expectations of stakeholders",
+    "personal gain",
+    "diversion of corporate opportunity"
+  ],
+  "whenYouSeeThis": "Fiduciary duty obligations are referenced in articles of incorporation, board resolutions, indemnification agreements, directors' consent to act, unanimous shareholder agreements, and shareholders' agreements. Every director and officer is subject to fiduciary duties from the moment of appointment, regardless of whether a written agreement explicitly mentions them.",
+  "founderNote": "As a founder who is also a director, this duty matters most when there is a potential conflict between your personal interests and the company's interests. Common traps include: taking a business opportunity that the company could pursue, having a side project that competes with the company, or approving a transaction that benefits you personally. When in doubt, disclose the conflict to the board and abstain from the vote. The penalty for breach can include personal liability and disgorgement of profits.",
+  "relatedTermSlugs": [
+    "duty-of-care",
+    "business-judgment-rule",
+    "conflicts-of-interest",
+    "oppression-remedy"
+  ],
+  "relatedTemplateIds": [
+    "tpl-consent-to-act-director",
+    "tpl-indemnification-agreement",
+    "tpl-directors-resolution-shareholder-rights-plan"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "board-resolutions",
+    "indemnification-agreement",
+    "shareholders-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "director",
+    "officer",
+    "founder"
+  ]
+}

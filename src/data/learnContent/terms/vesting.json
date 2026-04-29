@@ -1,0 +1,52 @@
+{
+  "id": "term-vesting",
+  "type": "term",
+  "slug": "vesting",
+  "term": "Vesting",
+  "definition": "Vesting is a schedule by which ownership of shares or options becomes unconditional over time or upon reaching milestones. Instead of receiving all your shares on day one, you earn them progressively — typically monthly over four years with a one-year cliff. The cliff means that if you leave before the first year is up, you vest nothing. After the cliff, you vest monthly for the remaining three years. Vesting aligns the interests of founders and employees with the long-term success of the company.",
+  "formalDefinition": "A time-based or milestone-based schedule governing the lapse of repurchase rights (for shares) or the exercisability of options, typically structured with an initial cliff period after which a proportion vests immediately, followed by periodic vesting of the remaining tranche.",
+  "synonyms": [
+    "vesting schedule",
+    "vesting period",
+    "cliff vesting",
+    "reverse vesting",
+    "accelerated vesting",
+    "single trigger acceleration",
+    "double trigger acceleration",
+    "lapse of repurchase rights",
+    "option vesting"
+  ],
+  "relatedPhrases": [
+    "four-year vesting with one-year cliff",
+    "monthly vesting",
+    "unvested shares",
+    "vested shares",
+    "early exercise",
+    "repurchase right",
+    "termination for cause",
+    "good leaver",
+    "bad leaver",
+    "acceleration on change of control"
+  ],
+  "whenYouSeeThis": "Vesting schedules appear in founders' share purchase agreements, employment agreements, stock option plans (ESOPs), option agreements, and unanimous shareholder agreements. The standard Canadian venture-backed schedule is four years with a one-year cliff. Investor term sheets will often specify vesting requirements for founder shares as a condition of financing.",
+  "founderNote": "Acceleration matters most at exit. Single-trigger acceleration (vests on change of control alone) is founder-friendly but investors often resist it because it can reduce earnout alignment. Double-trigger (change of control plus termination) is the standard compromise. Always check what happens to unvested options on termination without cause.",
+  "relatedTermSlugs": [
+    "right-of-first-refusal",
+    "non-compete",
+    "dilution",
+    "cap-table"
+  ],
+  "relatedTemplateIds": [
+    "tpl-stock-option-agreement",
+    "tpl-employment-agreement-long-form"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "employment-agreement",
+    "shareholders-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "founder",
+    "adviser"
+  ]
+}

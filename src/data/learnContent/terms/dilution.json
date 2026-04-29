@@ -1,0 +1,53 @@
+{
+  "id": "term-dilution",
+  "type": "term",
+  "slug": "dilution",
+  "term": "Dilution",
+  "definition": "Dilution is the reduction in an existing shareholder's ownership percentage that occurs when new shares are issued to other people. If you own 50% of a company with 1,000 shares (you hold 500), and the company issues 1,000 new shares to an investor, you now own 500 out of 2,000 total shares, or 25%. Your percentage went from 50% to 25% even though you still hold the same number of shares. Dilution is an expected part of startup financing: each funding round typically dilutes existing shareholders. The key question is always whether the increase in company value from the new capital offsets the reduction in your ownership percentage.",
+  "formalDefinition": "Dilution refers to the decrease in an existing shareholder's proportional ownership interest in a corporation resulting from the issuance of additional shares, whether through equity financing rounds, option exercises, warrant conversions, or other share issuances. Economic dilution occurs when new shares are issued at a lower price per share than the implied value of existing shares (a 'down round'). Anti-dilution protection provisions in preferred share terms (weighted average or full ratchet) adjust the conversion price to mitigate economic dilution for preferred shareholders.",
+  "synonyms": [
+    "equity dilution",
+    "ownership dilution",
+    "share dilution",
+    "dilutive issuance",
+    "down-round dilution",
+    "anti-dilution",
+    "full ratchet",
+    "weighted average anti-dilution"
+  ],
+  "relatedPhrases": [
+    "fully diluted basis",
+    "pre-money valuation",
+    "post-money valuation",
+    "price per share",
+    "option pool",
+    "employee stock option plan",
+    "conversion price adjustment",
+    "pro rata right",
+    "pre-emptive right",
+    "pay to play"
+  ],
+  "whenYouSeeThis": "Dilution is discussed in term sheets, share purchase agreements, subscription agreements, option plans, and investors' rights agreements. Anti-dilution protection clauses appear in preferred share terms. Pro rata participation rights (allowing existing investors to maintain their percentage by investing in future rounds) appear in investors' rights agreements.",
+  "founderNote": "As a founder, expect to be diluted in every financing round. A typical seed round might dilute founders by 15-25%. Series A might dilute another 20-30%. The option pool (usually 10-15% reserved for employees) also dilutes you. Run the math on a fully diluted basis (including all options and convertible instruments) before negotiating. Two protective mechanisms: (1) pre-emptive rights allow you to invest proportionally in future rounds to maintain your percentage, and (2) anti-dilution provisions protect preferred shareholders but typically not common shareholders. Your goal is to ensure each round increases the per-share value enough that your smaller slice of the pie is worth more than your larger slice was before.",
+  "relatedTermSlugs": [
+    "cap-table",
+    "share-structure",
+    "vesting",
+    "anti-dilution",
+    "liquidation-preference",
+    "pre-money-valuation"
+  ],
+  "relatedTemplateIds": [
+    "tpl-share-purchase-agreement-seed",
+    "tpl-investors-rights-agreement",
+    "tpl-term-sheet-seed"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "founder",
+    "investor"
+  ]
+}

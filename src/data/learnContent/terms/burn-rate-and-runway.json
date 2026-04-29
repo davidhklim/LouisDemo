@@ -1,0 +1,44 @@
+{
+  "id": "term-burn-rate-and-runway",
+  "type": "term",
+  "slug": "burn-rate-and-runway",
+  "term": "Burn Rate and Runway",
+  "definition": "Burn rate is the rate at which a startup spends money in excess of what it earns, usually expressed as a monthly figure. If your company spends $50,000 per month and earns $10,000 per month, your net burn rate is $40,000/month. Runway is how long your cash will last at the current burn rate. If you have $480,000 in the bank and your net burn rate is $40,000/month, you have 12 months of runway. These two numbers are the most important financial metrics for any pre-profit startup, because they tell you exactly how much time you have before you need to raise more money, cut costs, or reach profitability.",
+  "formalDefinition": "Gross burn rate is total monthly operating expenditure. Net burn rate is monthly operating expenditure minus monthly revenue. Cash runway is the quotient of available cash reserves divided by net burn rate, expressed in months. These metrics are standard reporting items in board packages and investor updates for venture-backed companies. Burn rate analysis is a component of going concern assessment and cash flow management.",
+  "synonyms": [
+    "burn",
+    "monthly burn",
+    "cash burn",
+    "net burn",
+    "gross burn",
+    "runway",
+    "cash runway",
+    "months of runway",
+    "time to zero cash"
+  ],
+  "relatedPhrases": [
+    "cash on hand",
+    "operating expenses",
+    "break-even point",
+    "extend the runway",
+    "bridge financing",
+    "down to the wire",
+    "18 months of runway",
+    "default alive",
+    "default dead"
+  ],
+  "whenYouSeeThis": "Burn rate and runway are discussed in board reports, investor updates, term sheets (investors want to know how long the round will last), and financial projections. They are not contractual terms but are central to every fundraising conversation. Investors typically expect a funding round to provide 18-24 months of runway to achieve the next set of milestones.",
+  "founderNote": "The golden rule: always raise enough capital for at least 18 months of runway. This gives you 12 months to execute and 6 months to fundraise for the next round. If your runway drops below 6 months, you are in a danger zone where you have little leverage and may be forced to accept unfavorable terms. Track your burn rate weekly, report it to your board monthly, and model multiple scenarios (current plan, aggressive hiring, austerity mode). When deciding whether to raise: if you can reach profitability before running out of cash, you may not need to raise. If not, start fundraising when you have 9-12 months of runway left.",
+  "relatedTermSlugs": [
+    "bootstrapping",
+    "dilution"
+  ],
+  "relatedTemplateIds": [
+    "tpl-term-sheet-convertible-note",
+    "tpl-term-sheet-safe"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "term-sheet"
+  ],
+  "updatedAt": "2026-03-30"
+}

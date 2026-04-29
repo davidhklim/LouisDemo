@@ -1,0 +1,44 @@
+{
+  "id": "term-dividend",
+  "type": "term",
+  "slug": "dividend",
+  "term": "Dividend",
+  "definition": "A distribution of a corporation's profits (or stated capital) to its shareholders, paid in proportion to their shareholdings. Dividends can be paid in cash or in additional shares (stock dividends). The board of directors decides when and how much to declare. For startups, cash dividends are rare because capital is needed for growth, but dividends become relevant in corporate reorganizations, estate freezes, tax planning, and exit scenarios.",
+  "formalDefinition": "A distribution declared by the board of directors out of the corporation's retained earnings or contributed surplus to holders of shares, paid in cash, property, or additional shares, subject to the solvency test in CBCA s. 42 or equivalent provincial provision.",
+  "synonyms": [
+    "distribution",
+    "stock dividend",
+    "cash dividend",
+    "capital dividend",
+    "eligible dividend",
+    "deemed dividend",
+    "return of capital",
+    "shareholder distribution"
+  ],
+  "relatedPhrases": [
+    "declare and pay a dividend",
+    "dividend in kind",
+    "cumulative dividend",
+    "participating dividend",
+    "preferred dividend",
+    "dividend arrears",
+    "solvency test",
+    "capital dividend account",
+    "eligible dividend designation"
+  ],
+  "whenYouSeeThis": "Dividend provisions appear in articles of incorporation (setting out the dividend rights of each share class), shareholders' agreements (covering dividend policy and priority), share term sheets (for preferred share dividend rights), and corporate reorganization plans. Directors encounter the solvency test whenever they consider any form of return of capital to shareholders, including share buybacks.",
+  "founderNote": "Three things Canadian founders should know about dividends. First, the solvency test: before declaring any dividend, the board must confirm that the company is not insolvent and that paying the dividend will not render it insolvent (CBCA s. 42). Directors who authorize a dividend in contravention of this test are personally jointly and severally liable. Second, preferred share dividends: if your financing documents give preferred shareholders a cumulative dividend, unpaid dividends accrue — check whether they are cumulative (they keep stacking up) or non-cumulative. Third, the capital dividend account (CDA): this is a uniquely Canadian tax concept that allows a private corporation to pay tax-free capital dividends to its shareholders — highly relevant in restructuring and exit planning.",
+  "relatedTermSlugs": [
+    "share-structure",
+    "ccpc",
+    "capital-gains-exemption"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "shareholders-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "director"
+  ]
+}

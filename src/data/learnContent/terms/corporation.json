@@ -1,0 +1,47 @@
+{
+  "id": "term-corporation",
+  "type": "term",
+  "slug": "corporation",
+  "term": "Corporation",
+  "definition": "A corporation is a legal entity that exists separately from the people who own it (shareholders) and the people who manage it (directors and officers). This 'separate legal personality' means the corporation can own property, enter into contracts, sue and be sued, and incur debts in its own name. The most important practical consequence is limited liability: shareholders are generally not personally responsible for the debts or liabilities of the corporation beyond their investment. Canadian corporations are created by filing articles of incorporation under the CBCA (federal) or one of the provincial business corporations acts (BCBCA, OBCA, ABCA, etc.).",
+  "formalDefinition": "A corporation is a body corporate with legal personality separate from that of its shareholders, created by the filing of articles of incorporation (or equivalent constating documents) under the applicable business corporations statute. It possesses the capacity, rights, powers, and privileges of a natural person (CBCA s. 15). Its shareholders enjoy limited liability, its existence is perpetual (continuing regardless of changes in membership), and its internal governance is managed by an elected board of directors subject to applicable statutory duties and any restrictions in a unanimous shareholder agreement.",
+  "synonyms": [
+    "company",
+    "corp",
+    "incorporated company",
+    "body corporate",
+    "limited company",
+    "Inc.",
+    "Ltd.",
+    "Corp."
+  ],
+  "relatedPhrases": [
+    "separate legal personality",
+    "limited liability",
+    "corporate veil",
+    "piercing the corporate veil",
+    "perpetual existence",
+    "capacity of a natural person",
+    "public or private",
+    "distributing or non-distributing",
+    "incorporating jurisdiction"
+  ],
+  "whenYouSeeThis": "The corporation is the fundamental business vehicle for startup companies in Canada. All corporate documents (articles, by-laws, resolutions, agreements) exist within the context of a corporation. Understanding that the corporation is a separate legal person from you as the founder is essential to understanding limited liability, director duties, and shareholder rights.",
+  "founderNote": "Most Canadian startups incorporate either federally (CBCA) or provincially (BCBCA for BC, OBCA for Ontario). The choice of jurisdiction matters for annual filing obligations, registered office requirements, and continuance flexibility. As of 2022, the CBCA no longer imposes any Canadian residency requirement for directors (the former 25% rule was repealed by the Budget Implementation Act, 2022, No. 1). Ontario similarly dropped its residency requirement in 2021. BC's statute (BCBCA) has never imposed one. BC's statute is structured differently from the CBCA model in several respects (e.g., the articles serve a dual purpose). Regardless of jurisdiction, all Canadian business corporations share the core attributes: separate legal personality, limited liability, and governance by a board of directors.",
+  "relatedTermSlugs": [
+    "articles-of-incorporation",
+    "share-structure",
+    "fiduciary-duty"
+  ],
+  "relatedTemplateIds": [
+    "tpl-by-law-cbca-non-distributing"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "doc-articles-of-incorporation",
+    "by-law"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "founder"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "role-investor",
+  "type": "role",
+  "slug": "investor",
+  "role": "Investor (Venture Capital Investor)",
+  "summary": "A person or entity that provides capital to a company in exchange for equity or the contractual right to future equity. In the venture context, investors are typically accredited investors — individuals or funds — who participate in private placements that are exempt from prospectus requirements under applicable securities legislation. Investors range from angels (individuals investing personal capital) to institutional venture capital funds managing committed capital from limited partners.",
+  "whatTheyDo": "Investors provide capital at agreed valuations in exchange for shares or convertible instruments (SAFEs, convertible notes). Beyond capital, institutional investors often provide strategic guidance, introductions, and governance oversight. After a financing closes, investors exercise their rights through board representation (direct seats or observer rights), protective provisions (veto rights over specified corporate actions), information rights (regular financial reporting), and pro-rata rights (the ability to maintain their ownership percentage in future rounds). Investors monitoring their portfolio may also raise concerns through the oppression remedy or shareholder derivative actions if the corporation's affairs are being conducted in a manner prejudicial to their interests.",
+  "legalDuties": [
+    {
+      "duty": "No statutory duties as investor",
+      "description": "Investors holding shares have no general statutory duties to the corporation or other shareholders simply by virtue of their investment. Their obligations are defined entirely by contract."
+    },
+    {
+      "duty": "Investor-appointed director duties",
+      "description": "When an investor nominates a director to the board, that director owes the same fiduciary duties and duty of care to the corporation as any other director under CBCA s. 122, even though they were nominated to represent a specific shareholder's interests."
+    },
+    {
+      "duty": "Potential controlling shareholder duties",
+      "description": "A shareholder who exercises effective control over the corporation may owe duties to minority shareholders under the oppression remedy (CBCA s. 241). Courts have found that controlling shareholders cannot exercise their rights in a manner that is oppressive, unfairly prejudicial, or unfairly disregards the interests of minority shareholders."
+    },
+    {
+      "duty": "Contractual obligations under deal documents",
+      "description": "Investors have affirmative contractual obligations under subscription agreements (funding obligations), voting agreements (how they must vote on certain matters), and ROFR/co-sale agreements (obligations to offer co-sale participation to other shareholders)."
+    }
+  ],
+  "qualifications": "In Canada, investors in private placements must qualify under a prospectus exemption — most commonly the accredited investor exemption under National Instrument 45-106. Institutional investors (VC funds) must also comply with applicable investment dealer and fund registration requirements. There are no Canadian residency requirements for investors, but foreign investment may trigger review under the Investment Canada Act (ICA) for larger transactions.",
+  "commonDocuments": [
+    "Term sheet",
+    "Subscription agreement",
+    "SAFE",
+    "Convertible note",
+    "Investors' rights agreement",
+    "Voting agreement",
+    "Right of first refusal and co-sale agreement",
+    "Management rights letter",
+    "Accredited investor certificate",
+    "Side letter"
+  ],
+  "applicableJurisdictions": [
+    "CBCA",
+    "BCBCA",
+    "OBCA",
+    "ABCA"
+  ],
+  "founderNote": "Your investors' legal rights are entirely defined by the deal documents — not by statute, not by custom, not by what anyone said in the term sheet negotiation. After a financing closes, the investors typically hold: board seats or observer rights, information rights (regular financial reporting), pro-rata rights (to maintain ownership in future rounds), protective provisions (veto rights over major corporate actions like selling the company, issuing more shares above a threshold, or amending constitutional documents), and ROFR and co-sale rights (limiting your ability to sell your personal shares without offering them a ride). Read every one of these carefully before signing. The protective provisions in particular can give investors effective veto power over actions you thought were purely in management's discretion.",
+  "relatedTermSlugs": [
+    "accredited-investor",
+    "safe",
+    "convertible-note",
+    "liquidation-preference",
+    "anti-dilution",
+    "information-rights"
+  ],
+  "relatedTemplateIds": [],
+  "updatedAt": "2026-04-11",
+  "relatedDocumentGuideSlugs": [
+    "term-sheet",
+    "subscription-agreement",
+    "investors-rights-agreement",
+    "rofr-co-sale-agreement",
+    "safe",
+    "convertible-note"
+  ]
+}

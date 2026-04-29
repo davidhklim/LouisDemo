@@ -1,0 +1,50 @@
+{
+  "id": "term-liquidation-preference",
+  "type": "term",
+  "slug": "liquidation-preference",
+  "term": "Liquidation Preference",
+  "definition": "A liquidation preference is the right of preferred shareholders to get paid first — before common shareholders (founders and employees) receive anything — when the company is sold, dissolved, or wound up. A 1x non-participating preference means the investor gets back their original investment before anyone else sees a dollar, and then steps aside: the remaining proceeds are distributed to common shareholders. A participating preference (sometimes called 'double dipping') means the investor gets their money back first AND then participates alongside common shareholders in distributing whatever is left over — effectively getting paid twice. The liquidation preference is one of the most economically significant terms in any preferred share financing.",
+  "formalDefinition": "A liquidation preference is a preferential right attached to a class of preferred shares entitling the holders to receive a specified amount per share (typically expressed as a multiple of the original issue price, most commonly 1x) from the proceeds of a liquidation, dissolution, wind-up, or deemed liquidation event (including an acquisition, merger, or sale of all or substantially all assets) before any distribution is made to holders of junior securities. Non-participating preferred shares receive their liquidation preference amount and do not participate further in the remaining proceeds. Participating preferred shares receive their liquidation preference amount and then convert (or are deemed to convert) into common shares to share pro rata in the remaining proceeds. Participation rights may be capped (e.g., participate up to 2x the original investment total, then step aside) or uncapped. In Canada, the CRA treatment of liquidation preference payments relative to paid-up capital and stated capital is relevant to the CCPC analysis and potential deemed dividend exposure.",
+  "synonyms": [
+    "liquidation preference",
+    "liquidation right",
+    "preferred liquidation right",
+    "liquidation waterfall",
+    "participating preferred",
+    "non-participating preferred",
+    "double dip",
+    "double dipping",
+    "1x preference",
+    "liquidation priority"
+  ],
+  "relatedPhrases": [
+    "liquidation event",
+    "deemed liquidation event",
+    "participating preferred",
+    "non-participating preferred",
+    "liquidation waterfall",
+    "original issue price",
+    "proceeds distribution",
+    "liquidation multiple",
+    "conversion election",
+    "change of control"
+  ],
+  "whenYouSeeThis": "Liquidation preferences appear in the special rights and restrictions attached to preferred shares, set out in the articles of incorporation or the schedule of share provisions to a subscription or share purchase agreement. They are first negotiated in the term sheet under the heading 'Liquidation Preference' or 'Liquidation Rights.' They become critically important in any M&A transaction, as they determine the order and amounts paid to each class of shareholder from the sale proceeds.",
+  "founderNote": "The liquidation preference is where founders routinely get blindsided in an acquisition. A 1x non-participating preference is the standard and is completely fair — investors get their money back, then everyone shares equally. The problem arises with participating preferred: the investor gets their money back first AND shares in the upside, which can consume a disproportionate share of a modest acquisition. Example: investor puts in $2M with a 1x participating preference, company sells for $5M. The investor takes $2M off the top (their preference), and then participates in the remaining $3M pro rata with common shareholders. If they own 30%, that is another $900K — total: $2.9M on a $2M investment from a $5M exit. Push for non-participating. If the investor insists on participating, negotiate a participation cap (typically 2x or 3x the original investment as the maximum total payout). CVCA model documents default to non-participating.",
+  "relatedTermSlugs": [
+    "dilution",
+    "anti-dilution",
+    "pre-money-valuation",
+    "share-structure"
+  ],
+  "relatedTemplateIds": [
+    "tpl-term-sheet-seed"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "investor"
+  ]
+}

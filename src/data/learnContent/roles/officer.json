@@ -1,0 +1,53 @@
+{
+  "id": "role-officer",
+  "type": "role",
+  "slug": "officer",
+  "role": "Officer",
+  "summary": "An officer is a person appointed by the board of directors to manage the day-to-day operations of the corporation. Common officer titles include Chief Executive Officer (CEO), President, Chief Financial Officer (CFO), Chief Operating Officer (COO), and Secretary. Officers are agents of the corporation and derive their authority from the board. Like directors, officers owe fiduciary duties and a duty of care to the corporation.",
+  "whatTheyDo": "Officers execute the strategic decisions made by the board, manage employees, sign contracts on behalf of the corporation, oversee financial reporting, and handle day-to-day business operations. The CEO is typically the most senior officer, reporting to the board. The CFO manages finances and accounting. The Secretary is responsible for corporate records, minutes, and compliance filings. Officers do not set corporate policy (that is the board's role) but they implement it.",
+  "legalDuties": [
+    {
+      "duty": "Fiduciary duty",
+      "description": "Officers owe the same duty of honesty and good faith as directors under CBCA s. 122(1)(a). This includes the obligation to avoid conflicts of interest and not to divert corporate opportunities."
+    },
+    {
+      "duty": "Duty of care",
+      "description": "Officers must exercise care, diligence, and skill comparable to a reasonably prudent person in their position. The standard may be higher for officers with specialized expertise (e.g., a CFO is expected to understand financial statements at a professional level)."
+    },
+    {
+      "duty": "Agency obligations",
+      "description": "As agents of the corporation, officers must act within the scope of their authority. Contracts signed outside the scope of an officer's authority may not bind the corporation."
+    }
+  ],
+  "qualifications": "Officers are appointed by the board of directors (or by shareholders in some cases). There are no statutory residency or age requirements for officers. A person can be both a director and an officer simultaneously (this is common in startups where the CEO also sits on the board). Officers serve at the pleasure of the board and can be removed by board resolution.",
+  "commonDocuments": [
+    "Board resolutions appointing officers",
+    "Employment agreement",
+    "Indemnification agreement",
+    "Officer's certificate (for closing conditions)",
+    "Board resolutions ratifying prior actions of officers"
+  ],
+  "applicableJurisdictions": [
+    "CBCA",
+    "BCBCA",
+    "OBCA",
+    "ABCA"
+  ],
+  "founderNote": "In most startups, the founder is both a director and the CEO. This dual role is normal but creates potential conflicts: the board (including you) sets your compensation, approves your expenses, and evaluates your performance. Once you have outside investors on the board, the dynamic changes: they may have the power to remove you as CEO (an officer appointment) even if they cannot remove you as a director (which requires a shareholder vote). Understand this distinction before negotiating your investors' rights agreement. Officers' personal liability exposure is similar to directors' but the statutory defences available to directors (good faith reliance, reasonable diligence) do not always extend to officers in all jurisdictions.",
+  "relatedTermSlugs": [
+    "fiduciary-duty",
+    "duty-of-care",
+    "d-and-o-insurance"
+  ],
+  "relatedTemplateIds": [
+    "tpl-employment-agreement-long-form",
+    "tpl-board-resolutions-appointing-officers",
+    "tpl-indemnification-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedDocumentGuideSlugs": [
+    "employment-agreement",
+    "indemnification-agreement",
+    "board-resolutions"
+  ]
+}

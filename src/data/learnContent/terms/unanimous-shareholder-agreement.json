@@ -1,0 +1,43 @@
+{
+  "id": "term-unanimous-shareholder-agreement",
+  "type": "term",
+  "slug": "unanimous-shareholder-agreement",
+  "term": "Unanimous Shareholder Agreement",
+  "definition": "A unanimous shareholder agreement (USA) is a unique Canadian mechanism that allows shareholders to take over some or all of the powers of the board of directors. Under Canadian business corporations statutes, the BCAs generally do not permit contracts that relieve directors of their duties, with one exception: a USA that meets statutory requirements can transfer the rights, powers, duties, and liabilities of directors to the shareholders who sign it. This means shareholders themselves become personally responsible for the duties they assumed. A USA must be agreed to by all shareholders.",
+  "formalDefinition": "A unanimous shareholder agreement is an agreement among all shareholders, or between all shareholders and one or more non-shareholders, that restricts, in whole or in part, the powers of directors to manage or supervise the management of the business and affairs of the corporation, as contemplated by the CBCA (s. 146), ABCA, OBCA, and QBCA. Under the BCBCA, the equivalent transfer is effected through a provision in the articles rather than a separate USA. The transfer of powers carries with it the corresponding statutory duties and liabilities.",
+  "synonyms": [
+    "USA",
+    "unanimous shareholder agreement",
+    "shareholders' agreement",
+    "all-shareholder agreement",
+    "transfer of board powers"
+  ],
+  "relatedPhrases": [
+    "restrict the powers of directors",
+    "transfer of duties and liabilities",
+    "all shareholders must agree",
+    "constating document",
+    "provisions in the articles",
+    "shareholder management",
+    "closely held corporation"
+  ],
+  "whenYouSeeThis": "USAs are used primarily in closely held private companies where all shareholders want direct control over corporate decision-making rather than delegating to a board. They are common in two-person startups where both founders are equal shareholders. In venture-backed companies, a USA is less common because investors typically want board representation rather than direct management. The key template in LouisAI is the Unanimous Shareholder Agreement (Emerging Corporation).",
+  "founderNote": "A USA is powerful but comes with personal baggage: once you assume directors' duties through a USA, you are personally liable for those duties in the same way a director would be. In a two-founder company, a USA can be useful for ensuring both founders have equal control. However, if you plan to raise venture capital, investors will likely want you to move to a standard board structure. Be aware that under the BCBCA (BC companies), the USA concept works differently: the transfer is made through the articles, not a standalone agreement, and does not use the 'unanimous shareholder agreement' label.",
+  "relatedTermSlugs": [
+    "fiduciary-duty",
+    "oppression-remedy",
+    "duty-of-care"
+  ],
+  "relatedTemplateIds": [
+    "tpl-unanimous-shareholder-agreement-emerging"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "shareholders-agreement",
+    "articles-of-incorporation"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "director",
+    "founder"
+  ]
+}

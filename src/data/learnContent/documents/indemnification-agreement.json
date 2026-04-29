@@ -1,0 +1,27 @@
+{
+  "id": "doc-indemnification-agreement",
+  "type": "document_guide",
+  "slug": "indemnification-agreement",
+  "title": "Indemnification Agreement (Director/Officer)",
+  "summary": "A contract between the corporation and a director or officer that promises to cover their legal costs and liabilities arising from their service to the corporation. It supplements statutory indemnification rights and is a key tool for recruiting directors.",
+  "whatItIs": "An indemnification agreement is a stand-alone contract in which the corporation agrees to indemnify (cover the costs and liabilities of) a director or officer for claims arising from their service to the corporation. It typically covers legal defence costs, settlements, judgments, and fines incurred in connection with civil, criminal, or administrative proceedings, subject to statutory limitations (most BCAs prohibit indemnification where the director did not act honestly and in good faith). The agreement provides contractual certainty beyond what the statute provides, because statutory indemnification provisions are permissive (the company 'may' indemnify) while the agreement makes it mandatory.",
+  "whenToUse": "An indemnification agreement should be offered to every director and officer at the time of their appointment. It is especially important for independent directors and investor-nominated directors, who may refuse to serve without one. The agreement is also relevant when a director or officer resigns (the indemnification should survive termination of their service). In a financing round, providing indemnification agreements to new board members is often a closing condition.",
+  "whyItMatters": "Directors and officers face personal liability for their corporate decisions. Without adequate indemnification, qualified individuals will be reluctant to serve on your board. The indemnification agreement provides a contractual right to reimbursement that the company cannot unilaterally withdraw (unlike a discretionary by-law provision). It is the legal safety net that makes board service acceptable. Combined with D&O insurance, it forms the two-layer protection system for directors and officers.",
+  "keyTerms": [
+    { "termSlug": "indemnification", "label": "Indemnification" },
+    { "termSlug": "fiduciary-duty", "label": "Fiduciary Duty" },
+    { "termSlug": "duty-of-care", "label": "Duty of Care" },
+    { "termSlug": "d-and-o-insurance", "label": "D&O Insurance" }
+  ],
+  "applicableJurisdictions": ["CBCA", "BCBCA", "OBCA", "ABCA"],
+  "relatedTemplateIds": [
+    "tpl-indemnification-agreement",
+    "tpl-consent-to-act-director"
+  ],
+  "relatedTermSlugs": [
+    "indemnification",
+    "fiduciary-duty",
+    "d-and-o-insurance"
+  ],
+  "updatedAt": "2026-03-30"
+}

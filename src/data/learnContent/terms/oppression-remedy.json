@@ -1,0 +1,46 @@
+{
+  "id": "term-oppression-remedy",
+  "type": "term",
+  "slug": "oppression-remedy",
+  "term": "Oppression Remedy",
+  "definition": "The oppression remedy is the most powerful tool available to minority shareholders in Canadian corporate law. It allows a court to grant nearly any remedy when the conduct of the corporation or its directors is oppressive, unfairly prejudicial, or unfairly disregards the interests of a shareholder, creditor, director, or officer. The key test is whether the complained-of conduct defeats the reasonable expectations of the complainant. Courts can order the corporation to pay damages, buy out shares at fair value, amend articles, set aside transactions, or even hold directors personally liable.",
+  "formalDefinition": "Under s. 241 of the CBCA (and equivalent provincial provisions), a complainant may apply to a court for relief where the corporation or any of its affiliates has acted, or the directors have exercised their powers, in a manner that is oppressive or unfairly prejudicial to, or that unfairly disregards, the interests of any security holder, creditor, director, or officer. The concept of 'reasonable expectations' established in BCE Inc. v. 1976 Debentureholders (2008 SCC 69) is central to the analysis.",
+  "synonyms": [
+    "oppression",
+    "oppression claim",
+    "unfair prejudice remedy",
+    "minority shareholder remedy",
+    "s. 241 CBCA",
+    "unfairly disregards",
+    "oppressive conduct"
+  ],
+  "relatedPhrases": [
+    "oppressive, unfairly prejudicial, or unfairly disregards",
+    "reasonable expectations",
+    "complainant",
+    "rectificatory, not punitive",
+    "buyout order",
+    "fair value",
+    "personal liability of directors",
+    "wind-up order",
+    "just and equitable"
+  ],
+  "whenYouSeeThis": "The oppression remedy is a statutory remedy, not a contractual clause. However, it is relevant when reviewing shareholders agreements, unanimous shareholder agreements, and any document that establishes expectations about how a company will be governed. Courts often look at what was promised or implied in these documents to determine whether reasonable expectations were defeated.",
+  "founderNote": "The oppression remedy is easier to invoke than a derivative action because you can bring it in your own name and get a personal remedy. As a founder, you should be aware of it from two angles: (1) as a majority shareholder, ensure you are not acting in ways that unfairly prejudice minority shareholders (e.g., paying yourself an excessive salary, refusing to declare dividends, or squeezing out a co-founder), and (2) as a minority shareholder, it is your most powerful recourse if the majority is treating you unfairly. The remedy is not punitive but rectificatory, meaning courts aim to fix the situation rather than punish.",
+  "relatedTermSlugs": [
+    "fiduciary-duty",
+    "duty-of-care",
+    "unanimous-shareholder-agreement"
+  ],
+  "relatedTemplateIds": [
+    "tpl-shareholder-rights-plan-agreement"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "shareholders-agreement",
+    "investors-rights-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "investor"
+  ]
+}

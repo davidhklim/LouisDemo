@@ -1,0 +1,25 @@
+{
+  "id": "doc-articles-of-incorporation",
+  "type": "document_guide",
+  "slug": "doc-articles-of-incorporation",
+  "title": "Articles of Incorporation",
+  "summary": "The foundational document that creates a corporation and defines its basic structure. Every Canadian corporation starts with articles of incorporation.",
+  "whatItIs": "Articles of incorporation are the constitutional document of a Canadian corporation, filed with the government to bring the corporation into legal existence. They define the corporation's name, registered office province, authorized share structure (types and maximum number of shares), any transfer restrictions, the number of directors, and any restrictions on the corporation's business activities. Under the CBCA, the document filed is called 'articles of incorporation.' Under the BCBCA, the equivalent is an incorporation application plus articles (which serve a dual constitutional and governance purpose).",
+  "whenToUse": "Articles of incorporation are prepared and filed at the moment of incorporation. They are amended whenever the company needs to change its name, add or modify share classes (common for financing rounds), change the number of directors, or alter transfer restrictions. Amendments to articles typically require a special resolution (two-thirds majority) of shareholders.",
+  "whyItMatters": "The articles define the boundaries of what the corporation can do and how its equity is structured. Getting the share structure right at incorporation saves significant time and cost later. A poorly designed share structure can delay financing rounds, create tax problems, and complicate corporate governance. The articles are also the document that investors' lawyers review first in due diligence.",
+  "keyTerms": [
+    { "termSlug": "articles-of-incorporation", "label": "Articles of Incorporation" },
+    { "termSlug": "share-structure", "label": "Share Structure" },
+    { "termSlug": "corporation", "label": "Corporation" }
+  ],
+  "applicableJurisdictions": ["CBCA", "BCBCA", "OBCA", "ABCA"],
+  "relatedTemplateIds": [
+    "tpl-by-law-cbca-non-distributing"
+  ],
+  "relatedTermSlugs": [
+    "articles-of-incorporation",
+    "share-structure",
+    "corporation"
+  ],
+  "updatedAt": "2026-03-30"
+}

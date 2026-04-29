@@ -1,0 +1,50 @@
+{
+  "id": "term-indemnification",
+  "type": "term",
+  "slug": "indemnification",
+  "term": "Indemnification",
+  "definition": "An indemnification clause is a promise by one party to cover the other party's losses if something goes wrong. If Party A indemnifies Party B, and Party B gets sued because of something Party A did (or failed to do), Party A is responsible for paying the legal costs and any judgment. It is a contractual backstop — a financial guarantee that a named category of risk belongs to the indemnifying party.",
+  "formalDefinition": "An obligation by the indemnifying party to hold harmless, defend, and make whole the indemnified party from and against losses, liabilities, claims, damages, costs, and expenses arising from specified triggering events, including breaches of representations, third-party claims, and specified indemnified matters.",
+  "synonyms": [
+    "indemnify",
+    "hold harmless",
+    "make whole",
+    "indemnity",
+    "defend and indemnify",
+    "indemnification obligation",
+    "indemnitor",
+    "indemnitee",
+    "indemnified party",
+    "indemnifying party"
+  ],
+  "relatedPhrases": [
+    "indemnify, defend and hold harmless",
+    "losses, liabilities, claims, damages, costs and expenses",
+    "third-party claims",
+    "indemnification basket",
+    "indemnification cap",
+    "survival of indemnification obligations",
+    "indemnification procedures"
+  ],
+  "whenYouSeeThis": "Indemnification clauses appear in virtually every commercial agreement — employment contracts, NDAs, share purchase agreements, service agreements, and financing documents. They are most heavily negotiated in M&A transactions where the buyer seeks to recover post-closing for breaches of the seller's representations and warranties.",
+  "founderNote": "Pay attention to two numbers: the basket (the minimum loss threshold before indemnification kicks in) and the cap (the maximum you can recover or owe). In a seed-stage deal, these are often symmetric. In an acquisition, the seller will push hard to lower the cap and raise the basket.",
+  "relatedTermSlugs": [
+    "representations-and-warranties",
+    "d-and-o-insurance"
+  ],
+  "relatedTemplateIds": [
+    "tpl-indemnification-agreement",
+    "tpl-share-purchase-agreement-seed",
+    "tpl-employment-agreement-long-form"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "shareholders-agreement",
+    "indemnification-agreement",
+    "employment-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "director",
+    "officer"
+  ]
+}

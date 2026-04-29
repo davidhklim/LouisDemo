@@ -1,0 +1,50 @@
+{
+  "id": "term-warrant",
+  "type": "term",
+  "slug": "warrant",
+  "term": "Warrant",
+  "definition": "A warrant is the right — but not the obligation — to purchase shares in a company at a fixed price (called the exercise price or strike price) within a specific time period. Unlike a stock option, which is typically granted to employees as part of their compensation, warrants are usually issued to investors, lenders, or service providers. They are commonly attached to convertible notes or bridge loans as a 'sweetener' to reward the lender for providing capital before a priced round. When the warrant holder exercises their warrant, they pay the exercise price and receive shares — this results in dilution for existing shareholders.",
+  "formalDefinition": "A warrant is a contractual instrument granting the holder the right, but not the obligation, to subscribe for or purchase a specified number of shares of a corporation at a fixed exercise price, exercisable within a defined period or upon the occurrence of specified conditions. Warrants are securities for the purposes of applicable Canadian provincial securities legislation and their issuance constitutes a distribution requiring a prospectus exemption (typically the accredited investor or minimum amount investment exemption under NI 45-106). Upon exercise of a warrant, the corporation issues new shares from treasury, which dilutes existing shareholders. Outstanding warrants must be tracked on the cap table as potential dilutive instruments and may trigger CBCA pre-emptive rights unless waived. Warrants attached to convertible notes or other debt instruments may need to be bifurcated for accounting purposes under ASPE or IFRS.",
+  "synonyms": [
+    "warrant",
+    "share purchase warrant",
+    "stock warrant",
+    "common share warrant",
+    "preferred share warrant",
+    "bridge warrant",
+    "investor warrant",
+    "lender warrant",
+    "sweetener warrant",
+    "detachable warrant"
+  ],
+  "relatedPhrases": [
+    "exercise price",
+    "strike price",
+    "warrant exercise",
+    "warrant expiry",
+    "warrant coverage",
+    "cashless exercise",
+    "net exercise",
+    "warrant certificate",
+    "pre-emptive rights waiver",
+    "fully diluted share count"
+  ],
+  "whenYouSeeThis": "Warrants appear most commonly as attachments to convertible notes (the note terms will specify 'warrant coverage' as a percentage of the principal amount — e.g., 20% warrant coverage on a $500K note means warrants to purchase $100K worth of shares). You will also see them in bridge financing agreements, venture debt arrangements, and occasionally in service agreements with advisors or law firms taking equity in lieu of fees. They create a separate line on the cap table and must be listed in any due diligence disclosure.",
+  "founderNote": "Warrants attached to convertible notes are easy to overlook because the dilution is deferred — you do not feel it until the warrant is exercised. Always model warrants into your fully diluted cap table at signing. 'Warrant coverage' of 20-30% is typical for bridge notes; above 50% is aggressive and worth pushing back on. The exercise price matters: warrants priced at the conversion price of the round (or at a modest premium) are relatively founder-friendly; warrants priced at $0.01 or with a cashless exercise feature give the investor a near-free option on your shares. Also check whether existing CBCA pre-emptive rights require you to offer existing shareholders the right to purchase the same shares before issuing warrants — most sophisticated financings include a pre-emptive rights waiver in the closing documents.",
+  "relatedTermSlugs": [
+    "vesting",
+    "dilution",
+    "convertible-note",
+    "cap-table",
+    "safe",
+    "anti-dilution"
+  ],
+  "relatedTemplateIds": [
+    "tpl-share-purchase-warrant",
+    "tpl-convertible-promissory-note"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-11"
+}

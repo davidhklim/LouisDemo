@@ -1,0 +1,52 @@
+{
+  "id": "term-share-structure",
+  "type": "term",
+  "slug": "share-structure",
+  "term": "Share Structure / Authorized Capital",
+  "definition": "A share structure (also called authorized capital or authorized share structure) defines the types and maximum number of shares a corporation is permitted to issue. Most startup corporations are set up with at least two classes: common shares (held by founders and employees, carrying voting rights and residual economic interest) and preferred shares (issued to investors in financing rounds, typically carrying liquidation preferences, anti-dilution protection, and conversion rights). The share structure is established in the articles of incorporation and can only be changed by a special resolution of the shareholders.",
+  "formalDefinition": "The authorized share structure is the description of the classes and maximum number of shares that a corporation is authorized to issue, as set out in its articles of incorporation (CBCA s. 6) or notice of articles (BCBCA). Each class of shares has specific rights, privileges, restrictions, and conditions attached to it (sometimes called 'special rights or restrictions' under the BCBCA). Shares may be with or without par value. The corporation may issue shares up to the authorized maximum without further shareholder approval, though director approval is required for each issuance.",
+  "synonyms": [
+    "authorized capital",
+    "authorized share structure",
+    "share capital",
+    "capital structure",
+    "equity structure",
+    "classes of shares",
+    "authorized shares"
+  ],
+  "relatedPhrases": [
+    "common shares",
+    "preferred shares",
+    "class A shares",
+    "class B shares",
+    "voting rights",
+    "liquidation preference",
+    "par value",
+    "authorized but unissued",
+    "issued and outstanding",
+    "fully diluted"
+  ],
+  "whenYouSeeThis": "Share structure is discussed in articles of incorporation, subscription agreements, share purchase agreements, term sheets, shareholders agreements, and board resolutions for share issuances. Understanding the share structure is essential for reading a cap table and understanding the economics of a financing round.",
+  "founderNote": "The distinction between authorized shares and issued shares matters: authorized shares are the maximum the company is allowed to issue; issued shares are the ones actually in the hands of shareholders. A venture financing round typically creates a new class of preferred shares (Series Seed, Series A, etc.) with specific economic rights. Keep your share structure clean from day one. A messy structure with too many classes or unclear rights will slow down due diligence and increase legal costs in every future transaction.",
+  "relatedTermSlugs": [
+    "articles-of-incorporation",
+    "dilution",
+    "cap-table",
+    "liquidation-preference",
+    "anti-dilution",
+    "pre-emptive-right"
+  ],
+  "relatedTemplateIds": [
+    "tpl-share-purchase-agreement-seed",
+    "tpl-subscription-agreement-simple"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "doc-articles-of-incorporation",
+    "shareholders-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "founder",
+    "investor"
+  ]
+}

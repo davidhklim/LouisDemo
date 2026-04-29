@@ -1,0 +1,44 @@
+{
+  "id": "term-representations-and-warranties",
+  "type": "term",
+  "slug": "representations-and-warranties",
+  "term": "Representations and Warranties",
+  "definition": "Representations and warranties (often called 'reps and warranties' or just 'reps') are factual statements made by one party to another as of a specific date — usually the signing date and/or the closing date. If a statement turns out to be false, the party who made it has breached the agreement, which typically triggers indemnification obligations. They serve as a structured due diligence mechanism: the seller (or company) discloses what is true, and the buyer gets a remedy if any disclosure is incorrect.",
+  "formalDefinition": "Representations are statements of present or past fact. Warranties are promises that a fact is or will remain true. In Canadian commercial practice the two are almost always paired and treated together; a breach of either gives rise to an indemnification claim and, in some cases, a right to terminate.",
+  "synonyms": [
+    "reps and warranties",
+    "representations",
+    "warranties",
+    "reps",
+    "covenants and representations",
+    "representations, warranties and covenants"
+  ],
+  "relatedPhrases": [
+    "as of the date hereof",
+    "to the knowledge of",
+    "material adverse effect",
+    "bring-down condition",
+    "disclosure schedule",
+    "no material misrepresentation",
+    "breach of representation",
+    "survival of representations and warranties",
+    "knowledge qualifier",
+    "materiality qualifier"
+  ],
+  "whenYouSeeThis": "Representations and warranties appear in share purchase agreements, asset purchase agreements, subscription agreements, financing documents, and investor rights agreements. They are most extensively negotiated in M&A transactions. In seed-stage financing they are typically shorter and skewed toward the company making statements to investors.",
+  "founderNote": "Two qualifiers to watch: 'knowledge' (limits your liability to what you actually knew) and 'materiality' (limits your liability to significant breaches). Investors will push to remove both. The disclosure schedule is equally important — whatever you list there is typically carved out from indemnification exposure.",
+  "relatedTermSlugs": [
+    "indemnification",
+    "closing",
+    "conditions-precedent"
+  ],
+  "relatedTemplateIds": [
+    "tpl-share-purchase-agreement-seed",
+    "tpl-subscription-agreement-simple",
+    "tpl-subscription-agreement-buyout"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "subscription-agreement"
+  ],
+  "updatedAt": "2026-04-11"
+}

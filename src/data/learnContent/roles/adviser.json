@@ -1,0 +1,51 @@
+{
+  "id": "role-adviser",
+  "type": "role",
+  "slug": "adviser",
+  "role": "Adviser (Board Adviser / Startup Adviser)",
+  "summary": "A person who provides strategic guidance, domain expertise, or industry introductions to a startup, typically in exchange for a small equity grant on a vesting schedule. Unlike a director, an adviser has no statutory duties or personal liability under corporate law. Unlike a consultant, an adviser relationship is generally informal — defined by a light contractual framework rather than detailed deliverables or a statement of work.",
+  "whatTheyDo": "Advisers typically attend periodic one-on-one calls with founders, make introductions to customers, partners, or investors, provide feedback on product or strategy, and lend credibility to the company's pitch narrative. What they do not do (without becoming directors) is vote on corporate matters, sign documents on behalf of the company, or exercise management authority. The equity grant (typically 0.1%–1% of fully diluted common shares) is the primary incentive mechanism and is almost always subject to vesting to ensure ongoing engagement.",
+  "legalDuties": [
+    {
+      "duty": "No statutory duties",
+      "description": "Advisers have no duties under the CBCA, BCBCA, OBCA, or any Canadian corporate statute. Their obligations are defined entirely by their adviser agreement."
+    },
+    {
+      "duty": "Confidentiality obligation",
+      "description": "Adviser agreements invariably include a confidentiality clause. The adviser receives sensitive company information (financial data, product roadmaps, customer lists) and is contractually bound not to disclose it. This obligation typically survives the end of the adviser relationship."
+    },
+    {
+      "duty": "IP assignment for work product",
+      "description": "If an adviser creates any intellectual property in the course of their advisory role (drafts, designs, code, analysis), the adviser agreement should include an IP assignment clause to ensure that work product belongs to the company, not the adviser."
+    },
+    {
+      "duty": "Non-compete and non-solicitation covenants",
+      "description": "Many adviser agreements include limited non-compete and non-solicitation covenants, though these are typically narrower than employment-context restrictions and may be difficult to enforce under applicable provincial law."
+    }
+  ],
+  "qualifications": "There are no statutory qualifications to become an adviser. Anyone can serve. Advisers who hold shares in the company must qualify under a prospectus exemption (typically the accredited investor exemption or the founder exemption) if the share grant constitutes a distribution of securities. Options granted under an employee stock option plan (ESOP) to advisers typically rely on the private issuer exemption or the offering memorandum exemption under NI 45-106.",
+  "commonDocuments": [
+    "Adviser agreement",
+    "Board resolution approving adviser equity grant",
+    "Confidentiality agreement",
+    "IP assignment agreement",
+    "Option grant letter (if options rather than shares are used)"
+  ],
+  "applicableJurisdictions": [
+    "CBCA",
+    "BCBCA",
+    "OBCA",
+    "ABCA"
+  ],
+  "founderNote": "Three rules for adviser equity. First, always use a vesting schedule — the standard is 2 years with no cliff (monthly vesting from day one), because advisers are not full-time employees and a cliff is harder to justify. Second, do not grant equity without a signed adviser agreement in place; verbal promises create disputes and cap table cleanup headaches. Third, be disciplined about the size of grants — adviser equity adds up fast and comes directly out of the pool available for employees. The FAST Agreement (Founder/Adviser Standard Template) from the Founder Institute is a widely-used starting point, but it is a US document and should be reviewed by Canadian counsel before use. Pay particular attention to the governing law clause and the IP assignment provisions.",
+  "relatedTermSlugs": [
+    "vesting",
+    "non-compete",
+    "intellectual-property-assignment"
+  ],
+  "relatedTemplateIds": [],
+  "updatedAt": "2026-04-11",
+  "relatedDocumentGuideSlugs": [
+    "employment-agreement"
+  ]
+}

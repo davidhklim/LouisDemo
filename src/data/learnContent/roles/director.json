@@ -1,0 +1,63 @@
+{
+  "id": "role-director",
+  "type": "role",
+  "slug": "director",
+  "role": "Director",
+  "summary": "A director is a member of the board of directors, the body responsible for managing or supervising the management of a corporation's business and affairs. Directors are elected by shareholders and owe fiduciary duties and a duty of care to the corporation. In a startup, founders typically serve as directors alongside any investor-appointed directors.",
+  "whatTheyDo": "Directors set the strategic direction of the corporation, approve major transactions (financings, acquisitions, material contracts), oversee management, approve financial statements, declare dividends, authorize share issuances, and ensure legal compliance. They act collectively as a board, not individually. Day-to-day management is typically delegated to officers, but certain powers (amending by-laws, issuing shares, approving financial statements) cannot be delegated.",
+  "legalDuties": [
+    {
+      "duty": "Fiduciary duty",
+      "description": "Act honestly and in good faith with a view to the best interests of the corporation (CBCA s. 122(1)(a))."
+    },
+    {
+      "duty": "Duty of care",
+      "description": "Exercise the care, diligence, and skill that a reasonably prudent person would exercise in comparable circumstances (CBCA s. 122(1)(b))."
+    },
+    {
+      "duty": "Duty of compliance",
+      "description": "Comply with the governing statute, regulations, articles, by-laws, and any unanimous shareholder agreement."
+    },
+    {
+      "duty": "Conflict of interest disclosure",
+      "description": "Disclose any material interest in a contract or transaction with the corporation and abstain from voting on that matter (CBCA s. 120)."
+    },
+    {
+      "duty": "Duty not to support improper resolutions",
+      "description": "Directors who vote for improper dividends, share purchases, or other prohibited payments may be jointly and severally liable for the amount paid."
+    }
+  ],
+  "qualifications": "Must be an individual (not a corporation), at least 18 years old, of sound mind, and not bankrupt. As of 2022, the CBCA no longer imposes any Canadian residency requirement for directors (the former 25% rule was repealed). Ontario similarly removed its residency requirement in 2021. The BCBCA has never imposed one. No Canadian business corporations statute currently requires any director to be a Canadian resident. A director need not be a shareholder unless the articles say otherwise.",
+  "commonDocuments": [
+    "Consent to act as director",
+    "Board resolutions",
+    "Indemnification agreement",
+    "Minutes of directors' meetings",
+    "Directors' resignation"
+  ],
+  "applicableJurisdictions": [
+    "CBCA",
+    "BCBCA",
+    "OBCA",
+    "ABCA"
+  ],
+  "founderNote": "As a founder-director, you wear two hats: your management hat (as CEO or officer) and your governance hat (as director). The board hat carries personal liability. When the board votes on something that affects you personally (your compensation, a share transaction involving you), you must disclose the conflict and recuse yourself. Having at least one independent director early on (even before your Series A) improves governance quality and protects the company from the appearance of self-dealing. Investor directors (nominated by VCs after a financing round) have the same duties as any other director, even though they were nominated by a specific shareholder.",
+  "relatedTermSlugs": [
+    "fiduciary-duty",
+    "duty-of-care",
+    "business-judgment-rule",
+    "conflicts-of-interest",
+    "d-and-o-insurance"
+  ],
+  "relatedTemplateIds": [
+    "tpl-consent-to-act-director",
+    "tpl-indemnification-agreement",
+    "tpl-directors-resolution-shareholder-rights-plan"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedDocumentGuideSlugs": [
+    "board-resolutions",
+    "indemnification-agreement",
+    "shareholders-agreement"
+  ]
+}

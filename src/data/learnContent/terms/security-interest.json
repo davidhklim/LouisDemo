@@ -1,0 +1,47 @@
+{
+  "id": "term-security-interest",
+  "type": "term",
+  "slug": "security-interest",
+  "term": "Security Interest (PPSA)",
+  "definition": "A security interest is a legal right granted by a borrower (debtor) to a lender (secured party) over personal property (such as equipment, inventory, receivables, or intellectual property) to secure repayment of a debt. If the borrower defaults, the secured party can seize and sell the collateral to recover the amount owed. In Canada, security interests in personal property are governed by the Personal Property Security Act (PPSA) in each province. A security interest is 'perfected' by registering a financing statement in the provincial PPSA registry, which gives the secured party priority over other creditors. An unperfected security interest may be worthless in a bankruptcy.",
+  "formalDefinition": "Under the Personal Property Security Act (PPSA), a security interest is an interest in personal property that secures payment or performance of an obligation. A security interest attaches when value is given, the debtor has rights in the collateral, and the debtor has signed a security agreement (or the secured party has possession of the collateral). Perfection is achieved by registration of a financing statement in the applicable provincial Personal Property Registry, by possession, or by control. Priority among competing security interests is generally determined by the order of registration or perfection (first to register or perfect has priority), subject to special rules for purchase money security interests (PMSIs) and statutory deemed trusts.",
+  "synonyms": [
+    "PPSA security interest",
+    "lien",
+    "charge",
+    "encumbrance",
+    "collateral",
+    "secured obligation",
+    "general security agreement",
+    "GSA",
+    "floating charge",
+    "fixed charge"
+  ],
+  "relatedPhrases": [
+    "attachment",
+    "perfection",
+    "financing statement",
+    "PPSA registration",
+    "personal property registry",
+    "general security agreement",
+    "priority",
+    "purchase money security interest",
+    "PMSI",
+    "proceeds",
+    "after-acquired property"
+  ],
+  "whenYouSeeThis": "Security interests appear in loan agreements, general security agreements, convertible note financings (where the lender may take security over company assets), venture debt arrangements, and equipment financing. In M&A transactions, the buyer's due diligence will include a PPSA search to identify any existing security interests registered against the target company. Any outstanding security interests must typically be discharged at or before closing.",
+  "founderNote": "If you take on any form of debt (bank loan, venture debt, convertible note with security), the lender will likely require a general security agreement (GSA) granting them a security interest in all of your company's assets. This means if you default, they can seize your IP, equipment, receivables, and inventory. Before signing a GSA, understand: (1) what property is covered (try to exclude specific critical assets if possible), (2) whether it includes after-acquired property (most do), and (3) whether it restricts your ability to grant security to other lenders. When raising equity, check whether any existing secured lender has a right to consent to the transaction.",
+  "relatedTermSlugs": [
+    "representations-and-warranties",
+    "convertible-note"
+  ],
+  "relatedTemplateIds": [
+    "tpl-convertible-promissory-note",
+    "tpl-guarantee-bc"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "convertible-note"
+  ],
+  "updatedAt": "2026-04-11"
+}

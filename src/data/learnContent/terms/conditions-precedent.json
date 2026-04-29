@@ -1,0 +1,41 @@
+{
+  "id": "term-conditions-precedent",
+  "type": "term",
+  "slug": "conditions-precedent",
+  "term": "Conditions Precedent",
+  "definition": "Conditions precedent are a list of things that must be completed or satisfied before a transaction can close. Think of them as mandatory checkboxes — if any remain unchecked on closing day, the party they protect has the right to walk away from the deal without penalty. Common conditions include: legal opinions delivered, board and shareholder resolutions passed, no material adverse change having occurred, and all representations still being true as of closing.",
+  "formalDefinition": "Conditions precedent are contractual prerequisites whose satisfaction or waiver is required before a party's obligation to complete a transaction becomes binding. They are typically divided into mutual conditions (benefiting all parties), conditions for the benefit of the investor, and conditions for the benefit of the issuer, each of which may be waived solely by the party they are designed to protect.",
+  "synonyms": [
+    "CPs",
+    "closing conditions",
+    "conditions to closing",
+    "closing deliverables",
+    "pre-closing conditions",
+    "conditions precedent to closing",
+    "closing checklist conditions"
+  ],
+  "relatedPhrases": [
+    "conditions to closing",
+    "closing deliverables",
+    "material adverse change",
+    "bring-down certificate",
+    "legal opinion",
+    "board resolution",
+    "shareholder approval",
+    "no material adverse effect",
+    "representations true and correct",
+    "waiver of condition"
+  ],
+  "whenYouSeeThis": "Conditions precedent appear in subscription agreements, share purchase agreements, and term sheets. In a seed subscription agreement the CP list is typically short: corporate authorization (board resolution approving the issuance), delivery of a compliance certificate, and payment of purchase price. In a Series A the list expands to include legal opinions, updated articles of incorporation, executed ancillary agreements (investors rights agreement, ROFR/co-sale, voting agreement), and sometimes regulatory filings. Term sheets describe CPs at a high level; the subscription agreement sets them out in binding detail.",
+  "founderNote": "Conditions precedent are where deals get stuck. The investor's conditions protect them — if your reps turn out to be wrong, or you cannot get the required shareholder vote, the investor can refuse to fund. As a founder, your goal before signing is to ensure every CP is within your control and achievable on the proposed timeline. Never agree to a CP that requires a third party's consent (e.g., a landlord or bank) without first confirming that third party will cooperate. Also, conditions can usually be waived by the party they protect — so a minor outstanding item does not necessarily kill a closing if the investor is willing to waive. Under the CBCA, fundamental changes (like amending articles to create a new class of preferred shares) require both a board resolution and shareholder approval, so those authorizations must be completed as CPs before a financing closes.",
+  "relatedTermSlugs": [
+    "closing",
+    "representations-and-warranties"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "subscription-agreement",
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-10"
+}

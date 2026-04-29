@@ -1,0 +1,47 @@
+{
+  "id": "term-pre-emptive-right",
+  "type": "term",
+  "slug": "pre-emptive-right",
+  "term": "Pre-Emptive Right",
+  "definition": "A pre-emptive right allows existing shareholders to maintain their percentage ownership by purchasing new shares before the company can sell them to outside parties. If you own 10% and the company is about to issue new shares to a new investor, your pre-emptive right lets you buy enough of those new shares to stay at 10%. In the venture context these rights are almost always called pro-rata rights or participation rights, and they typically apply only to major investors.",
+  "formalDefinition": "A pre-emptive right is a shareholder's contractual or statutory entitlement to subscribe for newly issued shares of a corporation pro rata to their existing shareholding, prior to the company offering such shares to third parties, thereby preserving the shareholder's proportionate ownership interest. Under CBCA s. 28, a statutory pre-emptive right attaches only if expressly included in the articles of incorporation; contractual pre-emptive rights are instead typically granted to preferred shareholders pursuant to an investors' rights agreement.",
+  "synonyms": [
+    "pro-rata right",
+    "participation right",
+    "pre-emption right",
+    "right of first offer",
+    "anti-dilution participation right",
+    "preemptive right",
+    "rights offering",
+    "pro-rata participation right",
+    "follow-on right"
+  ],
+  "relatedPhrases": [
+    "pro-rata basis",
+    "fully diluted capitalization",
+    "new securities",
+    "participation notice",
+    "exercise period",
+    "major investor threshold",
+    "overallotment right",
+    "super pro-rata right",
+    "pay to play"
+  ],
+  "whenYouSeeThis": "Pre-emptive rights appear in investors' rights agreements, shareholders agreements, and term sheets. They are almost never included in CBCA or BCBCA articles for startup companies — the statutory version (CBCA s. 28) is rarely used. Instead, investors negotiate contractual pro-rata rights as part of the financing package. They typically apply only to shareholders above a minimum ownership threshold (e.g., major investors holding at least 1% or $500,000 of shares). The right applies to future equity financings, not to option plan issuances, convertible note conversions, or other carved-out share issuances. In a term sheet, the pro-rata right is listed under 'Investors' Rights'.",
+  "founderNote": "Pro-rata rights are one of the most valuable rights your investors will ask for, and you should grant them to serious investors — it signals long-term commitment and gives investors the ability to protect their ownership in later rounds. The key negotiating points are: (1) the major investor threshold — a high threshold (e.g., $1M invested) limits how many investors have the right, which keeps your cap table clean; (2) whether the right is transferable (generally it should not be); and (3) whether investors have a super pro-rata right (the right to buy more than their pro-rata share, which can squeeze out other investors). As a founder, pre-emptive rights do not typically apply to you on common shares — you dilute along with everyone else unless you separately negotiate a right. The CBCA s. 28 statutory version is generally avoided because it applies to all shareholders and creates administrative complexity; the contractual version in the investors' rights agreement is far more controllable.",
+  "relatedTermSlugs": [
+    "dilution",
+    "anti-dilution",
+    "right-of-first-refusal",
+    "share-structure"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "investors-rights-agreement",
+    "shareholders-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "investor"
+  ]
+}

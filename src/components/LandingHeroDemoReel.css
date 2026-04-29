@@ -1,0 +1,326 @@
+/* ──────────────────────────────────────────────────────────────────────
+   LandingHeroDemoReel — auto-cycling hero visualization.
+
+   Replaces the static .landing__hero-mockup composition. Each slide is
+   absolutely-positioned inside .hero-reel__stage; the active slide is
+   opacity 1 with subtle scale, others are faded out. Cross-fade is
+   handled with CSS transitions; advance interval lives in JSX.
+   ──────────────────────────────────────────────────────────────────── */
+
+.hero-reel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    var(--surface-container-low) 0%,
+    var(--surface-container) 100%
+  );
+  overflow: hidden;
+}
+
+.hero-reel__stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.hero-reel__slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 12px;
+  padding: 16px;
+  opacity: 0;
+  transform: scale(0.985);
+  transition: opacity 600ms ease, transform 600ms ease;
+  pointer-events: none;
+}
+
+.hero-reel__slide--active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* ── Scene halves ─────────────────────────────────────────────────── */
+
+.hero-reel__scene {
+  display: contents;
+}
+
+.hero-reel__scene-doc,
+.hero-reel__scene-panel {
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.hero-reel__scene-doc-title {
+  font-family: 'Newsreader', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.hero-reel__scene-doc-section {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hero-reel__scene-doc-clause {
+  font-family: 'Newsreader', serif;
+  font-size: 0.66rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.hero-reel__scene-doc-clause--track {
+  background: rgba(201, 168, 76, 0.06);
+  border-left: 2px solid var(--gold-color);
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+/* Track-changes inline marks (scoped to reel — no name collision) */
+.hero-reel__track-delete {
+  background: rgba(218, 80, 80, 0.16);
+  text-decoration: line-through;
+  text-decoration-color: rgba(218, 80, 80, 0.55);
+  text-decoration-thickness: 1px;
+  color: var(--text-secondary);
+  padding: 0 3px;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+.hero-reel__track-insert {
+  background: rgba(74, 158, 116, 0.16);
+  color: var(--text-primary);
+  padding: 0 3px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+/* ── Mail-merge specific row layout ───────────────────────────────── */
+
+.hero-reel__scene-doc-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+}
+
+.hero-reel__scene-doc-row-label {
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.hero-reel__scene-doc-row-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* ── Data-room event rows ─────────────────────────────────────────── */
+
+.hero-reel__scene-doc-event {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: var(--surface-container-low);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.64rem;
+}
+
+.hero-reel__avatar {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hero-reel__event-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-secondary);
+  min-width: 0;
+  overflow: hidden;
+}
+
+.hero-reel__event-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.hero-reel__event-time {
+  font-size: 0.52rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+}
+
+/* ── Right-side scene panel (assistant / metadata) ────────────────── */
+
+.hero-reel__scene-panel-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-color);
+}
+
+.hero-reel__scene-panel-title {
+  font-family: 'Newsreader', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.hero-reel__scene-panel-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.hero-reel__scene-panel-cta {
+  margin-top: auto;
+  padding: 7px 10px;
+  background: var(--text-primary);
+  color: #ffffff;
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+/* ── Pill-fill animation (form fields auto-populating) ───────────── */
+
+@keyframes heroReelPillFill {
+  0%   { background: rgba(18, 18, 18, 0.04); transform: translateY(2px); opacity: 0.45; }
+  40%  { background: rgba(201, 168, 76, 0.18); transform: translateY(0); opacity: 1; }
+  100% { background: rgba(201, 168, 76, 0.08); transform: translateY(0); opacity: 1; }
+}
+
+.hero-reel__slide--active .hero-reel__pill-fill {
+  animation: heroReelPillFill 1100ms ease forwards;
+}
+
+.hero-reel__slide--active .hero-reel__pill-fill--delay {
+  animation-delay: 280ms;
+}
+.hero-reel__slide--active .hero-reel__pill-fill--delay-2 {
+  animation-delay: 560ms;
+}
+.hero-reel__slide--active .hero-reel__pill-fill--delay-3 {
+  animation-delay: 840ms;
+}
+
+/* Inactive slides reset their pill animations so the next cycle replays. */
+.hero-reel__slide:not(.hero-reel__slide--active) .hero-reel__pill-fill {
+  background: rgba(18, 18, 18, 0.04);
+  opacity: 0.6;
+}
+
+/* ── Dots (clickable scene index) ─────────────────────────────────── */
+
+.hero-reel__dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  padding: 8px 0 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-reel__dot {
+  appearance: none;
+  border: none;
+  background: rgba(18, 18, 18, 0.18);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  transition: background 240ms ease, width 240ms ease;
+}
+
+.hero-reel__dot--active {
+  background: var(--text-primary);
+  width: 18px;
+  border-radius: 999px;
+}
+
+.hero-reel__dot:hover:not(.hero-reel__dot--active) {
+  background: rgba(18, 18, 18, 0.4);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Honor reduced-motion preference — pause the cycle's fade animation. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-reel__slide,
+  .hero-reel__pill-fill {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Compact layout for narrower hero columns */
+@media (max-width: 900px) {
+  .hero-reel__slide {
+    padding: 12px;
+    gap: 8px;
+  }
+  .hero-reel__scene-doc,
+  .hero-reel__scene-panel {
+    padding: 10px 12px;
+  }
+  .hero-reel__scene-doc-row {
+    grid-template-columns: 64px 1fr;
+  }
+}

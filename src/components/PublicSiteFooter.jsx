@@ -1,47 +1,61 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const UPDATE_EMAIL = "louisaiproject@gmail.com";
+const UPDATE_MAILTO = `mailto:${UPDATE_EMAIL}?subject=${encodeURIComponent(
+  "I would like to stay updated!"
+)}&body=${encodeURIComponent(`Hi LouisAI team,
+
+I would like to stay updated.
+
+Name: [your name]
+Company: [company name]
+Role: [your role]
+Location: [city/province]
+Interested in: [mailing list / pilot project / investor information]
+
+Notes:
+[add anything else you want us to know]`)}`;
+
+const MailIcon = () => (
+  <svg
+    className="public-site-footer__mail-icon"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      d="M4.75 6.75h14.5v10.5H4.75V6.75Z"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinejoin="round"
+    />
+    <path
+      d="m5.25 7.25 6.75 5.5 6.75-5.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 const PublicSiteFooter = () => {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const nextEmail = email.trim().toLowerCase();
-
-    if (!EMAIL_PATTERN.test(nextEmail)) {
-      setStatus("Please enter a valid email.");
-      return;
-    }
-
-    setStatus("Thanks. You are on the update list.");
-    setEmail("");
-  };
-
   return (
     <footer className="public-site-footer">
       <div className="public-site-footer__inner">
         <div className="public-site-footer__grid">
           <section className="public-site-footer__section">
-            <h2>Stay updated.</h2>
-            <p>
-              Subscribe to receive updates on our progress, pilot program, and industry insights.
-            </p>
-            <form className="public-site-footer__form" onSubmit={handleSubmit}>
-              <input
-                type="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                placeholder="Enter your email."
-                aria-label="Enter your email"
-              />
-              <button type="submit" className="pill-button primary-button">
-                Subscribe
-              </button>
-            </form>
-            {status ? <p className="public-site-footer__status">{status}</p> : null}
+            <h2>Stay updated</h2>
+            <a
+              href={UPDATE_MAILTO}
+              className="public-site-footer__email-link"
+              aria-label="Email LouisAI to join the update list"
+            >
+              <MailIcon />
+              {UPDATE_EMAIL}
+            </a>
           </section>
 
           <section className="public-site-footer__section">
@@ -58,8 +72,8 @@ const PublicSiteFooter = () => {
             <h2>Contact</h2>
             <p>
               <strong>Email:</strong>{" "}
-              <a href="mailto:louisaiproject@gmail.com" className="public-site-footer__link">
-                louisaiproject@gmail.com
+              <a href={UPDATE_MAILTO} className="public-site-footer__link">
+                {UPDATE_EMAIL}
               </a>
             </p>
             <p>

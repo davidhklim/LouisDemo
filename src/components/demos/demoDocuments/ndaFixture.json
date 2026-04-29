@@ -1,0 +1,1287 @@
+{
+  "layout": {
+    "pageSize": "letter",
+    "widthIn": 8.5,
+    "heightIn": 11,
+    "marginsIn": {
+      "top": 1,
+      "right": 1,
+      "bottom": 1,
+      "left": 1
+    },
+    "lineSpacing": 1,
+    "paragraphAfterPt": 9
+  },
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "content": [
+          {
+            "type": "text",
+            "text": "CONFIDENTIALITY AGREEMENT",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ],
+        "attrs": {
+          "level": 1,
+          "textAlign": "center"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "THIS CONFIDENTIALITY AGREEMENT (the ",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": "\"Agreement\"",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ") is entered into by and between {LEGAL NAME OF EMPLOYER}, a {JURISDICTION OF INCORPORATION/FORMATION} {ENTITY TYPE} (the ",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": "\"Employer\"",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ") and {EMPLOYEE NAME}, currently residing in the {City/Town/Municipality} of {CITY/TOWN/MUNICIPALITY} in the {Province/Territory} of {PROVINCE/TERRITORY} (the ",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": "\"Employee\"",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ").",
+            "marks": []
+          }
+        ],
+        "attrs": {
+          "textAlign": "left"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "WHEREAS the Employer seeks to employ the Employee in a position [of trust and confidence/with extensive contact with the Employer's customers] in the position of {JOB TITLE/GENERAL DESCRIPTION OF DUTIES} (the ",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": "\"Purpose\"",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ");",
+            "marks": []
+          }
+        ],
+        "attrs": {
+          "textAlign": "left"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "AND WHEREAS in the course of employment, the Employee may receive or have access to certain information relating to the business of the Employer that is non-public, confidential or proprietary in nature, the disclosure of which may be detrimental to the best interests of the Employer;"
+          }
+        ],
+        "attrs": {
+          "textAlign": "left"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "[AND WHEREAS the employment of the Employee by the Employer is conditional upon the Employer receiving covenants relating to non-disclosure of confidential information from the Employee;]"
+          }
+        ],
+        "attrs": {
+          "textAlign": "left"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "NOW, THEREFORE, [for the consideration set out in the letter from {NAME} to {NAME} dated {DATE}, the sufficiency of all of which is hereby acknowledged/in consideration of {DETAILS OF CONSIDERATION}], the Parties agree as follows:"
+          }
+        ],
+        "attrs": {
+          "textAlign": "left"
+        }
+      },
+      {
+        "type": "orderedList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Definitions.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "orderedList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "In this Agreement, the following terms have the following meanings:",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ]
+                          }
+                        ],
+                        "attrs": {
+                          "textAlign": "left"
+                        }
+                      },
+                      {
+                        "type": "orderedList",
+                        "content": [
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "\"Confidential Information\"",
+                                    "marks": [
+                                      {
+                                        "type": "bold"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": " means all information, data, documents, agreements, files and other materials in whatever form (including without limitation, in written, oral, visual or electronic form), which is disclosed or otherwise furnished by the Employer to the Employee in the course of the Employee's employment, whether or not such information is marked confidential, that relates directly or indirectly to the Employer's business, clients, customers, products, services, affairs, finances and trade secrets, including, without limitation:",
+                                    "marks": []
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              },
+                              {
+                                "type": "orderedList",
+                                "content": [
+                                  {
+                                    "type": "listItem",
+                                    "content": [
+                                      {
+                                        "type": "paragraph",
+                                        "content": [
+                                          {
+                                            "type": "text",
+                                            "text": "information concerning the Employer's and its customers', suppliers' and other third parties', past, present and future business affairs including, without limitation, finances, supplier information, services, customer information, products, organizational structure and internal practices, forecasts, sales and other financial results, records and budgets, and business, marketing, development, sales and other commercial strategies;"
+                                          }
+                                        ],
+                                        "attrs": {
+                                          "textAlign": "left"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "listItem",
+                                    "content": [
+                                      {
+                                        "type": "paragraph",
+                                        "content": [
+                                          {
+                                            "type": "text",
+                                            "text": "{INSERT EXAMPLES};",
+                                            "marks": [
+                                              {
+                                                "type": "bold"
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "attrs": {
+                                          "textAlign": "left"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "listItem",
+                                    "content": [
+                                      {
+                                        "type": "paragraph",
+                                        "content": [
+                                          {
+                                            "type": "text",
+                                            "text": "all or any portion of analysis, notations, plans compilations, reports, forecasts, studies, samples, statistics, summaries, interpretations and other documents created, developed, prepared, received, obtained, or generated or derived from such information, data, documents, agreements, files or other materials by the Employee in connection with the Employee's employment; and"
+                                          }
+                                        ],
+                                        "attrs": {
+                                          "textAlign": "left"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "listItem",
+                                    "content": [
+                                      {
+                                        "type": "paragraph",
+                                        "content": [
+                                          {
+                                            "type": "text",
+                                            "text": "other information that is marked or otherwise identified as confidential or proprietary, or that would otherwise appear to a reasonable person to be confidential or proprietary in the context and circumstances in which the information is known or used; and"
+                                          }
+                                        ],
+                                        "attrs": {
+                                          "textAlign": "left"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "attrs": {}
+                              }
+                            ]
+                          },
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "\"Copies\"",
+                                    "marks": [
+                                      {
+                                        "type": "bold"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": " means copies or records of any Confidential Information in whatever form including without limitation, notations, extracts, analysis, studies, plans, compilations or any other way of representing, recording or recalling information which contains, reflects, or is derived or generated from Confidential Information.",
+                                    "marks": []
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              },
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "Other terms not specifically defined in this Section 1 shall have the meanings given to them elsewhere in this Agreement."
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "attrs": {}
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Employee Obligations.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "orderedList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The Employee shall only use the Confidential Information or Copies for the Purpose of the Employee's employment and shall not directly or indirectly, without the [written] authorization of the Employer, either during the employment or at any time after termination of the employment, howsoever arising:"
+                          }
+                        ],
+                        "attrs": {
+                          "textAlign": "left"
+                        }
+                      },
+                      {
+                        "type": "orderedList",
+                        "content": [
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "use any Confidential Information or make or use any Copies for the Employee's own benefit or purposes, or for the benefit or purposes of any other person, company or organization whatsoever; or"
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "disclose any Confidential Information or Copies to any person, company or other organization whatsoever."
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "attrs": {}
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The restrictions in Section 2.1 does not apply to any Confidential Information which:",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ]
+                          }
+                        ],
+                        "attrs": {
+                          "textAlign": "left"
+                        }
+                      },
+                      {
+                        "type": "orderedList",
+                        "content": [
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "is or becomes generally available to and known by the public, other than as a result of the Employee's unauthorized disclosure or material breach of this Agreement;"
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "was already in the Employee's possession or available to the Employee on a non-confidential basis before the Employee's employment commenced;"
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "becomes available to the Employee on a non-confidential basis from a source not bound by a confidentiality obligation or agreement with the Employer; or"
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "has been or is independently developed by the Employee without violating any of the obligations under this Agreement or without use of, or reference to, the Confidential Information or Copies."
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "attrs": {}
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The Employee shall be responsible for protecting the confidentiality of the Confidential Information and shall:"
+                          }
+                        ],
+                        "attrs": {
+                          "textAlign": "left"
+                        }
+                      },
+                      {
+                        "type": "orderedList",
+                        "content": [
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "keep the Confidential Information and Copies strictly confidential;"
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "use the Employee's best endeavours to prevent the use or communication of any Confidential Information or Copies by any person, company or organization (except for the Purpose of the Employee's employment or as authorized [in writing] by the Employer); and"
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "inform the [Employer's {POSITION TITLE}/Employer] immediately on becoming aware or suspecting that any unauthorized person, company or organization knows or has used any Confidential Information or Copies."
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "attrs": {}
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Disclosure Required by Law.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "orderedList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "If, either during or after the Employee's employment, the Employee is compelled or required to disclose any Confidential Information or Copies by law or court order or pursuant to any requirement, request or process of any legal, regulatory or governmental authority, the Employee shall:"
+                          }
+                        ],
+                        "attrs": {
+                          "textAlign": "left"
+                        }
+                      },
+                      {
+                        "type": "orderedList",
+                        "content": [
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "give the Employer {immediate/prompt} prior [written] notice of such requirement, request or process so that the Employer may seek[, at its sole cost and expense,] an appropriate protective order or other remedy; and"
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "cooperate with the Employer[, at the Employer's sole cost and expense,] to obtain such protective order or other remedy."
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "attrs": {}
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Return of Confidential Information.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "orderedList",
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "All Confidential Information and Copies are the property of the Employer.",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "text",
+                            "text": " On termination of the Employee's employment, or at the request of the Employer at any time during the Employee's employment, the Employee shall:",
+                            "marks": []
+                          }
+                        ],
+                        "attrs": {
+                          "textAlign": "left"
+                        }
+                      },
+                      {
+                        "type": "orderedList",
+                        "content": [
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "[immediately/within {NUMBER} days] return all Confidential Information and Copies to the Employer; [and]"
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "[[immediately/within {NUMBER} days] irretrievably delete and destroy any and all Confidential Information and Copies stored on any electronic means of storage, including personal computer networks, personal email accounts or personal accounts on websites, and all matter derived from such sources which is in the Employee's possession or under the Employee's control; and]"
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "type": "listItem",
+                            "content": [
+                              {
+                                "type": "paragraph",
+                                "content": [
+                                  {
+                                    "type": "text",
+                                    "text": "within {NUMBER} days of the termination of the Employee's employment or the employer's request, certify [by affidavit or statutory declaration/to the reasonable satisfaction of the Employer] that the Employee has complied fully with the Employee's obligation[s] under this clause."
+                                  }
+                                ],
+                                "attrs": {
+                                  "textAlign": "left"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "attrs": {}
+                      }
+                    ]
+                  }
+                ],
+                "attrs": {}
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Remedies. The Employee acknowledges and agrees that monetary damages might not be a sufficient remedy for any breach of this Agreement by the Employee and that, in addition to all other remedies available at law, the Employer shall be entitled to seek injunctive or other equitable relief as a remedy for any such breach."
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Severability. Each paragraph of this Agreement is a separate and distinct covenant, severable from each other. If a covenant is determined to be invalid or unenforceable, such invalidity or unenforceability shall apply to the covenant only to the extent of that invalidity or unenforceability and shall not affect the validity or enforceability of any other covenant."
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Extended Meanings.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " For the purposes of this Agreement words in the singular include the plural, and words in the plural include the singular.",
+                    "marks": []
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Headings. The headings in this Agreement identifying various sections, paragraphs, subsections and clauses are inserted for convenience or reference only and are in no way intended to describe, interpret, define, affect the construction of or limit the scope, extent or intent of this Agreement or any provision of this Agreement."
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Amendment. Any amendment to this Agreement must be in writing and executed by both parties. No waiver of any provision in this Agreement shall be deemed or constitute a waiver of any other provision."
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Governing Law.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " This Agreement {and all matters arising out of or relating to this Agreement} {is/are} governed by, and construed in accordance with, the laws of the {Province/Territory} of {PROVINCE/TERRITORY}, and the federal laws of Canada applicable in that {Province/Territory} [and the parties agree [and attorn] to the jurisdiction of the courts of the {Province/Territory} of {PROVINCE/TERRITORY} in relation to the enforcement of this Agreement].",
+                    "marks": []
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Successors and Assigns.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " This Agreement enures to the benefit of the Employer and its respective affiliates, subsidiaries and parent companies and each of their respective successors. This Agreement and its confidentiality and non-disclosure obligations are personal to the Employee and shall not be subject to voluntary or involuntary assignment or transfer by the Employee.",
+                    "marks": []
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "[Independent Legal Advice.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " The Employee acknowledges that the Employer has provided the Employee with a reasonable opportunity to obtain independent legal advice regarding this Agreement, and that the Employee has reviewed and understands its terms.]",
+                    "marks": []
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Common Law Obligations Preserved.",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": " Nothing in this Agreement shall be interpreted so as to limit any obligations owing by the Employee to the Employer as a matter of common law.",
+                    "marks": []
+                  }
+                ],
+                "attrs": {
+                  "textAlign": "left"
+                }
+              }
+            ]
+          }
+        ],
+        "attrs": {}
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "[SIGNATURE PAGE FOLLOWS]"
+          }
+        ],
+        "attrs": {
+          "textAlign": "center"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "IN WITNESS WHEREOF, the Employee {EMPLOYEE NAME} has executed this Agreement this day of {DATE}, in the {City/Town/Municipality} of {CITY/TOWN/MUNICIPALITY}, in the {Province/Territory} of {PROVINCE/TERRITORY}."
+          }
+        ],
+        "attrs": {
+          "textAlign": "left"
+        }
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": "left",
+          "sourceStyle": null
+        }
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "________________"
+                      }
+                    ],
+                    "attrs": {
+                      "textAlign": "left",
+                      "sourceStyle": null
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "___________________"
+                      }
+                    ],
+                    "attrs": {
+                      "textAlign": "left",
+                      "sourceStyle": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Witness"
+                      }
+                    ],
+                    "attrs": {
+                      "textAlign": "left"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "{EMPLOYEE NAME}"
+                      }
+                    ],
+                    "attrs": {
+                      "textAlign": "left",
+                      "sourceStyle": null
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attrs": {
+          "colWidths": [
+            50,
+            50
+          ]
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "IN WITNESS WHEREOF, the Employer {EMPLOYER NAME}, by its duly authorized representatives, has executed this Agreement this day of {DATE}, in the {City/Town/Municipality} of {CITY/TOWN/MUNICIPALITY}, in the {Province/Territory} of {PROVINCE/TERRITORY}."
+          }
+        ],
+        "attrs": {
+          "textAlign": "left",
+          "sourceStyle": null
+        }
+      },
+      {
+        "type": "paragraph",
+        "attrs": {
+          "textAlign": "left",
+          "sourceStyle": null
+        }
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "___________________"
+                      }
+                    ],
+                    "attrs": {
+                      "textAlign": "left",
+                      "sourceStyle": null
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "{EMPLOYER NAME}"
+                      }
+                    ],
+                    "attrs": {
+                      "textAlign": "left",
+                      "sourceStyle": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Witness"
+                      }
+                    ],
+                    "attrs": {
+                      "textAlign": "left",
+                      "sourceStyle": null
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "attrs": {
+                      "textAlign": "left",
+                      "sourceStyle": null
+                    }
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "By_____________________"
+                      }
+                    ],
+                    "attrs": {
+                      "textAlign": "left",
+                      "sourceStyle": null
+                    }
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Name:"
+                      }
+                    ],
+                    "attrs": {
+                      "textAlign": "left",
+                      "sourceStyle": null
+                    }
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Title:"
+                      }
+                    ],
+                    "attrs": {
+                      "textAlign": "left",
+                      "sourceStyle": null
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attrs": {
+          "colWidths": [
+            50,
+            50
+          ]
+        }
+      }
+    ]
+  }
+}

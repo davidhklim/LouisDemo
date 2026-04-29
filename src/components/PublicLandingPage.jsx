@@ -1,43 +1,56 @@
+import { FEATURES as FEATURE_DATA } from "../data/features";
+import LandingHeroDemoReel from "./LandingHeroDemoReel";
 import "./PublicLandingPage.css";
 
-const FEATURES = [
-  {
-    id: "ai-drafting",
-    icon: "psychology",
-    title: "AI Drafting",
-    description:
-      "Our context-aware AI leverages 228K verified clauses to suggest the perfect legal wording. Draft, rewrite, and assemble documents grounded in real Canadian deals.",
-    badge: "Legal Intelligence",
-    videoShort: "/videos/Ai-Drafting-SHORT.mp4",
-  },
-  {
-    id: "secure-repository",
-    icon: "history",
-    title: "Version Control & Redline",
-    description:
-      "Every save creates an immutable snapshot. Compare any two versions side-by-side with semantic redlining that highlights exactly what changed.",
-    badge: "Audit Ready",
-    videoShort: "/videos/version-control-SHORT.mp4",
-  },
-  {
-    id: "document-storage",
-    icon: "edit_note",
-    title: "Collaborative Editing",
-    description:
-      "Work on documents with your team in real time. Grant credential-based access to advisors, investors, and outside counsel with the right level of visibility.",
-    badge: "Team Workflow",
-    videoShort: "/videos/document-storage-SHORT.mp4",
-  },
-  {
-    id: "e-signatures",
-    icon: "draw",
-    title: "DocuSign Integration",
-    description:
-      "Prepare and send signature packages directly from your workspace. Go from draft to executed without switching tabs or chasing down signers.",
-    badge: "Closing Workflow",
-    videoShort: "/videos/e-signature-SHORT.mp4",
-  },
-];
+const UPDATE_EMAIL = "louisaiproject@gmail.com";
+const UPDATE_MAILTO = `mailto:${UPDATE_EMAIL}?subject=${encodeURIComponent(
+  "I would like to stay updated!"
+)}&body=${encodeURIComponent(`Hi LouisAI team,
+
+I would like to stay updated.
+
+Name: [your name]
+Company: [company name]
+Role: [your role]
+Location: [city/province]
+Interested in: [mailing list / pilot project / investor information]
+
+Notes:
+[add anything else you want us to know]`)}`;
+
+const MailIcon = () => (
+  <svg
+    className="landing__footer-mail-icon"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      d="M4.75 6.75h14.5v10.5H4.75V6.75Z"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinejoin="round"
+    />
+    <path
+      d="m5.25 7.25 6.75 5.5 6.75-5.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Map shared feature data → landing-card shape (uses shortTitle + landingDescription).
+const FEATURES = FEATURE_DATA.map((f) => ({
+  id: f.id,
+  icon: f.icon,
+  title: f.shortTitle ?? f.title,
+  description: f.landingDescription,
+  badge: f.badge,
+}));
 
 const FOOTER_PRODUCT_LINKS = [
   { label: "Features", action: "features" },
@@ -75,7 +88,7 @@ const PublicLandingPage = ({
       case "templates": onGetStarted?.(); break;
       case "about": onViewAbout?.(); break;
       case "learn": onViewLearn?.(); break;
-      case "contact": window.location.href = "mailto:louisaiproject@gmail.com"; break;
+      case "contact": window.location.href = UPDATE_MAILTO; break;
       case "privacy": onViewPrivacy?.(); break;
       case "terms": onViewTerms?.(); break;
       default: break;
@@ -127,7 +140,8 @@ const PublicLandingPage = ({
         <section className="landing__hero" aria-label="Hero">
           <div className="landing__hero-text">
             <h1 className="landing__hero-headline">
-              Legal operations, simplified.
+              Legal operations,<br />
+              simplified
             </h1>
             <p className="landing__hero-sub">
               The lightweight platform startup founders use to manage corporate
@@ -152,27 +166,22 @@ const PublicLandingPage = ({
                   <div className="landing__avatar landing__avatar--c" />
                 </div>
                 <p className="landing__social-proof-label">
-                  Trusted by 500+ Canadian founders
+                  Trusted by founders
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Product demo video — enlarged */}
+          {/* Product preview — auto-cycling reel of demo run-throughs */}
           <div className="landing__hero-visual">
             <div className="landing__hero-orb--a" />
             <div className="landing__hero-orb--b" />
             <div className="landing__hero-card">
-              <div className="landing__hero-screen">
-                <video
-                  className="landing__hero-video"
-                  src="/videos/ai-drafting.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  aria-label="LouisAI product demo"
-                />
+              <div
+                className="landing__hero-screen"
+                aria-label="LouisAI demo reel — AI drafting, mail merge, version control, and data room"
+              >
+                <LandingHeroDemoReel />
               </div>
             </div>
           </div>
@@ -188,9 +197,9 @@ const PublicLandingPage = ({
               </p>
             </div>
             <div className="landing__proof-right">
-              <span className="landing__proof-number">228,005</span>
+              <span className="landing__proof-number">500,000+</span>
               <span className="landing__proof-sublabel">
-                clauses from 87 real Canadian deals power our AI
+                clauses indexed from real Canadian transactions
               </span>
             </div>
           </div>
@@ -216,17 +225,6 @@ const PublicLandingPage = ({
                   className="landing__feature-card landing__feature-card--clickable"
                   onClick={() => onOpenUseCase?.(feature.id)}
                 >
-                  {/* Video thumbnail */}
-                  <div className="landing__feature-video-wrap">
-                    <video
-                      src={feature.videoShort}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      aria-label={`${feature.title} preview`}
-                    />
-                  </div>
                   <div className="landing__feature-icon-wrap" aria-hidden="true">
                     <span className="material-symbols-outlined">
                       {feature.icon}
@@ -263,8 +261,7 @@ const PublicLandingPage = ({
                 Ready to clean up your legal deck?
               </h2>
               <p className="landing__cta-body">
-                Join hundreds of founders who spend less on legal fees and more
-                on building.
+                Spend less on legal fees, and more on building.
               </p>
             </div>
             <div className="landing__cta-actions">
@@ -345,28 +342,16 @@ const PublicLandingPage = ({
           </div>
           <div className="landing__footer-bottom">
             <p className="landing__footer-copy">
-              &copy; 2026 LouisAI Legal Operations Inc. All rights reserved.
+              &copy; 2026 LouisAI. All rights reserved.
             </p>
-            <div className="landing__footer-icons">
-              <button
-                type="button"
-                className="landing__footer-icon-btn"
-                aria-label="Language"
-              >
-                <span className="material-symbols-outlined" aria-hidden="true">
-                  language
-                </span>
-              </button>
-              <button
-                type="button"
-                className="landing__footer-icon-btn"
-                aria-label="Email"
-              >
-                <span className="material-symbols-outlined" aria-hidden="true">
-                  alternate_email
-                </span>
-              </button>
-            </div>
+            <a
+              href={UPDATE_MAILTO}
+              className="landing__footer-email-link"
+              aria-label="Email LouisAI to join the update list"
+            >
+              <MailIcon />
+              <span>{UPDATE_EMAIL}</span>
+            </a>
           </div>
         </div>
       </footer>

@@ -1,0 +1,61 @@
+{
+  "id": "role-founder",
+  "type": "role",
+  "slug": "founder",
+  "role": "Founder",
+  "summary": "The person or persons who start a company. There is no special statutory status for 'founders' under Canadian corporate law — the term is a business designation, not a legal one. A founder typically holds multiple simultaneous legal roles: shareholder, director, and officer (usually CEO or CTO). The legal significance of being a founder comes almost entirely from the combination of those roles and the vesting schedule attached to their shares.",
+  "whatTheyDo": "Founders set the initial strategic direction of the company, contribute IP, build the product, hire early employees, and lead early fundraising. Legally, they act in whatever capacity their specific roles require: as shareholders they vote on major corporate matters; as directors they govern the board and owe fiduciary duties; as officers they manage day-to-day operations and execute on board decisions. In the early stage, these roles blur together — the same person makes the decision as CEO and ratifies it as a director. This changes materially after an equity financing when investor-appointed directors join the board.",
+  "legalDuties": [
+    {
+      "duty": "No duties as 'founder' per se",
+      "description": "Canadian corporate statutes impose no duties on the basis of the founder label. All duties arise from the specific roles the founder holds — director duties under CBCA s. 122, officer duties, and employment obligations."
+    },
+    {
+      "duty": "IP assignment obligation",
+      "description": "Founders are typically required by their company's founders' agreement or IP assignment agreement to assign all pre-incorporation and post-incorporation IP to the company. Failure to do so creates a fatal title defect that blocks financing and acquisition."
+    },
+    {
+      "duty": "Vesting obligations",
+      "description": "Founder shares are typically subject to a vesting schedule (commonly 4 years with a 1-year cliff). If a founder leaves before full vesting, unvested shares are subject to repurchase by the company, often at cost. The specific mechanics are set out in the founders' agreement or shareholders' agreement."
+    },
+    {
+      "duty": "Representations in financing documents",
+      "description": "Founders personally make representations and warranties in equity financing documents (subscription agreements, SAFEs) regarding ownership, IP, and authority. Breach of these representations can give rise to personal liability."
+    },
+    {
+      "duty": "Non-compete and non-solicit covenants",
+      "description": "Founders frequently sign non-compete and non-solicitation covenants in favour of the company, either in their employment agreements or as a condition of an equity financing or acquisition."
+    }
+  ],
+  "qualifications": "Any person can be a founder in the business sense. Legal roles layered on top (director, officer, shareholder) have their own qualification requirements — see those entries. There are no statutory residency requirements for founders in any Canadian jurisdiction as of 2022.",
+  "commonDocuments": [
+    "Founder vesting agreement",
+    "IP assignment agreement",
+    "Employment agreement",
+    "Shareholders' agreement",
+    "Consent to act as director",
+    "Founders' subscription agreement",
+    "Non-compete and confidentiality agreement"
+  ],
+  "applicableJurisdictions": [
+    "CBCA",
+    "BCBCA",
+    "OBCA",
+    "ABCA"
+  ],
+  "founderNote": "Your title as 'founder' gives you no special legal protections. Your actual rights come from four sources: your shares (and any vesting terms), your employment agreement (salary, termination, equity), your director position (if you hold one), and any shareholders' agreement or investors' rights agreement. The most dangerous moment for a founder's legal position is a financing round — investors will introduce new document packages (term sheets, subscription agreements, investors' rights agreements, voting agreements) that permanently alter the power structure of the company. Read every word. Negotiate your own employment agreement separately, before closing. Always have your own legal counsel review financing documents, even when the lead investor's lawyers draft them.",
+  "relatedTermSlugs": [
+    "vesting",
+    "intellectual-property-assignment",
+    "non-compete",
+    "fiduciary-duty"
+  ],
+  "relatedTemplateIds": [],
+  "updatedAt": "2026-04-11",
+  "relatedDocumentGuideSlugs": [
+    "articles-of-incorporation",
+    "shareholders-agreement",
+    "employment-agreement",
+    "ip-assignment-agreement"
+  ]
+}

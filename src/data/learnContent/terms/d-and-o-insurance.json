@@ -1,0 +1,49 @@
+{
+  "id": "term-d-and-o-insurance",
+  "type": "term",
+  "slug": "d-and-o-insurance",
+  "term": "D&O Insurance",
+  "definition": "D&O (Directors and Officers) insurance is a liability insurance policy that protects directors and officers from personal financial loss arising from claims made against them in connection with their role. It covers legal defence costs, settlements, and judgments when directors are sued for alleged wrongful acts such as breach of fiduciary duty, breach of duty of care, misrepresentation, or regulatory violations. D&O insurance typically has three coverage components: Side A covers directors personally when the company cannot indemnify them, Side B reimburses the company when it has indemnified a director, and Side C covers the company itself for securities claims.",
+  "formalDefinition": "Directors' and officers' liability insurance is a policy purchased by or on behalf of a corporation that indemnifies its directors and officers against personal liability for claims arising from their conduct in office. It supplements (but does not replace) the corporation's statutory and contractual indemnification obligations under the applicable BCA (e.g., CBCA s. 124). Coverage exclusions typically include intentional fraud, personal profit from breach of fiduciary duty, and matters where indemnification is prohibited by statute.",
+  "synonyms": [
+    "D&O insurance",
+    "directors and officers insurance",
+    "directors' liability insurance",
+    "management liability insurance",
+    "Side A coverage",
+    "Side B coverage",
+    "Side C coverage"
+  ],
+  "relatedPhrases": [
+    "wrongful act",
+    "defence costs",
+    "claims-made basis",
+    "tail coverage",
+    "run-off policy",
+    "retention",
+    "policy limits",
+    "insured vs insured exclusion",
+    "prior acts coverage"
+  ],
+  "whenYouSeeThis": "D&O insurance is referenced in indemnification agreements, shareholders agreements (investors often require it as a closing condition), and board resolutions authorizing the purchase of insurance. It is also discussed in the context of director recruitment and in the consent to act as a director.",
+  "founderNote": "Most seed-stage startups do not have D&O insurance because of the cost, but investors may require it as a condition of closing a Series A round. The main reason to get it early is to attract quality independent directors to your board. Experienced directors will often require D&O insurance before agreeing to serve. If you cannot afford standalone D&O coverage, at minimum ensure your company's by-laws include robust indemnification provisions for directors. When evaluating policies, pay attention to the retention (deductible) and whether the policy is claims-made (covers claims filed during the policy period) or occurrence-based.",
+  "relatedTermSlugs": [
+    "fiduciary-duty",
+    "duty-of-care",
+    "indemnification",
+    "conflicts-of-interest",
+    "oppression-remedy"
+  ],
+  "relatedTemplateIds": [
+    "tpl-indemnification-agreement",
+    "tpl-consent-to-act-director"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "indemnification-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "director",
+    "officer"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "term-conflicts-of-interest",
+  "type": "term",
+  "slug": "conflicts-of-interest",
+  "term": "Conflict of Interest (Director)",
+  "definition": "A conflict of interest arises when a director or officer has a personal interest in a transaction or matter that could interfere with their duty to act in the best interests of the corporation. All Canadian business corporations statutes require directors to disclose material conflicts and, in most cases, to abstain from voting on the conflicted transaction. The disclosure must be made to the board of directors (or, in some jurisdictions, to the shareholders). Failure to disclose can make the transaction voidable and expose the director to personal liability.",
+  "formalDefinition": "Under s. 120 of the CBCA and equivalent provincial provisions, a director or officer who is a party to, or has a material interest in, a material contract or transaction with the corporation must disclose the nature and extent of that interest. The director must abstain from voting (except in limited circumstances such as arrangements relating to the director's own remuneration). Failure to comply may render the contract voidable at the corporation's option and expose the director to liability for any profit realized.",
+  "synonyms": [
+    "material interest",
+    "related party transaction",
+    "self-dealing",
+    "interested director transaction",
+    "conflict disclosure",
+    "director conflict"
+  ],
+  "relatedPhrases": [
+    "disclose the nature and extent of the interest",
+    "abstain from voting",
+    "material contract or transaction",
+    "interested director",
+    "related party",
+    "arm's length",
+    "non-arm's length",
+    "corporate opportunity doctrine",
+    "retrospective ratification"
+  ],
+  "whenYouSeeThis": "Conflict of interest rules apply to every board decision where a director has a personal stake. They are most commonly triggered in related-party transactions, management compensation decisions, founder share transactions, and situations where a director sits on the boards of two companies that are doing business with each other. Conflict of interest disclosure requirements appear in by-laws, board resolution templates, and corporate governance policies.",
+  "founderNote": "As a founder-CEO who also sits on the board, you are in a permanent potential conflict position on compensation and benefit decisions. Best practice: disclose your interest at the start of the meeting, have it recorded in the minutes, and abstain from the vote. For transactions between you and the company (e.g., loans, share repurchases), get independent board approval and ideally a fairness opinion. The corporate opportunity doctrine is especially dangerous for founders with side projects: if your startup could have pursued an opportunity and you took it personally instead, you may owe the company any profits.",
+  "relatedTermSlugs": [
+    "fiduciary-duty",
+    "duty-of-care",
+    "business-judgment-rule"
+  ],
+  "relatedTemplateIds": [
+    "tpl-consent-to-act-director",
+    "tpl-directors-resolution-shareholder-rights-plan"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "board-resolutions",
+    "shareholders-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "director"
+  ]
+}

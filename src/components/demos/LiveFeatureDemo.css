@@ -1,0 +1,1032 @@
+/* ─────────────────────────────────────────────────────────────
+   LiveFeatureDemo.css — Chrome for the scripted-scene live demo.
+
+   Interaction model: event-driven state machine.
+     - User can ONLY perform the predetermined next action
+     - Ribbon is visually rendered but NOT interactive (here: hidden)
+     - Editor is not typable; selection is gated via an overlay hit-box
+     - Scroll is always allowed
+
+   Scoped under .live-demo so styles do not leak outside the demo.
+────────────────────────────────────────────────────────────── */
+
+:root {
+  --live-demo-gold: #c9a84c;
+  --live-demo-gold-soft: rgba(201, 168, 76, 0.32);
+  --live-demo-gold-ring: rgba(201, 168, 76, 0.55);
+  --live-demo-gold-tint: rgba(201, 168, 76, 0.06);
+  --live-demo-text: #121212;
+  --live-demo-text-2: #424242;
+  --live-demo-text-muted: #777777;
+  --live-demo-panel: #f5f5f5;
+  --live-demo-hairline: rgba(18, 18, 18, 0.08);
+}
+
+/* ── Wrapper ─────────────────────────────────────────────────── */
+.live-demo {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid var(--live-demo-hairline);
+  box-shadow: 0 24px 60px -20px rgba(18, 18, 18, 0.22);
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  color: var(--live-demo-text);
+}
+
+/* ── Header ──────────────────────────────────────────────────── */
+.live-demo__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--live-demo-hairline);
+  background: #fff;
+  flex-shrink: 0;
+  gap: 16px;
+}
+
+.live-demo__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Newsreader", serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--live-demo-text);
+  letter-spacing: -0.01em;
+}
+
+.live-demo__title-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+  animation: live-demo-pulse-dot 2.4s ease-in-out infinite;
+}
+
+@keyframes live-demo-pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.12); opacity: 0.85; }
+}
+
+.live-demo__header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.live-demo__hint {
+  font-size: 11px;
+  color: var(--live-demo-text-2);
+  letter-spacing: 0.01em;
+}
+
+.live-demo__hint-gold {
+  color: var(--live-demo-gold);
+  font-weight: 600;
+}
+
+.live-demo__step-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--live-demo-panel);
+  color: var(--live-demo-text-2);
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.live-demo__step-chip-num {
+  color: var(--live-demo-text);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Viewport ────────────────────────────────────────────────── */
+.live-demo__viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 640px;
+  background: var(--live-demo-panel);
+  overflow: hidden;
+}
+
+.live-demo__stage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  /* Interactive-demo layout: document-first composition. The assistant
+     is a compact 280 px rail — narrower than production so the document
+     (the hero of the demo) reads at a comfortable width. */
+  grid-template-columns: minmax(0, 1fr) 280px;
+  background: #ffffff;
+  z-index: 2;
+}
+
+/* Override the assistant panel's internal min-widths so it fits cleanly
+   in the demo's 280 px rail. */
+.live-demo__assistant-col > *,
+.live-demo__assistant-col .ai-assistant-panel,
+.live-demo__assistant-col .assistant-section {
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+.live-demo__editor-col {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  background: var(--live-demo-panel);
+}
+
+.live-demo__assistant-col {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  border-left: 1px solid var(--live-demo-hairline);
+  background: #ffffff;
+  overflow: auto;
+}
+
+/* ── Target overlay for the clause (WAITING_FOR_SELECTION) ─────
+   Stitch brief 001 pulse: box-shadow ring expansion (spotlight),
+   replacing the simple outline pulse. */
+.live-demo__clause-target {
+  position: absolute;
+  z-index: 30;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--live-demo-gold-ring);
+  border-radius: 8px;
+  background: var(--live-demo-gold-tint);
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.0);
+  animation: live-demo-ring-pulse 2s ease-in-out infinite;
+  transition: background 0.15s ease;
+}
+
+.live-demo__clause-target:hover {
+  background: rgba(201, 168, 76, 0.12);
+}
+
+.live-demo__clause-target:focus {
+  outline: none;
+}
+
+@keyframes live-demo-ring-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(201, 168, 76, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 168, 76, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-demo__clause-target {
+    animation: none;
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.4);
+  }
+}
+
+/* ── Tooltip attached to the active target ───────────────────── */
+.live-demo__tooltip {
+  position: absolute;
+  z-index: 40;
+  padding: 6px 11px;
+  background: var(--live-demo-text);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 8px 22px -6px rgba(18, 18, 18, 0.45);
+}
+
+.live-demo__tooltip--below {
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.live-demo__tooltip--below::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background: var(--live-demo-text);
+}
+
+/* ── Assistant gating: dim everything, light up the active target ──
+   By default the panel's controls are visible but non-interactive.
+   We then re-enable pointer-events only on the active button per
+   state, and draw a pulsing gold ring around it. */
+
+/* Default: block all interactive controls inside the assistant */
+.live-demo__assistant-col button,
+.live-demo__assistant-col select,
+.live-demo__assistant-col textarea,
+.live-demo__assistant-col input {
+  pointer-events: none;
+}
+
+/* Generate Rewrite button — live during WAITING_FOR_GENERATE. The
+   "Generate Rewrite" button is the first primary-button inside an
+   .ai-panel__button-row. */
+.live-demo--WAITING_FOR_GENERATE
+  .live-demo__assistant-col
+  .ai-panel__button-row
+  .pill-button.primary-button:first-child {
+  pointer-events: auto !important;
+  animation: live-demo-btn-pulse 2s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+/* Insert into Document button — live during WAITING_FOR_INSERT */
+.live-demo--WAITING_FOR_INSERT
+  .live-demo__assistant-col
+  .ai-panel__card--stacked
+  .ai-panel__button-row
+  .pill-button.primary-button:first-child {
+  pointer-events: auto !important;
+  animation: live-demo-btn-pulse 2s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+/* Button pulse — same spotlight as the clause ring, but bounded by
+   the button's rounded shape. */
+@keyframes live-demo-btn-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.55);
+    outline: 1px solid var(--live-demo-gold);
+    outline-offset: 2px;
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(201, 168, 76, 0);
+    outline: 1px solid var(--live-demo-gold-ring);
+    outline-offset: 3px;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 168, 76, 0);
+    outline: 1px solid var(--live-demo-gold);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-demo--WAITING_FOR_GENERATE
+    .live-demo__assistant-col
+    .ai-panel__button-row
+    .pill-button.primary-button:first-child,
+  .live-demo--WAITING_FOR_INSERT
+    .live-demo__assistant-col
+    .ai-panel__card--stacked
+    .ai-panel__button-row
+    .pill-button.primary-button:first-child {
+    animation: none;
+    outline: 1px solid var(--live-demo-gold);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.25);
+  }
+}
+
+/* Dim the disabled state of non-active buttons so they read as
+   "inactive" without looking broken. */
+.live-demo__assistant-col button[disabled],
+.live-demo__assistant-col .pill-button[disabled] {
+  opacity: 0.55;
+}
+
+/* ── Narration card — Stitch brief 001 ────────────────────────
+   Frosted glass surface with a gold badge on the left, serif title,
+   two-line body. 280 px max, floats in a corner, fades-slides on
+   state change. Doesn't overlap the current action because the
+   script assigns corners intentionally. */
+.live-demo__narration {
+  position: absolute;
+  z-index: 50;
+  display: flex;
+  gap: 12px;
+  max-width: 320px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--live-demo-hairline);
+  border-radius: 14px;
+  box-shadow: 0 14px 34px -10px rgba(18, 18, 18, 0.24);
+  animation: live-demo-narration-in 0.28s ease-out;
+}
+
+.live-demo__narration--top-right   { top: 20px; right: 20px; }
+.live-demo__narration--top-left    { top: 20px; left: 20px; }
+.live-demo__narration--bottom-right { bottom: 20px; right: 20px; }
+.live-demo__narration--bottom-left  { bottom: 20px; left: 20px; }
+
+@keyframes live-demo-narration-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Gold badge — a 28 px rounded-corner square with a small serif mark. */
+.live-demo__narration-badge {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #d4b96a 0%, #c9a84c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px -2px rgba(201, 168, 76, 0.35);
+}
+
+.live-demo__narration-badge-mark {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+.live-demo__narration--done .live-demo__narration-badge {
+  background: linear-gradient(180deg, #1f8a4c 0%, #16a34a 100%);
+  box-shadow: 0 4px 10px -2px rgba(22, 163, 74, 0.35);
+}
+
+.live-demo__narration-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.live-demo__narration-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--live-demo-gold);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.live-demo__narration--done .live-demo__narration-eyebrow {
+  color: #16a34a;
+}
+
+.live-demo__narration-title {
+  font-family: "Newsreader", serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--live-demo-text);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.live-demo__narration-body {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--live-demo-text-2);
+}
+
+/* ── Start Over + restrained "Done" label (DONE state) ──────── */
+.live-demo__restart-wrap {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.live-demo__restart-done-label {
+  font-family: "Newsreader", serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #16a34a;
+  letter-spacing: 0.01em;
+  padding-right: 2px;
+}
+
+.live-demo__restart {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: var(--live-demo-text);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 8px 22px -6px rgba(18, 18, 18, 0.35);
+  animation: live-demo-btn-pulse 2s ease-in-out infinite;
+}
+
+.live-demo__restart:hover {
+  background: #000;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-demo__restart {
+    animation: none;
+    outline: 1px solid var(--live-demo-gold);
+    outline-offset: 2px;
+  }
+}
+
+/* When DONE state shows the Start Over cluster, the narration bottom-left
+   position doesn't collide so we don't need to shift it. Keeping this
+   rule intentionally absent. */
+
+/* ── Loading state — document-shaped skeleton (Stitch-derived) ── */
+.live-demo__loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 72px 48px 48px;
+  background: var(--live-demo-panel);
+  overflow: hidden;
+}
+
+.live-demo__loading-doc {
+  width: 100%;
+  max-width: 640px;
+  background: #ffffff;
+  border: 1px solid var(--live-demo-hairline);
+  border-radius: 6px;
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 8px 24px -12px rgba(18, 18, 18, 0.15);
+}
+
+.live-demo__loading-heading {
+  width: 55%;
+  height: 18px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #e6e4e2 0%,
+    #efedea 50%,
+    #e6e4e2 100%
+  );
+  background-size: 200% 100%;
+  animation: live-demo-shimmer 1.6s linear infinite;
+  margin-bottom: 10px;
+}
+
+.live-demo__loading-row {
+  height: 12px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #edece9 0%,
+    #f3f2ef 50%,
+    #edece9 100%
+  );
+  background-size: 200% 100%;
+  animation: live-demo-shimmer 1.6s linear infinite;
+}
+
+.live-demo__loading-row--long    { width: 100%; }
+.live-demo__loading-row--medium  { width: 72%;  }
+.live-demo__loading-row--short   { width: 48%;  }
+
+@keyframes live-demo-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-demo__loading-heading,
+  .live-demo__loading-row { animation: none; }
+}
+
+.live-demo__loading-caption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--live-demo-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.live-demo__loading-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--live-demo-gold);
+  animation: live-demo-pulse-dot 1.4s ease-in-out infinite;
+}
+
+/* ── Atmospheric corner blobs (Stitch brief 001, very subtle) ── */
+.live-demo__blob {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+}
+
+.live-demo__blob--gold {
+  top: -80px;
+  right: -80px;
+  width: 340px;
+  height: 340px;
+  background: rgba(201, 168, 76, 0.10);
+}
+
+.live-demo__blob--ink {
+  bottom: -80px;
+  left: -80px;
+  width: 320px;
+  height: 320px;
+  background: rgba(18, 18, 18, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-demo__blob { display: none; }
+}
+
+/* ── Unknown demo fallback ──────────────────────────────────── */
+.live-demo--unknown {
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--live-demo-text-muted);
+}
+
+/* ── Responsive: collapse assistant below the editor ────────── */
+@media (max-width: 960px) {
+  .live-demo__stage {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .live-demo__assistant-col {
+    border-left: 0;
+    border-top: 1px solid var(--live-demo-hairline);
+    max-height: 360px;
+  }
+
+  .live-demo__viewport {
+    aspect-ratio: auto;
+    min-height: 820px;
+  }
+
+  .live-demo__narration {
+    max-width: 260px;
+  }
+
+  .live-demo__header-right {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+}
+
+/* ── Box-sizing safety inside the demo ───────────────────────── */
+.live-demo * {
+  box-sizing: border-box;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Scripted AI Drafting stage. Visual language reuses the
+   `.scene-doc` / `.scene-panel` / `.scene-target` primitives
+   from LiveScenarioDemo.css so the AI Drafting scene reads
+   identically to the other 8 scenario demos.
+────────────────────────────────────────────────────────────── */
+
+.live-demo__scripted-stage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 0;
+  background: var(--live-demo-panel);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.live-demo__scripted-doc-col {
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  padding: 28px 32px;
+  background: var(--live-demo-panel);
+}
+
+.live-demo__scripted-panel-col {
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  border-left: 1px solid var(--live-demo-hairline);
+  background: #ffffff;
+}
+
+.live-demo__scripted-doc-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* The clause target inherits `.scene-target--active` pulse animation
+   from LiveScenarioDemo.css. This wrapper ensures its border-radius
+   matches the highlighted paragraph block. */
+.live-demo__clause-wrap {
+  display: block;
+  margin: 0 -8px 10px;
+  padding: 0 8px;
+}
+
+.live-demo__clause-wrap.scene-target--active {
+  margin: 0 -8px 10px;
+}
+
+/* ── Scripted assistant panel ────────────────────────────────── */
+
+.live-demo__scripted-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+.live-demo__panel-header {
+  padding: 16px 18px 0;
+  border-bottom: 1px solid var(--live-demo-hairline);
+}
+
+.live-demo__panel-tabs {
+  display: inline-flex;
+  gap: 2px;
+  padding-bottom: 0;
+}
+
+.live-demo__panel-tab {
+  padding: 8px 14px;
+  border: none;
+  background: transparent;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--live-demo-text-muted);
+  cursor: default;
+  border-bottom: 2px solid transparent;
+  transform: translateY(1px);
+}
+
+.live-demo__panel-tab--active {
+  color: var(--live-demo-text);
+  border-bottom-color: var(--live-demo-text);
+}
+
+.live-demo__panel-body {
+  flex: 1;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: auto;
+}
+
+.live-demo__panel-card {
+  border: 1px solid var(--live-demo-hairline);
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.live-demo__panel-card--draft {
+  background: var(--live-demo-gold-tint);
+  border-color: rgba(201, 168, 76, 0.25);
+}
+
+.live-demo__panel-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--live-demo-text-muted);
+  text-transform: uppercase;
+}
+
+.live-demo__panel-hint {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--live-demo-gold);
+}
+
+.live-demo__panel-hint--pulsing {
+  animation: live-demo-pulse-dot 1.6s ease-in-out infinite;
+}
+
+.live-demo__panel-selection {
+  font-family: "Newsreader", serif;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--live-demo-text);
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--live-demo-panel);
+  max-height: 150px;
+  overflow: auto;
+}
+
+.live-demo__panel-selection--empty {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-style: italic;
+  color: var(--live-demo-text-muted);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.live-demo__panel-selection-placeholder {
+  color: inherit;
+}
+
+.live-demo__panel-instruction {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--live-demo-text);
+  padding: 10px 12px;
+  border: 1px dashed var(--live-demo-hairline);
+  border-radius: 8px;
+  background: var(--live-demo-panel);
+  min-height: 78px;
+}
+
+.live-demo__panel-instruction--empty {
+  color: var(--live-demo-text-muted);
+  font-style: italic;
+}
+
+.live-demo__panel-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.live-demo__panel-actions .scene-target {
+  display: inline-block;
+}
+
+.live-demo__panel-draft {
+  position: relative;
+  font-family: "Newsreader", serif;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--live-demo-text);
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  min-height: 60px;
+}
+
+.live-demo__panel-caret {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  margin-left: 2px;
+  background: var(--live-demo-gold);
+  vertical-align: text-bottom;
+  animation: live-demo-caret-blink 0.95s ease-in-out infinite;
+}
+
+@keyframes live-demo-caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.live-demo__panel-error {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  color: #dc2626;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+}
+
+/* ── Draft skeleton (shown while streaming is warming up) ───── */
+.live-demo__draft-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.live-demo__draft-row {
+  height: 10px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #edece9 0%,
+    #f3f2ef 50%,
+    #edece9 100%
+  );
+  background-size: 200% 100%;
+  animation: live-demo-shimmer 1.6s linear infinite;
+}
+
+.live-demo__draft-row--long   { width: 100%; }
+.live-demo__draft-row--medium { width: 80%;  }
+.live-demo__draft-row--short  { width: 55%;  }
+
+@media (prefers-reduced-motion: reduce) {
+  .live-demo__draft-row,
+  .live-demo__panel-caret,
+  .live-demo__panel-hint--pulsing {
+    animation: none;
+  }
+}
+
+/* ── AI context bar (document title + status) ───────────────── */
+.live-demo__panel-context {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  background: var(--live-demo-panel);
+  border-bottom: 1px solid var(--live-demo-hairline);
+}
+
+.live-demo__panel-context-title {
+  font-family: "Newsreader", serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--live-demo-text);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.live-demo__panel-context-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #1f8a4c;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.live-demo__panel-context-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16a34a;
+  display: inline-block;
+}
+
+/* ── Numbered step cards (1 / 2 / 3) ───────────────────────── */
+.live-demo__panel-card--step {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.live-demo__panel-step-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--live-demo-text);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.live-demo__panel-step-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.live-demo__panel-card--draft.live-demo__panel-card--step {
+  background: var(--live-demo-gold-tint);
+  border-color: rgba(201, 168, 76, 0.25);
+}
+
+/* ── Refine this draft — chat-prompt pill row ──────────────── */
+.live-demo__panel-refine {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--live-demo-hairline);
+  background: var(--live-demo-panel);
+  margin: 4px -18px -18px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.live-demo__panel-refine-label {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--live-demo-text-muted);
+}
+
+.live-demo__panel-refine-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.live-demo__panel-refine-pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--live-demo-hairline);
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: var(--live-demo-text-2);
+  letter-spacing: 0.01em;
+  cursor: default;
+  opacity: 0.7;
+}
+
+/* ── Button XS variant for the AI panel ────────────────────── */
+.live-demo__scripted-panel .scene-btn--xs {
+  padding: 6px 12px;
+  font-size: 10.5px;
+}
+
+/* Responsive: collapse into a stacked single-column layout on narrow
+   viewports, matching the pre-refactor behaviour. */
+@media (max-width: 960px) {
+  .live-demo__scripted-stage {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+  .live-demo__scripted-panel-col {
+    border-left: 0;
+    border-top: 1px solid var(--live-demo-hairline);
+    max-height: 420px;
+  }
+
+  .live-demo__panel-context {
+    padding: 8px 14px;
+  }
+}

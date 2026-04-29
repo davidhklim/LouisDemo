@@ -1,0 +1,50 @@
+{
+  "id": "term-anti-dilution",
+  "type": "term",
+  "slug": "anti-dilution",
+  "term": "Anti-Dilution Protection",
+  "definition": "Anti-dilution protection is a right given to preferred shareholders that adjusts the price at which their preferred shares convert into common shares if the company later issues shares at a lower price — a situation called a down round. Without this protection, a down round would not only reduce everyone's ownership percentage but would also reduce the effective value of the preferred shareholder's investment relative to what they paid. There are two main types: full ratchet (aggressive — reprices all of the investor's shares to the new, lower price, as if they had paid the lower price from day one) and weighted average (fairer — adjusts the conversion price based on a formula that accounts for how many shares were issued at the lower price, so a small down round causes a smaller adjustment than a massive one).",
+  "formalDefinition": "Anti-dilution protection is a contractual provision in the terms of preferred shares that adjusts the conversion price applicable to those shares upon the issuance of additional equity securities at a price per share below the original conversion price (a dilutive issuance). Under a full ratchet mechanism, the conversion price is reset to the lower issuance price regardless of the number of shares issued at the lower price. Under a weighted average mechanism (broad-based or narrow-based), the conversion price is adjusted using a formula that weights the adjustment by reference to the number of shares outstanding before and after the dilutive issuance: Adjusted CP = CP x (A + B) / (A + C), where A is the pre-issuance fully diluted share count (broad-based) or issued share count (narrow-based), B is the number of shares issuable for the aggregate consideration received at the original conversion price, and C is the number of shares actually issued. Standard Canadian VC practice as reflected in CVCA model documents uses broad-based weighted average anti-dilution.",
+  "synonyms": [
+    "anti-dilution",
+    "anti-dilution protection",
+    "anti-dilution provision",
+    "anti-dilution clause",
+    "anti-dilution right",
+    "down-round protection",
+    "full ratchet",
+    "weighted average anti-dilution",
+    "broad-based weighted average",
+    "narrow-based weighted average"
+  ],
+  "relatedPhrases": [
+    "conversion price adjustment",
+    "down round",
+    "dilutive issuance",
+    "weighted average formula",
+    "full ratchet adjustment",
+    "broad-based weighted average",
+    "pay to play",
+    "anti-dilution carve-out",
+    "standard exceptions",
+    "option pool issuances"
+  ],
+  "whenYouSeeThis": "Anti-dilution provisions appear in the special terms attached to preferred shares, which are set out in the articles of incorporation or the share provisions schedule to a share purchase agreement. They are negotiated in the term sheet and then drafted into the preferred share terms at closing. You will also see anti-dilution carve-outs — lists of share issuances that do NOT trigger the anti-dilution adjustment (typically: option plan grants, convertible note conversions, shares issued in strategic transactions approved by the board).",
+  "founderNote": "Almost every venture investor will ask for anti-dilution protection — your goal is to ensure it is broad-based weighted average, not full ratchet. Full ratchet is rare in Canadian VC deals and is considered extremely aggressive: even a single share issued at a lower price fully reprices all preferred shares, which can cause catastrophic dilution to founders and employees. Broad-based weighted average is the CVCA standard and is genuinely fair — small technical down rounds have minimal impact. The carve-outs matter too: make sure that option pool expansions (which are issuances below the preferred price) are explicitly carved out, or every option grant will trigger an anti-dilution adjustment. Anti-dilution protections are a feature of preferred shares and do not protect common shareholders (i.e., founders) from down-round dilution.",
+  "relatedTermSlugs": [
+    "dilution",
+    "liquidation-preference",
+    "pre-money-valuation",
+    "share-structure"
+  ],
+  "relatedTemplateIds": [
+    "tpl-term-sheet-seed"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "investor"
+  ]
+}

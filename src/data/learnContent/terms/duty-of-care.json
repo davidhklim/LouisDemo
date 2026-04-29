@@ -1,0 +1,47 @@
+{
+  "id": "term-duty-of-care",
+  "type": "term",
+  "slug": "duty-of-care",
+  "term": "Duty of Care",
+  "definition": "The duty of care requires directors and officers to exercise the care, skill, and diligence that a reasonably prudent person would exercise in comparable circumstances. If the fiduciary duty is about acting for the right reasons (the 'ends'), the duty of care is about acting competently (the 'means'). You do not need to be perfect, but you must be reasonably informed, attend board meetings, review materials, ask probing questions, and ensure you understand the financial health of the company. The standard is measured objectively: even if you acted in good faith, you can still be liable if you fell below what a reasonable person would have done.",
+  "formalDefinition": "Under s. 122(1)(b) of the CBCA and equivalent provincial provisions, every director and officer shall exercise the care, diligence and skill that a reasonably prudent person would exercise in comparable circumstances. The duty of care is assessed using an objective standard, independent of the director's subjective good faith, as confirmed in Peoples Department Stores Inc. (Trustee of) v. Wise (2004 SCC 68). In discharging the duty of care, directors may (and should) consider the interests of shareholders, creditors, employees, and other stakeholders, but the statutory duty itself runs to the corporation.",
+  "synonyms": [
+    "standard of care",
+    "due care",
+    "care, skill and diligence",
+    "duty of diligence",
+    "reasonably prudent person standard",
+    "duty of competence"
+  ],
+  "relatedPhrases": [
+    "care, diligence and skill",
+    "reasonably prudent person",
+    "comparable circumstances",
+    "objective standard",
+    "review board materials",
+    "attend board meetings",
+    "adequate working knowledge",
+    "informed decision-making",
+    "due diligence defence"
+  ],
+  "whenYouSeeThis": "The duty of care is referenced in board resolutions, directors' consent to act, indemnification agreements, and D&O insurance policies. Unlike the fiduciary duty, a breach of the duty of care does not automatically give shareholders a direct right to sue; instead, enforcement typically occurs through the oppression remedy, derivative action, or tort-based claims.",
+  "founderNote": "As a startup founder who sits on the board, you are held to the same standard as any other director. Two practical takeaways: (1) always read board materials before voting, and (2) if you are present at a meeting and vote for a resolution (or fail to request your dissent be recorded), you are deemed to have assented under most statutes. If you miss a meeting, you are not automatically deemed to have consented, but you should review the minutes promptly and register a dissent in writing if you object to anything passed, as this creates contemporaneous evidence that you did not support the resolution. The reasonable diligence defence (showing you acted as a prudent person would have) is your best protection.",
+  "relatedTermSlugs": [
+    "fiduciary-duty",
+    "business-judgment-rule",
+    "d-and-o-insurance"
+  ],
+  "relatedTemplateIds": [
+    "tpl-consent-to-act-director",
+    "tpl-indemnification-agreement"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "board-resolutions",
+    "indemnification-agreement"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "director",
+    "officer"
+  ]
+}

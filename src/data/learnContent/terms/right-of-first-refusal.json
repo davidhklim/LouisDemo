@@ -1,0 +1,46 @@
+{
+  "id": "term-right-of-first-refusal",
+  "type": "term",
+  "slug": "right-of-first-refusal",
+  "term": "Right of First Refusal",
+  "definition": "A right of first refusal (ROFR) gives the holder the right to match any offer that the other party receives from a third party before that party can accept the third-party offer. If a shareholder wants to sell their shares, they must first offer those shares to the ROFR holders (usually the company and/or other shareholders) at the same price and on the same terms as the outside offer. Only if the ROFR holders decline can the seller proceed with the third party.",
+  "formalDefinition": "A contractual pre-emption right entitling the holder to purchase shares or assets on the same terms and conditions offered by a bona fide third party, exercisable within a specified notice period following delivery of a transfer notice.",
+  "synonyms": [
+    "ROFR",
+    "right of first refusal",
+    "pre-emption right",
+    "right of pre-emption",
+    "first refusal right",
+    "right to match",
+    "transfer restriction"
+  ],
+  "relatedPhrases": [
+    "transfer notice",
+    "offered shares",
+    "bona fide third-party offer",
+    "ROFR exercise period",
+    "right of first offer",
+    "co-sale right",
+    "tag-along right",
+    "permitted transferee",
+    "drag-along right"
+  ],
+  "whenYouSeeThis": "ROFRs appear in shareholders agreements, investors' rights agreements, co-sale agreements, and employment agreements where shares may be subject to vesting. They are standard in Canadian venture-backed companies and almost always paired with co-sale rights (tag-along) and drag-along provisions.",
+  "founderNote": "A ROFR is a liquidity friction mechanism — it slows down a founder's ability to sell shares to outside parties. Venture investors use it to prevent strategic buyers from accumulating a stake without going through the existing shareholders. As a founder, understand the exercise period (usually 15–30 days) and whether the company or the other shareholders exercise first.",
+  "relatedTermSlugs": [
+    "vesting",
+    "tag-along",
+    "drag-along",
+    "pre-emptive-right"
+  ],
+  "relatedTemplateIds": [
+    "tpl-rofr-co-sale-agreement",
+    "tpl-investors-rights-agreement"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "rofr-co-sale-agreement",
+    "shareholders-agreement",
+    "investors-rights-agreement"
+  ],
+  "updatedAt": "2026-04-11"
+}

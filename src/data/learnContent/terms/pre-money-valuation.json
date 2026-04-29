@@ -1,0 +1,52 @@
+{
+  "id": "term-pre-money-valuation",
+  "type": "term",
+  "slug": "pre-money-valuation",
+  "term": "Pre-Money Valuation",
+  "definition": "Pre-money valuation is the agreed value of a company before new investment money comes in. When an investor says they are valuing your company at $4 million pre-money and investing $1 million, the math works like this: the company is worth $4M before the cheque, the cheque brings the total value (post-money) to $5M, so the investor receives $1M / $5M = 20% of the company for their $1 million. The pre-money valuation is the central negotiating point in any priced round — it directly determines how much of your company you are selling. A higher pre-money valuation means you give away a smaller percentage for the same dollar amount.",
+  "formalDefinition": "Pre-money valuation is the enterprise value attributed to a company immediately prior to a capital injection in a priced financing round. It is calculated as the price per share agreed in the transaction multiplied by the total number of shares outstanding on a fully diluted basis (including all issued shares, outstanding options, warrants, and convertible instruments) immediately before the closing of the round. Post-money valuation equals pre-money valuation plus the total new capital invested. The price per share for newly issued shares in the round is derived by dividing the pre-money valuation by the pre-money fully diluted share count. Pre-money valuation is a negotiated figure rather than an independently audited value, and is distinct from fair market value for tax purposes.",
+  "synonyms": [
+    "pre-money valuation",
+    "pre-money",
+    "pre-money cap",
+    "valuation cap",
+    "company valuation",
+    "enterprise value",
+    "pre-money enterprise value",
+    "headline valuation",
+    "pre-investment valuation"
+  ],
+  "relatedPhrases": [
+    "post-money valuation",
+    "price per share",
+    "fully diluted basis",
+    "fully diluted share count",
+    "option pool shuffle",
+    "option pool expansion",
+    "pro rata right",
+    "pre-money cap table",
+    "implied valuation",
+    "down round"
+  ],
+  "whenYouSeeThis": "Pre-money valuation appears in term sheets, subscription agreements, share purchase agreements, and board resolutions approving a financing round. It is also embedded in the mechanics of SAFE and convertible note conversions through the valuation cap, which functions as a ceiling on the pre-money valuation at which those instruments convert. In a priced round, the pre-money valuation is the first economic term in the term sheet.",
+  "founderNote": "The option pool shuffle is the most common way founders get surprised by their pre-money valuation. Investors often require you to expand the employee option pool before closing the round, and that expansion comes out of the pre-money (i.e., it dilutes the founders, not the investors). Example: $4M pre-money sounds good, but if you have to create a 10% option pool as part of closing, the effective pre-money for founders is closer to $3.6M. Always model this. On the SAFE side, the valuation cap is essentially a pre-money valuation ceiling for SAFE holders — if your Series A pre-money valuation is above the cap, SAFE holders convert at the cap price (getting more shares per dollar than Series A investors). Negotiate your SAFE caps carefully: a cap that seemed reasonable at signing can result in serious dilution if the company's value grows quickly before the Series A.",
+  "relatedTermSlugs": [
+    "dilution",
+    "safe",
+    "convertible-note",
+    "cap-table",
+    "anti-dilution",
+    "liquidation-preference"
+  ],
+  "relatedTemplateIds": [
+    "tpl-term-sheet-seed"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "founder",
+    "investor"
+  ]
+}

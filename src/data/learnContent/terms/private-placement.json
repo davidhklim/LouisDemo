@@ -1,0 +1,49 @@
+{
+  "id": "term-private-placement",
+  "type": "term",
+  "slug": "private-placement",
+  "term": "Private Placement",
+  "definition": "A private placement is a sale of securities (usually shares) directly from a company to a select group of investors, rather than through a public offering on a stock exchange. It is the standard way that Canadian startups raise capital. Because the securities are not offered to the general public, the company can rely on prospectus exemptions instead of preparing a full prospectus. The process typically involves a term sheet, subscription agreements, and supporting documents (accredited investor certificates, shareholders agreement amendments). Securities sold in a private placement are subject to resale restrictions and cannot be freely traded.",
+  "formalDefinition": "A private placement is a distribution of securities by a private issuer to a limited number of purchasers, conducted under one or more prospectus exemptions prescribed by National Instrument 45-106 or applicable provincial securities legislation. The distribution is exempt from the prospectus requirement but remains subject to registration, reporting, and resale restrictions under applicable securities law. Common private placement structures for emerging companies include priced equity rounds (issuing a new class of preferred shares), convertible note financings, and SAFE (Simple Agreement for Future Equity) offerings.",
+  "synonyms": [
+    "private offering",
+    "exempt distribution",
+    "private sale of securities",
+    "PP",
+    "private round",
+    "equity financing"
+  ],
+  "relatedPhrases": [
+    "subscription agreement",
+    "term sheet",
+    "priced round",
+    "convertible note",
+    "SAFE",
+    "closing conditions",
+    "use of proceeds",
+    "pre-money valuation",
+    "post-money valuation",
+    "securities legend"
+  ],
+  "whenYouSeeThis": "Private placements involve a cluster of related documents: the term sheet (economic summary), subscription agreement (investor commitment), share terms or certificate of amendment (creating the new share class), shareholders agreement or investors' rights agreement (governance rights), and any ancillary agreements (ROFR, voting, IP assignment). Each document in LouisAI's seed financing template set corresponds to one piece of a standard Canadian private placement.",
+  "founderNote": "A private placement has two phases: negotiation (agreeing on the term sheet) and closing (executing the documents and receiving the money). Between term sheet and close, expect 4-8 weeks of legal work. Key cost drivers: number of investors (each signs a subscription agreement), complexity of share terms (liquidation preferences, anti-dilution, protective provisions), and number of jurisdictions (filing fees and resale restrictions vary by province). For a seed round, total legal fees typically range from $10,000-$30,000 for the company. Using standardized templates (like the LouisAI seed financing set) significantly reduces both cost and timeline.",
+  "relatedTermSlugs": [
+    "accredited-investor",
+    "prospectus-exemption",
+    "dilution",
+    "safe",
+    "convertible-note"
+  ],
+  "relatedTemplateIds": [
+    "tpl-subscription-agreement-simple",
+    "tpl-share-purchase-agreement-seed",
+    "tpl-term-sheet-seed"
+  ],
+  "relatedDocumentGuideSlugs": [
+    "term-sheet"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "investor"
+  ]
+}

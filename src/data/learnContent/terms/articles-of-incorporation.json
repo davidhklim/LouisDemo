@@ -1,0 +1,44 @@
+{
+  "id": "term-articles-of-incorporation",
+  "type": "term",
+  "slug": "articles-of-incorporation",
+  "term": "Articles of Incorporation",
+  "definition": "Articles of incorporation are the foundational legal document that creates a corporation. They are filed with the relevant government authority (Corporations Canada for federal companies, or the provincial registry for provincial companies) and define the corporation's basic structure: its name, the province of registered office, the classes and maximum number of shares it can issue, any restrictions on share transfers, the number of directors, and any restrictions on the corporation's business activities. Once filed and accepted, the corporation legally comes into existence. In British Columbia, the equivalent concept is the 'incorporation agreement' and 'articles' (a single combined document under the BCBCA).",
+  "formalDefinition": "Under the CBCA, articles of incorporation are the constitutional documents of a corporation filed with the Director under s. 6, setting out the corporation's authorized share structure, restrictions on business or powers, the number of directors, and any other provisions permitted by the Act. Under the BCBCA, a corporation is created by filing an incorporation application along with articles (which serve a role similar to by-laws in other jurisdictions); the 'notice of articles' filed with the Registrar contains the key constitutional details.",
+  "synonyms": [
+    "articles",
+    "certificate of incorporation",
+    "constating documents",
+    "charter",
+    "incorporation application",
+    "notice of articles",
+    "memorandum",
+    "letters patent"
+  ],
+  "relatedPhrases": [
+    "authorized share structure",
+    "registered office",
+    "class of shares",
+    "share transfer restrictions",
+    "number of directors",
+    "restrictions on business",
+    "amendment of articles",
+    "special resolution to amend",
+    "restated articles"
+  ],
+  "whenYouSeeThis": "Articles of incorporation are referenced in virtually every corporate document: shareholders agreements, subscription agreements, board resolutions, and financing documents. They are the starting point of corporate existence. Any change to the share structure, director count, or company name requires an amendment to the articles (typically by special resolution of the shareholders).",
+  "founderNote": "Your articles of incorporation are the first legal document you will sign as a founder. Key decisions at this stage: (1) jurisdiction of incorporation (CBCA vs. BC vs. Ontario), (2) share structure (common shares, preferred share classes for future investors), and (3) transfer restrictions (private company restrictions are standard). Get the share structure right from the start because amending articles later requires shareholder approval. Most startup lawyers will recommend creating authorized but unissued preferred share classes at incorporation to simplify future financing rounds.",
+  "relatedTermSlugs": [
+    "share-structure",
+    "corporation"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "doc-articles-of-incorporation"
+  ],
+  "updatedAt": "2026-04-11",
+  "relatedRoleSlugs": [
+    "founder",
+    "corporate-secretary"
+  ]
+}

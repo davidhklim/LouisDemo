@@ -1,0 +1,42 @@
+{
+  "id": "term-limitation-of-liability",
+  "type": "term",
+  "slug": "limitation-of-liability",
+  "term": "Limitation of Liability",
+  "definition": "A contractual clause that caps the maximum amount one party can owe the other if something goes wrong under the agreement. Unlike indemnification (which defines who is responsible for a loss), a limitation of liability defines the ceiling on how much they can be required to pay. Common forms include dollar caps tied to fees paid, exclusions of consequential or indirect damages, and exclusions of specific damage categories such as lost profits or lost data.",
+  "formalDefinition": "A contractual provision limiting the aggregate liability of one or both parties to a specified maximum amount or category of damages, typically excluding indirect, consequential, special, punitive, or incidental damages, and often capping direct damages at the fees paid under the agreement during a defined prior period.",
+  "synonyms": [
+    "liability cap",
+    "limitation clause",
+    "exclusion of liability",
+    "damage cap",
+    "consequential damages exclusion",
+    "indirect damages exclusion",
+    "aggregate liability limit",
+    "LOL clause",
+    "exclusion clause",
+    "exculpatory clause"
+  ],
+  "relatedPhrases": [
+    "in no event shall either party be liable for",
+    "indirect, incidental, special, consequential, or punitive damages",
+    "aggregate liability shall not exceed",
+    "fees paid in the twelve months preceding the claim",
+    "lost profits, lost data, or business interruption",
+    "whether or not advised of the possibility of such damages",
+    "notwithstanding the foregoing",
+    "except in the case of gross negligence or wilful misconduct"
+  ],
+  "whenYouSeeThis": "Limitation of liability clauses appear in SaaS agreements, professional services agreements, NDAs, technology licensing agreements, employment agreements, and commercial contracts generally. They are heavily negotiated in enterprise SaaS contracts, where buyers push for unlimited liability for data breaches and sellers push for strict caps. In M&A documents, the indemnification cap functions as a limitation of liability on post-closing claims.",
+  "founderNote": "Two things to watch as a founder. First, the standard carve-outs: courts and well-drafted contracts typically exclude gross negligence and wilful misconduct from limitation-of-liability protection — if your contract does not have this carve-out, your counterparty may be able to cap liability even for intentional wrongdoing. Second, enforceability: Canadian courts generally enforce limitation clauses between sophisticated commercial parties, but provincial consumer protection legislation may override them entirely in consumer-facing agreements. If you are selling to consumers, get separate legal advice on whether your limitation clause will actually hold.",
+  "relatedTermSlugs": [
+    "indemnification",
+    "representations-and-warranties"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [
+    "nda",
+    "employment-agreement"
+  ],
+  "updatedAt": "2026-04-10"
+}

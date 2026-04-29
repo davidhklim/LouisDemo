@@ -1,0 +1,38 @@
+{
+  "id": "term-small-business-deduction",
+  "type": "term",
+  "slug": "small-business-deduction",
+  "term": "Small Business Deduction (SBD)",
+  "definition": "The small business deduction is a tax reduction available to CCPCs that lowers the corporate tax rate on the first $500,000 of active business income. Without the SBD, a corporation pays the general corporate tax rate (approximately 26-31% combined federal and provincial, depending on the province). With the SBD, the combined rate drops to approximately 9-12.2%, depending on the province. This significant reduction makes the CCPC/SBD combination one of the most important tax planning tools for Canadian startups. The $500,000 business limit must be shared among associated corporations (companies under common control).",
+  "formalDefinition": "Under s. 125(1) of the Income Tax Act (Canada), a CCPC may claim a deduction from tax otherwise payable equal to the small business deduction rate (currently 19% federal reduction) on the lesser of (a) its active business income for the year, (b) its taxable income for the year, and (c) its business limit for the year ($500,000, allocated among associated corporations under s. 125(3) and subject to reduction based on taxable capital employed in Canada exceeding $10 million under s. 125(5.1) and adjusted aggregate investment income exceeding $50,000 under s. 125(5.1)(a)).",
+  "synonyms": [
+    "SBD",
+    "small business deduction",
+    "small business rate",
+    "reduced tax rate",
+    "small business tax rate",
+    "business limit"
+  ],
+  "relatedPhrases": [
+    "active business income",
+    "business limit",
+    "$500,000 threshold",
+    "associated corporations",
+    "taxable capital",
+    "passive investment income grind",
+    "aggregate investment income",
+    "general rate income pool",
+    "eligible dividends",
+    "non-eligible dividends"
+  ],
+  "whenYouSeeThis": "The small business deduction affects how you structure founder compensation, when to pay dividends vs. salary, and whether to keep investment assets inside or outside the corporation. Tax advisors reference it in corporate reorganizations, holding company structures, and year-end tax planning. It is also relevant in M&A transactions when assessing the tax cost of an asset sale vs. a share sale.",
+  "founderNote": "The SBD is your biggest early-stage tax advantage. At a combined rate of approximately 11% (BC) vs. 27% (general rate), the savings on $500,000 of active business income are roughly $80,000 per year. Two things can reduce or eliminate it: (1) having more than $50,000 in passive investment income (interest, dividends, capital gains from investments inside the corporation), which grinds down the business limit, and (2) having more than $10 million in taxable capital, which phases out the SBD. Keep investment assets in a holding company, not in the operating company, to protect the SBD.",
+  "relatedTermSlugs": [
+    "ccpc",
+    "capital-gains-exemption",
+    "corporation"
+  ],
+  "relatedTemplateIds": [],
+  "relatedDocumentGuideSlugs": [],
+  "updatedAt": "2026-03-30"
+}

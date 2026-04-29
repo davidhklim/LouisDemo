@@ -20,7 +20,13 @@ export default function PublicPrivacyPage({
   ];
 
   return (
-    <PublicPageShell onGoHome={onGoHome} actions={actions}>
+    <PublicPageShell
+      pageClassName="legal-page"
+      headerClassName="legal-page__header"
+      contentClassName="legal-page__content"
+      onGoHome={onGoHome}
+      actions={actions}
+    >
       <section className="public-pricing__hero public-reveal">
         <p className="public-legal__updated">Last Updated: March 31, 2026</p>
         <h1>Privacy Policy</h1>
